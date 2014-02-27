@@ -90,35 +90,51 @@ public class XMLSiteReader {
             panel.add(fileButton);
             chooser = new JFileChooser();
             
-            /* This section is setting up a table with dummy data. This will be populated with data from the analyzer*/
-            String[] columnNames = {"First Name",
-                        "Last Name",
-                        "Sport",
-                        "# of Years",
-                        "Vegetarian"};
-            Object[][] data = {
-    {"Kathy", "Smith",
-     "Snowboarding", new Integer(5), new Boolean(false)},
-    {"John", "Doe",
-     "Rowing", new Integer(3), new Boolean(true)},
-    {"Sue", "Black",
-     "Knitting", new Integer(2), new Boolean(false)},
-    {"Jane", "White",
-     "Speed reading", new Integer(20), new Boolean(true)},
-    {"Joe", "Brown",
-     "Pool", new Integer(10), new Boolean(false)}
-};
-            
-            table = new JTable(data, columnNames);
-            JScrollPane scrollPane = new JScrollPane(table);
-            panel2 = new JPanel();
-            panel.add(scrollPane);
-            add(panel2);
+            //JScrollPane scrollPane = new JScrollPane(table);
+            //panel2 = new JPanel();
+            //panel.add(scrollPane);
+            //add(panel2);
             add(panel);
             setTitle(frameTitle);  	
             setSize(frameWidth, frameWidth);
             setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             setVisible(true);
+        }
+        
+        private void buildTable() {
+            URL[] urls = xml.getURLs();
+            String[] columnNames = {"URL", "Page", "Document", "Image"};
+            Object[][] data = new Object[urls.length][columnNames.length];
+            for (int i = 2; i < urls.length; i++) {
+                for (int j = 0; j < columnNames.length; j++) {
+                    switch (j) {
+                        case 0:
+                            System.out.println(urls[i].getURL());
+                            data[i][j] = urls[i].getURL();
+                            break;
+                        case 1:
+                            data[i][j] = urls[i].isPage();
+                            System.out.println(urls[i].isPage());
+                            break;
+                        case 2:
+                            data[i][j] = urls[i].isDocument();
+                            System.out.println(urls[i].isDocument());
+                            break;
+                        case 3:
+                            data[i][j] = urls[i].isImage();
+                            System.out.println(urls[i].isImage());
+                            break;
+                        default:
+                    }
+                }
+            }
+            //table = new JTable(data, columnNames);
+            //JScrollPane scrollPane = new JScrollPane(table);
+            //panel.add(scrollPane);
+            //add(panel);
+            
+            
+            
         }
         
         private class BrowseButtonListener implements ActionListener {
@@ -134,6 +150,13 @@ public class XMLSiteReader {
                         case JFileChooser.APPROVE_OPTION :                            
                             if (chooser.getTypeDescription(chooser.getSelectedFile()).equals("XML File")) {
                                 xml.setFile(chooser.getSelectedFile());
+                                try {
+                                    xml.parseXML();
+                                    buildTable();
+                                }
+                                catch (FileNotFoundException e) {
+                                    System.out.println(e);
+                                }
                             }
                             else {
                                 JOptionPane.showMessageDialog(null, "You must choose a .xml file.", "Wrong File Type", JOptionPane.INFORMATION_MESSAGE);

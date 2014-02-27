@@ -27,9 +27,9 @@ public class URL {
     public void setIsDocument(boolean document) { this.isDocument = document; }    
     public void setIsImage(boolean image) { this.isImage = image; }    
     public String getURL() { return urlPath; }    
-    public boolean getIsPage() { return isPage; }    
-    public boolean getIsDocument() { return isDocument; }    
-    public boolean getIsImage() { return isImage; }
+    public boolean isPage() { return isPage; }    
+    public boolean isDocument() { return isDocument; }    
+    public boolean isImage() { return isImage; }
     
 
 }
