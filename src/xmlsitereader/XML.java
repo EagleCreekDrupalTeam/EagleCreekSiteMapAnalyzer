@@ -12,7 +12,7 @@ import org.w3c.dom.NodeList;
 
 /**
  *
- ** @author Stephen Paden 
+ ** @author Stephen Paden and Curtis Conner
  ** Company: Eagle Creek Software Services 
  ** Date: 2/26/2014
  *
