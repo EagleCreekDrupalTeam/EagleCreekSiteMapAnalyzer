@@ -50,6 +50,7 @@ public class XML {
     
     public void setFile(File file) {
         this.file = file;
+        setFileName(file.getName());
     }
     
     public File getFile() {
