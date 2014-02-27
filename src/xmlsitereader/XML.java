@@ -87,53 +87,32 @@ public class XML {
                 urls = new URL[nodeList.getLength()];
                 
                 for (int i = 0; i < fullPaths.length; i++) {
+                    boolean stored = false;
                     for (String extension : documentExtensions) {
                         if (fullPaths[i].endsWith(extension)) {
                             urls[i] = new URL(fullPaths[i], false, true, false);
+                            stored = true;
                         }
                     }
                     for (String extension : pageExtensions) {
                         if (fullPaths[i].endsWith(extension)) {
                             urls[i] = new URL(fullPaths[i], true, false, false);
+                            stored = true;
                         }                    
                     }
+                    
+                    if (!stored) {
+                        urls[i] = new URL(fullPaths[i], true, false, false);
+                    }
+                    
+                }
+                
+                for (int i = 0; i < urls.length; i++) {
+                    System.out.println(urls[i].getURL());
                 }
    
                 
                 System.out.println("Base element :" + doc.getDocumentElement().getNodeName());
-
-                for (int i = 0; i < nodeList.getLength(); i++) {
-                    Node newNode = nodeList.item(i);
-                    if (newNode.getChildNodes().toString().contains("loc")) {              
-                        if (newNode.getTextContent().toLowerCase().endsWith(".html")
-                                || newNode.getTextContent().toLowerCase().endsWith(".htm")
-                                || newNode.getTextContent().toLowerCase().endsWith(".asp")
-                                || newNode.getTextContent().toLowerCase().endsWith(".jsp")
-                                || newNode.getTextContent().toLowerCase().endsWith(".php")
-                                || newNode.getTextContent().toLowerCase().endsWith(".htm")) {
-                            sumPages++;
-                            urls[i] = new URL(newNode.getTextContent(), true, false, false);
-                        } else if (newNode.getTextContent().toLowerCase().endsWith(".doc")
-                                || newNode.getTextContent().toLowerCase().endsWith(".pdf")
-                                || newNode.getTextContent().toLowerCase().endsWith(".docx")
-                                || newNode.getTextContent().toLowerCase().endsWith(".txt")
-                                || newNode.getTextContent().toLowerCase().endsWith(".odt")
-                                || newNode.getTextContent().toLowerCase().endsWith(".odg")
-                                || newNode.getTextContent().toLowerCase().endsWith(".csv")
-                                || newNode.getTextContent().toLowerCase().endsWith(".xls")
-                                || newNode.getTextContent().toLowerCase().endsWith(".xlsx")) {
-                            sumDocuments++;
-                            urls[i] = new URL(newNode.getTextContent(), false, true, false);
-                        }
-                        } else {
-                            //System.out.println(newNode.getFirstChild().getTextContent() 
-//                                    + " <--------------------------------------------------------------------"
-//                                    + " ********this might be a null object or something we cannot parse yet ********* ");
-                            sumOtherItems++;   
-                            urls[i] = new URL(newNode.getFirstChild().getTextContent(), true, false, false);
-                        }
-                    
-                }
             }
         } catch (Exception e) {
             System.out.println(e);
