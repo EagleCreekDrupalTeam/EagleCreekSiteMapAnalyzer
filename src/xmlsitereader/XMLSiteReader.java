@@ -14,36 +14,48 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 /**
  *
- ** @author Stephen Paden 
+ ** @author Stephen Paden and Curtis Conner
  ** Company: Eagle Creek Software Services 
  ** Date: 2/26/2014
  *
  */
 public class XMLSiteReader {
+    
+    private XML newXML;
+    private XMLSiteReaderFrame readerFrame;
+    
+    public XMLSiteReader() {
+        newXML = new XML();
+        readerFrame = new XMLSiteReaderFrame();
+    }
+    
 
     public static void main(String[] args) throws FileNotFoundException {
         
-        // stepwise refinement testing below        
-        String fileName = "placeHolder";
-        String urlPath = "placeHolder";
+        XMLSiteReader siteReader = new XMLSiteReader();
         
-        URL newURL = new URL(urlPath, true, false, false);
-        URL newNewURL = new URL();
-        
-        newURL.setIsDocument(true);
-        newURL.setIsImage(false);
-        
-        XML newXML = new XML(fileName);
-        newXML.setFileName(fileName);
-        newXML.parseXML();
-        newXML.printResults();     
-        
-        System.out.println(newURL.getIsDocument());
-        System.out.println(newURL.getURL() + " overloaded constructor");
-        System.out.println(newNewURL.getURL() + " default constructor");
+//        // stepwise refinement testing below        
+//        String fileName = "placeHolder";
+//        String urlPath = "placeHolder";
+//        
+//        URL newURL = new URL(urlPath, true, false, false);
+//        URL newNewURL = new URL();
+//        
+//        newURL.setIsDocument(true);
+//        newURL.setIsImage(false);
+//        
+//        XML newXML = new XML(fileName);
+//        newXML.setFileName(fileName);
+//        newXML.parseXML();
+//        newXML.printResults();     
+//        
+//        System.out.println(newURL.getIsDocument());
+//        System.out.println(newURL.getURL() + " overloaded constructor");
+//        System.out.println(newNewURL.getURL() + " default constructor");
     }
     
     class XMLSiteReaderFrame extends JFrame {
+        
         public static final String frameTitle = "Eagle Creek Sitemap Analyzer";
         public static final int frameHeight = 600;
         public static final int frameWidth = 600;
@@ -55,6 +67,8 @@ public class XMLSiteReader {
         private JFileChooser chooser;
         private File file;
         private JTable table;
+        
+        
         
         public XMLSiteReaderFrame() {
             setTitle(frameTitle);  	

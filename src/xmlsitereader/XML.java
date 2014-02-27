@@ -23,6 +23,8 @@ public class XML {
     private int sumTotal = 0;
     public String fileName;
     private static int queryStrings = 0;
+    
+    public XML() {}
     public XML(String fName) {
         fileName = fName;
     }
