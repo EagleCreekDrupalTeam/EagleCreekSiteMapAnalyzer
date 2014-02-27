@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileNotFoundException;
+import javax.swing.GroupLayout;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
@@ -32,35 +33,16 @@ public class XMLSiteReader {
     public static void main(String[] args) throws FileNotFoundException {
         
         XMLSiteReader siteReader = new XMLSiteReader();
-        
-//        // stepwise refinement testing below        
-//        String fileName = "placeHolder";
-//        String urlPath = "placeHolder";
-//        
-//        URL newURL = new URL(urlPath, true, false, false);
-//        URL newNewURL = new URL();
-//        
-//        newURL.setIsDocument(true);
-//        newURL.setIsImage(false);
-//        
-//        XML newXML = new XML(fileName);
-//        newXML.setFileName(fileName);
-//        newXML.parseXML();
-//        newXML.printResults();     
-//        
-//        System.out.println(newURL.getIsDocument());
-//        System.out.println(newURL.getURL() + " overloaded constructor");
-//        System.out.println(newNewURL.getURL() + " default constructor");
     }
     
     class XMLSiteReaderFrame extends JFrame {
         
         public static final String frameTitle = "Eagle Creek Sitemap Analyzer";
-        public static final int frameHeight = 600;
-        public static final int frameWidth = 600;
+        public static final int frameHeight = 1300;
+        public static final int frameWidth = 768;
         private JMenuBar menuBar;
         private JMenu fileMenu, optionsMenu, helpMenu;
-        private JButton fileButton;
+        private JButton fileButton, analyzeButton;
         private XMLSiteReaderPanel panel; //Not sure if we need the custom Panel class
         private JPanel panel2;
         private JFileChooser chooser;
@@ -84,16 +66,23 @@ public class XMLSiteReader {
             helpMenu = new JMenu("Help");
             menuBar.add(helpMenu);
             
+            GroupLayout layout = new GroupLayout(panel);
+            panel.setLayout(layout);
+            
+            layout.setAutoCreateGaps(true);
+            layout.setAutoCreateContainerGaps(true);
+            
             fileButton = new JButton("Browse");
             fileButton.addActionListener(new BrowseButtonListener());
+            analyzeButton = new JButton("Analyze");
+            analyzeButton.setEnabled(false);
+            analyzeButton.addActionListener(new AnalyzeButtonListener());
             panel = new XMLSiteReaderPanel();
             panel.add(fileButton);
+            panel.add(analyzeButton);
             chooser = new JFileChooser();
             
-            //JScrollPane scrollPane = new JScrollPane(table);
-            //panel2 = new JPanel();
-            //panel.add(scrollPane);
-            //add(panel2);
+            
             add(panel);
             setTitle(frameTitle);  	
             setSize(frameWidth, frameWidth);
@@ -104,40 +93,38 @@ public class XMLSiteReader {
         private void buildTable() {
             URL[] urls = xml.getURLs();
             System.out.println("Number of URLs " + urls.length);
-//            for (int i = 0; i < urls.length; i++) {
-//                System.out.println(i + " URL: " + urls[i].getURL() == null? "NO URL" : urls[i].getURL() + "Page: " + urls[i].isPage() + "Document: " + urls[i].isDocument() + "Image: " + urls[i].isImage());
-//            }
-//            String[] columnNames = {"URL", "Page", "Document", "Image"};
-//            Object[][] data = new Object[urls.length][columnNames.length];
-//            for (int i = 2; i < urls.length; i++) {
-//                for (int j = 0; j < columnNames.length; j++) {
-//                    switch (j) {
-//                        case 0:
-//                            System.out.println(urls[i].getURL());
-//                            data[i][j] = urls[i].getURL();
-//                            break;
-//                        case 1:
-//                            data[i][j] = urls[i].isPage();
-//                            System.out.println(urls[i].isPage());
-//                            break;
-//                        case 2:
-//                            data[i][j] = urls[i].isDocument();
-//                            System.out.println(urls[i].isDocument());
-//                            break;
-//                        case 3:
-//                            data[i][j] = urls[i].isImage();
-//                            System.out.println(urls[i].isImage());
-//                            break;
-//                        default:
-//                    }
-//                }
-//            }
             
-//            table = new JTable(data, columnNames);
-//            JScrollPane scrollPane = new JScrollPane(table);
-//            panel.add(scrollPane);
-//            add(panel);
+            String[] columnNames = {"URL", "Page", "Document", "Image"};
+            Object[][] data = new Object[urls.length][columnNames.length];
+            for (int i = 2; i < urls.length; i++) {
+                for (int j = 0; j < columnNames.length; j++) {
+                    switch (j) {
+                        case 0:
+                            System.out.println(urls[i].getURL());
+                            data[i][j] = urls[i].getURL();
+                            break;
+                        case 1:
+                            data[i][j] = urls[i].isPage();
+                            System.out.println(urls[i].isPage());
+                            break;
+                        case 2:
+                            data[i][j] = urls[i].isDocument();
+                            System.out.println(urls[i].isDocument());
+                            break;
+                        case 3:
+                            data[i][j] = urls[i].isImage();
+                            System.out.println(urls[i].isImage());
+                            break;
+                        default:
+                    }
+                }
+            }
             
+            table = new JTable(data, columnNames);
+            JScrollPane scrollPane = new JScrollPane(table);
+            panel.add(scrollPane);
+            add(panel);
+            panel.repaint();
             
             
         }
@@ -151,13 +138,14 @@ public class XMLSiteReader {
                     switch(returnOption)  {
                         case JFileChooser.CANCEL_OPTION :
                             JOptionPane.showMessageDialog(null, "You must select a file to continue.", "Warning", JOptionPane.WARNING_MESSAGE);
+                            analyzeButton.setEnabled(false);
                             break;
                         case JFileChooser.APPROVE_OPTION :                            
                             if (chooser.getTypeDescription(chooser.getSelectedFile()).equals("XML File")) {
                                 xml.setFile(chooser.getSelectedFile());
                                 try {
                                     xml.parseXML();
-                                    buildTable();
+                                    analyzeButton.setEnabled(true);
                                 }
                                 catch (FileNotFoundException e) {
                                     System.out.println(e);
@@ -165,17 +153,31 @@ public class XMLSiteReader {
                             }
                             else {
                                 JOptionPane.showMessageDialog(null, "You must choose a .xml file.", "Wrong File Type", JOptionPane.INFORMATION_MESSAGE);
+                                analyzeButton.setEnabled(false);
                             }                            
                             break;
                         case JFileChooser.ERROR_OPTION :
                             JOptionPane.showMessageDialog(null, "Something went wrong.", "Error", JOptionPane.ERROR_MESSAGE);
+                            analyzeButton.setEnabled(false);
                             break;
                         default :
                             JOptionPane.showMessageDialog(null, "Something went wrong.", "Error", JOptionPane.ERROR_MESSAGE);
+                            analyzeButton.setEnabled(false);
                     }
                         
 		}
 	}
+        
+        private class AnalyzeButtonListener implements ActionListener {
+            public void actionPerformed(ActionEvent event) {
+                try {
+                    xml.parseXML();
+                    buildTable();
+                }catch(FileNotFoundException e) {
+                    
+                }
+            }
+        }
         
     }
     

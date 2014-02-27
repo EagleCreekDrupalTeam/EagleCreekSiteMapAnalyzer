@@ -21,6 +21,7 @@ import org.w3c.dom.NodeList;
 public class XML {
     private int sumPages = 0;
     private int sumDocuments = 0;
+    private int sumImages = 0;
     private int sumOtherItems = 0;
     private int sumTotal = 0;
     private String fileName;
@@ -92,6 +93,7 @@ public class XML {
                     for (String extension : documentExtensions) {
                         if (fullPaths[i].toLowerCase().endsWith(extension)) {
                             urls[i] = new URL(fullPaths[i], false, true, false);
+                            sumDocuments++;
                             stored = true;
                         }
                     }
@@ -99,6 +101,7 @@ public class XML {
                     for (String extension : pageExtensions) {
                         if (fullPaths[i].toLowerCase().endsWith(extension)) {
                             urls[i] = new URL(fullPaths[i], true, false, false);
+                            sumPages++;
                             stored = true;
                         }                    
                     }
@@ -106,21 +109,17 @@ public class XML {
                     for (String extension : imageExtensions) {
                         if (fullPaths[i].toLowerCase().endsWith(extension)) {
                             urls[i] = new URL(fullPaths[i], false, false, true);
+                            sumImages++;
                             stored = true;
                         } 
                     }
                     
                     if (!stored) {
                         urls[i] = new URL(fullPaths[i], true, false, false);
+                        sumPages++;
                     }
                     
                 }
-                
-                for (int i = 0; i < urls.length; i++) {
-                    System.out.println(urls[i].getURL());
-                }
-   
-                
                 System.out.println("Base element :" + doc.getDocumentElement().getNodeName());
             }
         } catch (Exception e) {
