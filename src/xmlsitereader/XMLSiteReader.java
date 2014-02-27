@@ -103,35 +103,40 @@ public class XMLSiteReader {
         
         private void buildTable() {
             URL[] urls = xml.getURLs();
-            String[] columnNames = {"URL", "Page", "Document", "Image"};
-            Object[][] data = new Object[urls.length][columnNames.length];
-            for (int i = 2; i < urls.length; i++) {
-                for (int j = 0; j < columnNames.length; j++) {
-                    switch (j) {
-                        case 0:
-                            System.out.println(urls[i].getURL());
-                            data[i][j] = urls[i].getURL();
-                            break;
-                        case 1:
-                            data[i][j] = urls[i].isPage();
-                            System.out.println(urls[i].isPage());
-                            break;
-                        case 2:
-                            data[i][j] = urls[i].isDocument();
-                            System.out.println(urls[i].isDocument());
-                            break;
-                        case 3:
-                            data[i][j] = urls[i].isImage();
-                            System.out.println(urls[i].isImage());
-                            break;
-                        default:
-                    }
-                }
-            }
-            //table = new JTable(data, columnNames);
-            //JScrollPane scrollPane = new JScrollPane(table);
-            //panel.add(scrollPane);
-            //add(panel);
+            System.out.println("Number of URLs " + urls.length);
+//            for (int i = 0; i < urls.length; i++) {
+//                System.out.println(i + " URL: " + urls[i].getURL() == null? "NO URL" : urls[i].getURL() + "Page: " + urls[i].isPage() + "Document: " + urls[i].isDocument() + "Image: " + urls[i].isImage());
+//            }
+//            String[] columnNames = {"URL", "Page", "Document", "Image"};
+//            Object[][] data = new Object[urls.length][columnNames.length];
+//            for (int i = 2; i < urls.length; i++) {
+//                for (int j = 0; j < columnNames.length; j++) {
+//                    switch (j) {
+//                        case 0:
+//                            System.out.println(urls[i].getURL());
+//                            data[i][j] = urls[i].getURL();
+//                            break;
+//                        case 1:
+//                            data[i][j] = urls[i].isPage();
+//                            System.out.println(urls[i].isPage());
+//                            break;
+//                        case 2:
+//                            data[i][j] = urls[i].isDocument();
+//                            System.out.println(urls[i].isDocument());
+//                            break;
+//                        case 3:
+//                            data[i][j] = urls[i].isImage();
+//                            System.out.println(urls[i].isImage());
+//                            break;
+//                        default:
+//                    }
+//                }
+//            }
+            
+//            table = new JTable(data, columnNames);
+//            JScrollPane scrollPane = new JScrollPane(table);
+//            panel.add(scrollPane);
+//            add(panel);
             
             
             
