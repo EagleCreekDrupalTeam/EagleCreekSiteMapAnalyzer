@@ -29,7 +29,7 @@ public class XML {
     private String[] fullPaths;
     private final ArrayList<String> documentExtensions = new ArrayList(Arrays.asList(".doc", ".docx", ".pdf", ".txt", ".odt",".odg", ".csv", ".xls", ".xlsx"));
     private final ArrayList<String> pageExtensions = new ArrayList(Arrays.asList(".htm", ".html", ".asp", ".jsp", ".php"));
-    private final ArrayList<String> imageExtensions = new ArrayList(Arrays.asList());
+    private final ArrayList<String> imageExtensions = new ArrayList(Arrays.asList(".gif", ".jpg", ".png", ".jpeg", ".bmp"));
    
     private static int queryStrings = 0;
     
@@ -87,18 +87,27 @@ public class XML {
                 urls = new URL[nodeList.getLength()];
                 
                 for (int i = 0; i < fullPaths.length; i++) {
-                    boolean stored = false;
+                    boolean stored = false; //Flag to see if we've had a match
+                    //Check to see if url is for a document
                     for (String extension : documentExtensions) {
-                        if (fullPaths[i].endsWith(extension)) {
+                        if (fullPaths[i].toLowerCase().endsWith(extension)) {
                             urls[i] = new URL(fullPaths[i], false, true, false);
                             stored = true;
                         }
                     }
+                    //Check to see if url is for a page
                     for (String extension : pageExtensions) {
-                        if (fullPaths[i].endsWith(extension)) {
+                        if (fullPaths[i].toLowerCase().endsWith(extension)) {
                             urls[i] = new URL(fullPaths[i], true, false, false);
                             stored = true;
                         }                    
+                    }
+                    //Check to see if url is for an image
+                    for (String extension : imageExtensions) {
+                        if (fullPaths[i].toLowerCase().endsWith(extension)) {
+                            urls[i] = new URL(fullPaths[i], false, false, true);
+                            stored = true;
+                        } 
                     }
                     
                     if (!stored) {
