@@ -9,6 +9,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -21,11 +22,9 @@ import javax.swing.JTable;
  */
 public class XMLSiteReader {
     
-    private XML newXML;
     private XMLSiteReaderFrame readerFrame;
     
     public XMLSiteReader() {
-        newXML = new XML();
         readerFrame = new XMLSiteReaderFrame();
     }
     
@@ -65,8 +64,8 @@ public class XMLSiteReader {
         private XMLSiteReaderPanel panel; //Not sure if we need the custom Panel class
         private JPanel panel2;
         private JFileChooser chooser;
-        private File file;
         private JTable table;
+        private XML xml;
         
         
         
@@ -75,6 +74,7 @@ public class XMLSiteReader {
             setSize(frameWidth, frameWidth);
             setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             setVisible(true);
+            xml = new XML();
             menuBar = new JMenuBar();
             setJMenuBar(menuBar);
             fileMenu = new JMenu("File");
@@ -124,9 +124,28 @@ public class XMLSiteReader {
         private class BrowseButtonListener implements ActionListener {
 
 		public void actionPerformed(ActionEvent event) {
-			chooser.showOpenDialog(panel);
-                        file = chooser.getSelectedFile();
-                        System.out.println(file);
+                    
+                    int returnOption = chooser.showOpenDialog(panel);
+                    
+                    switch(returnOption)  {
+                        case JFileChooser.CANCEL_OPTION :
+                            JOptionPane.showMessageDialog(null, "You must select a file to continue.", "Warning", JOptionPane.WARNING_MESSAGE);
+                            break;
+                        case JFileChooser.APPROVE_OPTION :                            
+                            if (chooser.getTypeDescription(chooser.getSelectedFile()).equals("XML File")) {
+                                xml.setFile(chooser.getSelectedFile());
+                            }
+                            else {
+                                JOptionPane.showMessageDialog(null, "You must choose a .xml file.", "Wrong File Type", JOptionPane.INFORMATION_MESSAGE);
+                            }                            
+                            break;
+                        case JFileChooser.ERROR_OPTION :
+                            JOptionPane.showMessageDialog(null, "Something went wrong.", "Error", JOptionPane.ERROR_MESSAGE);
+                            break;
+                        default :
+                            JOptionPane.showMessageDialog(null, "Something went wrong.", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                        
 		}
 	}
         

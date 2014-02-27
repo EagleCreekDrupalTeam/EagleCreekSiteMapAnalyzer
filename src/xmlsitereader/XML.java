@@ -21,7 +21,8 @@ public class XML {
     private int sumDocuments = 0;
     private int sumOtherItems = 0;
     private int sumTotal = 0;
-    public String fileName;
+    private String fileName;
+    private File file;
     private static int queryStrings = 0;
     
     public XML() {}
@@ -37,14 +38,22 @@ public class XML {
         return fileName;
     }
     
+    public void setFile(File file) {
+        this.file = file;
+    }
+    
+    public File getFile() {
+        return file;
+    }
+    
     public void parseXML() throws FileNotFoundException {
 
         try {
             
-            File newFile = new File("sitemap.xml");
+            file = new File("sitemap.xml");
             DocumentBuilderFactory newDocumentBuilderFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder newBuilder = newDocumentBuilderFactory.newDocumentBuilder();
-            Document doc = newBuilder.parse(newFile);
+            Document doc = newBuilder.parse(file);
             doc.getDocumentElement().normalize();
 
             NodeList nodeList = doc.getElementsByTagName("loc");
