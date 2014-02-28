@@ -23,7 +23,7 @@ public class GUIReader extends javax.swing.JFrame {
     private XML xml = new XML();
     private Object[][] data;
     private String[] columnNames = {"URL", "Page", "Document", "Image"};
-    private DefaultTableModel tableModel = new DefaultTableModel(){  
+    private DefaultTableModel tableModel = new DefaultTableModel(data, columnNames){  
         public boolean isCellEditable(int row, int column){  
         return false;
         }
@@ -37,6 +37,7 @@ public class GUIReader extends javax.swing.JFrame {
      */
     public GUIReader() {
         initComponents();
+        
     }
 
     /**
@@ -123,9 +124,17 @@ public class GUIReader extends javax.swing.JFrame {
 
         urlTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         urlTable.setModel(tableModel);
-        urlTable.setCellSelectionEnabled(true);
+        urlTable.setColumnSelectionAllowed(false);
         urlTable.getTableHeader().setReorderingAllowed(false);
+        urlTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                urlTableMouseClicked(evt);
+            }
+        });
         scrollPane.setViewportView(urlTable);
+        urlTable.getColumnModel().getColumn(1).setMaxWidth(70);
+        urlTable.getColumnModel().getColumn(2).setMaxWidth(70);
+        urlTable.getColumnModel().getColumn(3).setMaxWidth(70);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -265,8 +274,7 @@ public class GUIReader extends javax.swing.JFrame {
                     default:
                 }
             }
-            tableModel.setDataVector(data, columnNames);
-            
+            tableModel.setDataVector(data, columnNames); 
         }
 
     }
@@ -340,6 +348,10 @@ public class GUIReader extends javax.swing.JFrame {
     private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton4ActionPerformed
+
+    private void urlTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_urlTableMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_urlTableMouseClicked
 
     /**
      * @param args the command line arguments
