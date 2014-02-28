@@ -309,13 +309,15 @@ public class GUIReader extends javax.swing.JFrame {
 
     private void analyzeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_analyzeButtonActionPerformed
 
-        try {
-            
-        
+        try {            
+               
+            xml.resetCounts();
+            xml.parseXML();
             xml.calculateResults();
             jTextArea1.setText(xml.printResults());
-            xml.parseXML();
             buildTable();
+           
+            
 
         } catch (FileNotFoundException fnfe) {
             System.out.println(fnfe);

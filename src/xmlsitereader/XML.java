@@ -19,13 +19,13 @@ import org.w3c.dom.NodeList;
  */
 
 public class XML {
-    private int sumPages = 0;
-    private int sumDocuments = 0;
-    private int sumImages = 0;
-    private int sumOtherItems = 0;
-    private int sumTotal = 0;
-    private int sumVideos = 0;
-    private int sumRSSFeeds = 0;
+    private static int sumPages = 0;
+    private static int sumDocuments = 0;
+    private static int sumImages = 0;
+    private static int sumOtherItems = 0;
+    private static int sumTotal = 0;
+    private static int sumVideos = 0;
+    private static int sumRSSFeeds = 0;
     private String fileName;
     private File file;
     private URL[] urls;
@@ -134,8 +134,20 @@ public class XML {
     public int calculateResults() {
         return sumTotal = sumPages + sumDocuments + sumOtherItems + queryStrings;
     }
+    
+    public void resetCounts() {
+        sumPages = 0;
+        sumDocuments = 0;
+        sumImages = 0;
+        sumOtherItems = 0;
+        sumTotal = 0;
+        sumVideos = 0;
+        sumRSSFeeds = 0;
+    }
 
     public String printResults() {
+        
+        
         String output = "";
         
         output += ("Number of pages: " + sumPages + "\n");
