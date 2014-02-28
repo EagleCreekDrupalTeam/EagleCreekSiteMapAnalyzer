@@ -93,7 +93,7 @@ public class XML {
                     //Check to see if url is for a document
                     for (String extension : documentExtensions) {
                         if (fullPaths[i].toLowerCase().endsWith(extension)) {
-                            urls[i] = new URL(fullPaths[i], false, true, false);
+                            urls[i] = new URL(fullPaths[i], Boolean.FALSE, Boolean.TRUE, Boolean.FALSE);
                             sumDocuments++;
                             stored = true;
                         }
@@ -101,7 +101,7 @@ public class XML {
                     //Check to see if url is for a page
                     for (String extension : pageExtensions) {
                         if (fullPaths[i].toLowerCase().endsWith(extension)) {
-                            urls[i] = new URL(fullPaths[i], true, false, false);
+                            urls[i] = new URL(fullPaths[i], Boolean.TRUE, Boolean.FALSE, Boolean.FALSE);
                             sumPages++;
                             stored = true;
                         }                    
@@ -109,14 +109,14 @@ public class XML {
                     //Check to see if url is for an image
                     for (String extension : imageExtensions) {
                         if (fullPaths[i].toLowerCase().endsWith(extension)) {
-                            urls[i] = new URL(fullPaths[i], false, false, true);
+                            urls[i] = new URL(fullPaths[i], Boolean.FALSE, Boolean.FALSE, Boolean.TRUE);
                             sumImages++;
                             stored = true;
                         } 
                     }
                     
                     if (!stored) {
-                        urls[i] = new URL(fullPaths[i], true, false, false);
+                        urls[i] = new URL(fullPaths[i], Boolean.TRUE, Boolean.FALSE, Boolean.FALSE);
                         sumPages++;
                     }
                     

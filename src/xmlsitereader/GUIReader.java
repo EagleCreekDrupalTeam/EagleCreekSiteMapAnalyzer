@@ -23,7 +23,14 @@ public class GUIReader extends javax.swing.JFrame {
     private XML xml = new XML();
     private Object[][] data;
     private String[] columnNames = {"URL", "Page", "Document", "Image"};
-    private DefaultTableModel tableModel = new DefaultTableModel();
+    private DefaultTableModel tableModel = new DefaultTableModel(){  
+        public boolean isCellEditable(int row, int column){  
+        return false;
+        }
+        public Class<?> getColumnClass(int columnIndex) {
+            return data[0][columnIndex].getClass();
+        }
+    };  
 
     /**
      * Creates new form GUIReader
@@ -114,7 +121,10 @@ public class GUIReader extends javax.swing.JFrame {
             }
         });
 
+        urlTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         urlTable.setModel(tableModel);
+        urlTable.setCellSelectionEnabled(true);
+        urlTable.getTableHeader().setReorderingAllowed(false);
         scrollPane.setViewportView(urlTable);
 
         jTextArea1.setColumns(20);
@@ -256,6 +266,7 @@ public class GUIReader extends javax.swing.JFrame {
                 }
             }
             tableModel.setDataVector(data, columnNames);
+            
         }
 
     }
@@ -272,7 +283,7 @@ public class GUIReader extends javax.swing.JFrame {
                 analyzeButton.setEnabled(false);
                 break;
             case JFileChooser.APPROVE_OPTION:
-                if (chooser.getTypeDescription(chooser.getSelectedFile()).equals("XML File")) {
+                if (chooser.getTypeDescription(chooser.getSelectedFile()).toLowerCase().contains("xml")) {
                     xml.setFile(chooser.getSelectedFile());
                     fileField.setText(xml.getFileName());
                     try {
