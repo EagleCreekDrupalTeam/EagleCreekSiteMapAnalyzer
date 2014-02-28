@@ -45,10 +45,7 @@ public class GUIReader extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        filterButtonGroup = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         browseButton = new javax.swing.JButton();
         analyzeButton = new javax.swing.JButton();
@@ -66,32 +63,6 @@ public class GUIReader extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
-
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane2.setViewportView(jTable2);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Eagle Creek Sitemap Analyzer v1.0");
@@ -121,7 +92,6 @@ public class GUIReader extends javax.swing.JFrame {
 
         urlTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         urlTable.setModel(tableModel);
-        urlTable.setColumnSelectionAllowed(false);
         urlTable.getTableHeader().setReorderingAllowed(false);
         urlTable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -141,6 +111,7 @@ public class GUIReader extends javax.swing.JFrame {
 
         jLabel3.setText("Filter by:");
 
+        filterButtonGroup.add(jRadioButton1);
         jRadioButton1.setText("All");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,6 +119,7 @@ public class GUIReader extends javax.swing.JFrame {
             }
         });
 
+        filterButtonGroup.add(jRadioButton2);
         jRadioButton2.setText("Image");
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -155,6 +127,7 @@ public class GUIReader extends javax.swing.JFrame {
             }
         });
 
+        filterButtonGroup.add(jRadioButton3);
         jRadioButton3.setText("Document");
         jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,6 +135,7 @@ public class GUIReader extends javax.swing.JFrame {
             }
         });
 
+        filterButtonGroup.add(jRadioButton4);
         jRadioButton4.setText("Page");
         jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -394,6 +368,7 @@ public class GUIReader extends javax.swing.JFrame {
     private javax.swing.JButton analyzeButton;
     private javax.swing.JButton browseButton;
     private javax.swing.JTextField fileField;
+    private javax.swing.ButtonGroup filterButtonGroup;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -404,11 +379,7 @@ public class GUIReader extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JScrollPane scrollPane;
     private javax.swing.JTable urlTable;
