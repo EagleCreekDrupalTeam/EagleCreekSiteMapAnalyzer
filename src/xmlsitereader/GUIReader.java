@@ -12,6 +12,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.TableModel;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -22,6 +23,14 @@ public class GUIReader extends javax.swing.JFrame {
     private XML xml = new XML();
     private Object[][] data;
     private String[] columnNames = {"URL", "Page", "Document", "Image"};
+    private DefaultTableModel tableModel = new DefaultTableModel(){  
+        public boolean isCellEditable(int row, int column){  
+        return false;
+        }
+        public Class<?> getColumnClass(int columnIndex) {
+            return data[0][columnIndex].getClass();
+        }
+    };  
 
     /**
      * Creates new form GUIReader
@@ -113,43 +122,11 @@ public class GUIReader extends javax.swing.JFrame {
             }
         });
 
-        urlTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Url", "Page", "Document", "Image"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Boolean.class, java.lang.Boolean.class, java.lang.Boolean.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
+        urlTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        urlTable.setModel(tableModel);
+        urlTable.setCellSelectionEnabled(true);
+        urlTable.getTableHeader().setReorderingAllowed(false);
         scrollPane.setViewportView(urlTable);
-        if (urlTable.getColumnModel().getColumnCount() > 0) {
-            urlTable.getColumnModel().getColumn(0).setPreferredWidth(300);
-            urlTable.getColumnModel().getColumn(0).setHeaderValue("Url");
-            urlTable.getColumnModel().getColumn(1).setMaxWidth(100);
-            urlTable.getColumnModel().getColumn(1).setHeaderValue("Page");
-            urlTable.getColumnModel().getColumn(2).setMaxWidth(100);
-            urlTable.getColumnModel().getColumn(2).setHeaderValue("Document");
-            urlTable.getColumnModel().getColumn(3).setMaxWidth(100);
-            urlTable.getColumnModel().getColumn(3).setHeaderValue("Image");
-        }
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -292,6 +269,8 @@ public class GUIReader extends javax.swing.JFrame {
                     default:
                 }
             }
+            tableModel.setDataVector(data, columnNames);
+            
         }
 
     }
@@ -308,7 +287,7 @@ public class GUIReader extends javax.swing.JFrame {
                 analyzeButton.setEnabled(false);
                 break;
             case JFileChooser.APPROVE_OPTION:
-                if (chooser.getTypeDescription(chooser.getSelectedFile()).equals("XML File")) {
+                if (chooser.getTypeDescription(chooser.getSelectedFile()).toLowerCase().contains("xml")) {
                     xml.setFile(chooser.getSelectedFile());
                     fileField.setText(xml.getFileName());
                     try {
@@ -339,7 +318,6 @@ public class GUIReader extends javax.swing.JFrame {
             XML printXML = new XML();
             jTextArea1.append(printXML.printResults());
             xml.parseXML();
-
             buildTable();
 
         } catch (FileNotFoundException fnfe) {
