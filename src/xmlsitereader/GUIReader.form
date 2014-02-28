@@ -124,7 +124,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="File"/>
+        <Property name="text" type="java.lang.String" value="File:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="browseButton">
@@ -144,6 +144,9 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="fileField">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fileFieldActionPerformed"/>
       </Events>

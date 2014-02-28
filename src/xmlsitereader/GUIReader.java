@@ -70,7 +70,7 @@ public class GUIReader extends javax.swing.JFrame {
         setTitle("Eagle Creek Sitemap Analyzer v1.0");
         setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setText("File");
+        jLabel1.setText("File:");
 
         browseButton.setText("Browse");
         browseButton.addActionListener(new java.awt.event.ActionListener() {
@@ -86,6 +86,7 @@ public class GUIReader extends javax.swing.JFrame {
             }
         });
 
+        fileField.setEditable(false);
         fileField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fileFieldActionPerformed(evt);
@@ -218,7 +219,10 @@ public class GUIReader extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Method to build table of information based on which radio button is selected
+     * @param button 
+     */
     private void buildTable(String button) {
         URL[] urls;
         switch (button) {
@@ -243,7 +247,11 @@ public class GUIReader extends javax.swing.JFrame {
         urlTable.getColumnModel().getColumn(2).setMaxWidth(70);
         urlTable.getColumnModel().getColumn(3).setMaxWidth(70);
     }
-    
+    /**
+     * Method to build an Object[][] from a URL[]
+     * @param urls 
+     */
+     
     private void buildData(URL[] urls) {
         data = new Object[urls.length][columnNames.length];
         for (int i = 0; i < urls.length; i++) {
@@ -271,7 +279,10 @@ public class GUIReader extends javax.swing.JFrame {
         }
     }
 
-
+/**
+ * Open JFileChooser to select a .xml file to parse
+ * @param evt 
+ */
     private void browseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_browseButtonActionPerformed
 
         JFileChooser chooser = new JFileChooser();
@@ -279,8 +290,11 @@ public class GUIReader extends javax.swing.JFrame {
 
         switch (returnOption) {
             case JFileChooser.CANCEL_OPTION:
+                
                 JOptionPane.showMessageDialog(null, "You must select a file to continue.", "Warning", JOptionPane.WARNING_MESSAGE);
                 analyzeButton.setEnabled(false);
+                fileField.setText("");
+                
                 break;
             case JFileChooser.APPROVE_OPTION:
                 if (chooser.getTypeDescription(chooser.getSelectedFile()).toLowerCase().contains("xml")) {
@@ -306,7 +320,10 @@ public class GUIReader extends javax.swing.JFrame {
                 analyzeButton.setEnabled(false);
         }
     }//GEN-LAST:event_browseButtonActionPerformed
-
+    /**
+     * Calls parseXML and sets results
+     * @param evt 
+     */
     private void analyzeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_analyzeButtonActionPerformed
 
         try {            
@@ -315,9 +332,7 @@ public class GUIReader extends javax.swing.JFrame {
             xml.parseXML();
             xml.calculateResults();
             jTextArea1.setText(xml.printResults());
-            buildTable("all");
-           
-            
+            buildTable("all");            
 
         } catch (FileNotFoundException fnfe) {
             System.out.println(fnfe);
