@@ -80,7 +80,7 @@
                               <Component id="fileField" min="-2" pref="244" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="browseButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Component id="analyzeButton" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -99,7 +99,7 @@
                   <Component id="browseButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="fileField" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="analyzeButton" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                  <Component id="analyzeButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
