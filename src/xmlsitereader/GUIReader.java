@@ -56,13 +56,15 @@ public class GUIReader extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        allRadioButton = new javax.swing.JRadioButton();
+        imageRadioButton = new javax.swing.JRadioButton();
+        documentRadioButton = new javax.swing.JRadioButton();
+        pageRadioButton = new javax.swing.JRadioButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
+
+        allRadioButton.setSelected(true);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Eagle Creek Sitemap Analyzer v1.0");
@@ -111,35 +113,35 @@ public class GUIReader extends javax.swing.JFrame {
 
         jLabel3.setText("Filter by:");
 
-        filterButtonGroup.add(jRadioButton1);
-        jRadioButton1.setText("All");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        filterButtonGroup.add(allRadioButton);
+        allRadioButton.setText("All");
+        allRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                allRadioButtonActionPerformed(evt);
             }
         });
 
-        filterButtonGroup.add(jRadioButton2);
-        jRadioButton2.setText("Image");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        filterButtonGroup.add(imageRadioButton);
+        imageRadioButton.setText("Image");
+        imageRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                imageRadioButtonActionPerformed(evt);
             }
         });
 
-        filterButtonGroup.add(jRadioButton3);
-        jRadioButton3.setText("Document");
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+        filterButtonGroup.add(documentRadioButton);
+        documentRadioButton.setText("Document");
+        documentRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
+                documentRadioButtonActionPerformed(evt);
             }
         });
 
-        filterButtonGroup.add(jRadioButton4);
-        jRadioButton4.setText("Page");
-        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+        filterButtonGroup.add(pageRadioButton);
+        pageRadioButton.setText("Page");
+        pageRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
+                pageRadioButtonActionPerformed(evt);
             }
         });
 
@@ -166,13 +168,13 @@ public class GUIReader extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton1)
+                        .addComponent(allRadioButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton4)
+                        .addComponent(pageRadioButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton3)
+                        .addComponent(documentRadioButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton2))
+                        .addComponent(imageRadioButton))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addComponent(jLabel1)
@@ -201,10 +203,10 @@ public class GUIReader extends javax.swing.JFrame {
                 .addGap(50, 50, 50)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton4))
+                    .addComponent(allRadioButton)
+                    .addComponent(imageRadioButton)
+                    .addComponent(documentRadioButton)
+                    .addComponent(pageRadioButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(scrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -217,10 +219,32 @@ public class GUIReader extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void buildTable() {
-
-        URL[] urls = xml.getURLs();
-
+    private void buildTable(String button) {
+        URL[] urls;
+        switch (button) {
+            case "all":
+                urls = xml.getURLs();
+                break;
+            case "page":
+                urls = xml.getPageURLs();
+                break;
+            case "document":
+                urls = xml.getDocumentURLs();
+                break;
+            default:
+                urls = xml.getImageURLs();
+                break;
+        }
+        
+        buildData(urls);
+            
+        tableModel.setDataVector(data, columnNames);
+        urlTable.getColumnModel().getColumn(1).setMaxWidth(70);
+        urlTable.getColumnModel().getColumn(2).setMaxWidth(70);
+        urlTable.getColumnModel().getColumn(3).setMaxWidth(70);
+    }
+    
+    private void buildData(URL[] urls) {
         data = new Object[urls.length][columnNames.length];
         for (int i = 0; i < urls.length; i++) {
             for (int j = 0; j < columnNames.length; j++) {
@@ -244,12 +268,7 @@ public class GUIReader extends javax.swing.JFrame {
                     default:
                 }
             }
-            tableModel.setDataVector(data, columnNames);
-            urlTable.getColumnModel().getColumn(1).setMaxWidth(70);
-            urlTable.getColumnModel().getColumn(2).setMaxWidth(70);
-            urlTable.getColumnModel().getColumn(3).setMaxWidth(70);
         }
-
     }
 
 
@@ -296,7 +315,7 @@ public class GUIReader extends javax.swing.JFrame {
             xml.parseXML();
             xml.calculateResults();
             jTextArea1.setText(xml.printResults());
-            buildTable();
+            buildTable("all");
            
             
 
@@ -309,21 +328,21 @@ public class GUIReader extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_fileFieldActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    private void allRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_allRadioButtonActionPerformed
+        buildTable("all");
+    }//GEN-LAST:event_allRadioButtonActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    private void imageRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imageRadioButtonActionPerformed
+       buildTable("iamge");
+    }//GEN-LAST:event_imageRadioButtonActionPerformed
 
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
+    private void documentRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_documentRadioButtonActionPerformed
+        buildTable("document");
+    }//GEN-LAST:event_documentRadioButtonActionPerformed
 
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
+    private void pageRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pageRadioButtonActionPerformed
+       buildTable("page");
+    }//GEN-LAST:event_pageRadioButtonActionPerformed
 
     private void urlTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_urlTableMouseClicked
         // TODO add your handling code here:
@@ -365,22 +384,22 @@ public class GUIReader extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton allRadioButton;
     private javax.swing.JButton analyzeButton;
     private javax.swing.JButton browseButton;
+    private javax.swing.JRadioButton documentRadioButton;
     private javax.swing.JTextField fileField;
     private javax.swing.ButtonGroup filterButtonGroup;
+    private javax.swing.JRadioButton imageRadioButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JRadioButton pageRadioButton;
     private javax.swing.JScrollPane scrollPane;
     private javax.swing.JTable urlTable;
     // End of variables declaration//GEN-END:variables

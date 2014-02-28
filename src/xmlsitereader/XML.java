@@ -29,6 +29,9 @@ public class XML {
     private String fileName;
     private File file;
     private URL[] urls;
+    private ArrayList<URL> documentURLs;
+    private ArrayList<URL> pageURLs;
+    private ArrayList<URL> imageURLs;
     private String[] fullPaths;
     private final ArrayList<String> documentExtensions = new ArrayList(Arrays.asList(".doc", ".docx", ".pdf", ".txt", ".odt",".odg", ".csv", ".xls", ".xlsx"));
     private final ArrayList<String> pageExtensions = new ArrayList(Arrays.asList(".htm", ".html", ".asp", ".jsp", ".php", ".aspx"));
@@ -67,6 +70,16 @@ public class XML {
         return urls;
     }
     
+    public URL[] getDocumentURLs() {
+        return documentURLs.toArray(new URL[documentURLs.size()]);
+    }
+    public URL[] getPageURLs() {
+        return pageURLs.toArray(new URL[pageURLs.size()]);
+    }
+    public URL[] getImageURLs() {
+        return imageURLs.toArray(new URL[imageURLs.size()]);
+    }
+    
         
     public void parseXML() throws FileNotFoundException {
 
@@ -89,6 +102,9 @@ public class XML {
                 }
                 
                 urls = new URL[nodeList.getLength()];
+                documentURLs = new ArrayList<>();
+                pageURLs = new ArrayList<>();
+                imageURLs = new ArrayList<>();
                 
                 for (int i = 0; i < fullPaths.length; i++) {
                     boolean stored = false; //Flag to see if we've had a match
@@ -96,6 +112,7 @@ public class XML {
                     for (String extension : documentExtensions) {
                         if (fullPaths[i].toLowerCase().endsWith(extension)) {
                             urls[i] = new URL(fullPaths[i], Boolean.FALSE, Boolean.TRUE, Boolean.FALSE);
+                            documentURLs.add(new URL(fullPaths[i], Boolean.FALSE, Boolean.TRUE, Boolean.FALSE));
                             sumDocuments++;
                             stored = true;
                         }
@@ -104,6 +121,7 @@ public class XML {
                     for (String extension : pageExtensions) {
                         if (fullPaths[i].toLowerCase().endsWith(extension)) {
                             urls[i] = new URL(fullPaths[i], Boolean.TRUE, Boolean.FALSE, Boolean.FALSE);
+                            pageURLs.add(new URL(fullPaths[i], Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
                             sumPages++;
                             stored = true;
                         }                    
@@ -112,6 +130,8 @@ public class XML {
                     for (String extension : imageExtensions) {
                         if (fullPaths[i].toLowerCase().endsWith(extension)) {
                             urls[i] = new URL(fullPaths[i], Boolean.FALSE, Boolean.FALSE, Boolean.TRUE);
+                            imageURLs.add(new URL(fullPaths[i], Boolean.FALSE, Boolean.FALSE, Boolean.TRUE));
+                            
                             sumImages++;
                             stored = true;
                         } 
@@ -119,6 +139,7 @@ public class XML {
                     
                     if (!stored) {
                         urls[i] = new URL(fullPaths[i], Boolean.TRUE, Boolean.FALSE, Boolean.FALSE);
+                        pageURLs.add(new URL(fullPaths[i], Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
                         sumPages++;
                     }
                     
