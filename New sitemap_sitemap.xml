@@ -1,0 +1,4620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- sitemap-generator-url="http://www.auditmypc.com/free-sitemap-generator.asp" -->
+<!-- This sitemap was created using the free tool found here: http://www.auditmypc.com/free-sitemap-generator.asp -->
+<!-- Audit My PC also offers free security tools to help keep you safe during internet travels -->
+<urlset 
+		xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+		http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+>
+<url>
+    <loc>http://utah.gov/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/css/style.css</loc>
+    <lastmod>2014-01-15T16:58:04-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/shared-content/css/accessibility/default.css</loc>
+    <lastmod>2013-05-01T00:03:21-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/css/icons.css</loc>
+    <lastmod>2013-05-01T00:04:36-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/css/noscript.css</loc>
+    <lastmod>2013-05-01T00:05:54-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew/rss.xml?category=utah.gov</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencylist.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/governor.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/executive.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/legislative.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/judicial.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/citycounty.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/federal.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/election.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/utahlaws.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/priorities/economic_development.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/priorities/education.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/priorities/energy.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/employment/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/careers/explore.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/careers/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/infographics/infographic-unemployment.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/business/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/business.html?type=Business</loc>
+</url>
+<url>
+    <loc>http://utah.gov/business/starting.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/business/running.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/business/closing.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/infographics/infographic-business.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/education/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/education/k12.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/education/colleges.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/education/edresources.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/education/historical.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/education/onlinebook.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/education/libraries.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/education/studentnet.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/education/kidspage.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/infographics/infographic-education.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/residents/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/residents/citandcom.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/residents/healthandss.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/residents/newcomers.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/residents/movingtoutah.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/residents/carsandtrans.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/residents/utahlaws.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/residents/taxes.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/residents/arts.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/residents/sports.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/neighbor/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/infographics/infographic-statedollars.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/visiting/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/visiting/travel.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/visiting/arts.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/visiting/highwayinfo.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/visiting/sports.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/infographics/infographic-stateparks.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/about/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/about/demographics.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/about/symbols.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/about/history.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/about/land.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/about/quickfacts.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/locations/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/about/arts.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/infographics/infographic-promontory.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connect/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connect/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/facebook/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connect/twitter/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connect/googleplus.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connect/photos.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connect/youtube.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connect/podcasts.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connect/widgets.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connect/mobile.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/collaborate/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connect/presentations.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connect/publications.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/developer/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/index.html?type=Citizen</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/index.html?type=Business</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/index.html?type=Government</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/financial.html?type=Citizen</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/legal.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/registration/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/alerts/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/trending/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/contact.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/categories.html?type=citizen</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/categories.html?type=business</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/categories.html?type=government</loc>
+</url>
+<url>
+    <loc>http://utah.gov/images/news/governor-flickr-placeholder.jpg</loc>
+    <lastmod>2013-12-17T17:25:46-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?type=outdoor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?type=commerce</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connect/twitter/twitter-business.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/facebook/facebook-publiceducation.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/images/teaser-map.gif</loc>
+    <lastmod>2013-04-30T23:39:39-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/testimage.jpg</loc>
+    <lastmod>2013-04-30T23:39:39-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/services/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/taxpayer-receipt/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/images/innovations/taxpayer-vert.jpg</loc>
+    <lastmod>2013-12-04T10:08:07-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/innovations/avenueH-vert.jpg</loc>
+    <lastmod>2013-12-04T10:08:19-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/innovations/education-horz-mid.png</loc>
+    <lastmod>2013-04-30T23:40:00-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/innovations/education-horz-fore.png</loc>
+    <lastmod>2013-04-30T23:40:00-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/innovations/education-vert-mid.png</loc>
+    <lastmod>2013-04-30T23:40:00-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/innovations/education-vert-fore.png</loc>
+    <lastmod>2013-04-30T23:40:00-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/innovations/utahair-vert.jpg</loc>
+    <lastmod>2013-12-04T10:08:14-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/innovations/open-horz-mid.png</loc>
+    <lastmod>2013-04-30T23:40:00-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/innovations/open-horz-fore.png</loc>
+    <lastmod>2013-04-30T23:39:59-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/innovations/open-vert-mid.png</loc>
+    <lastmod>2013-04-30T23:40:00-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/innovations/open-vert-fore.png</loc>
+    <lastmod>2013-04-30T23:40:00-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connect/twitter.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connect/flickr.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connect/feeds.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connect/blogs.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/maps/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/images/footer-awards.png</loc>
+    <lastmod>2013-10-03T11:06:41-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/sitemap.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/disclaimer.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/security.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/accessibility.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/translate.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/shared-content/css/style.css</loc>
+    <lastmod>2013-12-06T12:16:34-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/government/css/portal.css</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/apple-touch-icon.png</loc>
+    <lastmod>2013-12-05T11:28:18-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/ajax-loader.gif</loc>
+    <lastmod>2013-03-08T17:29:48-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/tertiary-government-book.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/tertiary-government-phone.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/tertiary-government-law.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/tertiary-government-vote.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/tertiary-government-federal.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/tertiary-government-state.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/tertiary-government.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/tertiary-government-legislature.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/tertiary-government-juditial.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/tertiary-government-city.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/government/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/contactgov.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/images/governor-headshot.jpg</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/staff/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/images/firstlady-headshot.jpg</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/government/images/ltgov-headshot.jpg</loc>
+    <lastmod>2013-11-25T10:42:21-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/staff/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencycomplete.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/countymap.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/open/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/css/style.css</loc>
+    <lastmod>2013-12-14T17:44:35-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/about/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/priorities/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/boards/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/contact/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/headers/governor-herbet-2012-headers-09.png</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/priorities/jobs.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/priorities/self-determination.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/headers/governor-herbet-2012-headers-08.png</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/education/PACE2013Booklet.pdf</loc>
+    <lastmod>2013-03-08T17:29:55-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/education/2013EducationRecommendations.pdf</loc>
+    <lastmod>2013-03-08T17:29:55-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/priorities/economic-development-visits.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/employment/css/portal.css</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/careers/css/portal.css</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/careers/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/careers/investigate.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/careers/find.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/careers/glossary.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/careers/resources.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/careers/tips.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/careers/faq.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/careers/partners.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/infographics/css/portal.css</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/infographics/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/infographics/infographic-unemployment-lg.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/infographics/unemployment-infograph-570.png</loc>
+    <lastmod>2013-06-26T17:53:38-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/state_data_files.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/state_data_sources.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/local_data_sources.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/data_visualizations.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/external_data_sources.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/collaborate/submit-infographic.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/collaborate/images/collaborate-bump-data.png</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/careers/images/utahfutures.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/business/css/portal.css</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/business/starting/assess.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/business/starting/structure_starting.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/business/starting/plan.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/business/starting/government_starting.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/business/starting/financial_starting.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/business/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/business.html?type=citizen</loc>
+</url>
+<url>
+    <loc>http://utah.gov/business/running/financial_running.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/business/running/structure_running.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/business/running/government_running.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/business/running/counseling_running.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/business/running/statistical_running.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/business/running/hr_running.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/business/closing/dissolve.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/business/training.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/business/starting/counseling_starting.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/business/starting/statistical_starting.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/business/starting/hr_starting.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/index.html?type=Legal</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/financial.html?type=Business</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/index.html?type=Technology</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/index.html?type=Agriculture</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/index.html?type=Education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/index.html?type=Energy</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/index.html?type=Health</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/index.html?type=Housing</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/index.html?type=Human</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/index.html?type=Jobs</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/index.html?type=Natural</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/index.html?type=Safety</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/index.html?type=Taxes</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/index.html?type=Voting</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/index.html?type=History</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/index.html?type=Tourism</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/index.html?type=Transportation</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/infographics/infographic-business-lg.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/infographics/business-infograph-570.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/education/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/business/closing/government_closing.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/business/closing/counseling_closing.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/infographics/infographic-education-lg.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/infographics/education-infograph-570.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/residents/css/portal.css</loc>
+    <lastmod>2013-03-08T17:29:51-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/residents/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/residents/countymap.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/images/logo-211.gif</loc>
+    <lastmod>2013-03-08T17:29:48-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/css/portal.css</loc>
+    <lastmod>2013-03-08T17:30:04-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/seniors.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/caregiver.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/general.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/images/seniors_sml.jpg</loc>
+    <lastmod>2013-03-08T17:30:04-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/images/caregivers_sml.jpg</loc>
+    <lastmod>2013-03-08T17:30:04-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/images/general_sml.jpg</loc>
+    <lastmod>2013-03-08T17:30:04-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/seniorsfinancial.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/seniorshousing.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/seniorshealth.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/seniorslegal.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/neighbor/centers.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/neighbor/katrina.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/infographics/infographic-statedollars-lg.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/infographics/residents-infograph-570.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/visiting/css/portal.css</loc>
+    <lastmod>2013-03-08T17:29:51-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/visiting/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/infographics/infographic-stateparks-lg.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/infographics/stateparks-infograph-570.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/about/maps.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/about/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/tertiary-visiting-parks.png</loc>
+    <lastmod>2013-03-08T17:29:48-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/tertiary-visiting-tourism.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/tertiary-visiting-arts.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/tertiary-visiting-traffic.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/tertiary-visiting-sports.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/locations/css/portal.css</loc>
+    <lastmod>2013-03-08T17:30:04-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/infographics/infographic-promontory-lg.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/infographics/promontory-infograph-570.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connect/css/portal.css</loc>
+    <lastmod>2013-03-08T17:29:57-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/advert/utahgov_2012-advert-fullpage-connect.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/facebook/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/facebook.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/googleplus.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/blogs.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/widgets.png</loc>
+    <lastmod>2013-03-08T17:29:48-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/publications.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/twitter.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/rss.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/mobile.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/presentations.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connect/pinterest.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/pinterest.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/videos.png</loc>
+    <lastmod>2013-03-08T17:29:48-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/multimedia.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/photos.png</loc>
+    <lastmod>2013-03-08T17:29:48-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/podcasts.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connect/linkedin.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/linkedin.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connectplus/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/connectplus.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connect/qr.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/qr.png</loc>
+    <lastmod>2013-03-08T17:29:48-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connect/flipboard.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/flipboard.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/icons/60/collaborate.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connect/twitter/css/portal.css</loc>
+    <lastmod>2013-06-26T13:49:31-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connect/twitter/twitter-government.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connect/twitter/twitter-education.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connect/twitter/twitter-jobs.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connect/twitter/twitter-tourism.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connect/twitter/twitter-community.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connect/twitter/twitter-legislature.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connect/twitter/twitter-hospitals.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connect/itunes.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/collaborate/submit-photo.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/collaborate/images/collaborate-bump-photo.png</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/collaborate/submit-widget.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/collaborate/images/collaborate-bump-widget.png</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/facebook/css/portal.css</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/facebook/facebook-stateagencies.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/facebook/facebook-localgovernment.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/facebook/facebook-federalgovernment.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/facebook/facebook-highereducation.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/facebook/images/find_us_on_facebook_badge.gif</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/facebook/images/facebook/facebook-homepage-stateagencies.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/facebook/images/facebook/facebook-homepage-localgov.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/facebook/images/facebook/facebook-homepage-federal.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/facebook/images/facebook/facebook-homepage-publiceducation.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/facebook/images/facebook/facebook-homepage-highereducation.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/collaborate/submit-mobile.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/collaborate/images/collaborate-bump-mobile.png</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/collaborate/css/portal.css</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/collaborate/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/collaborate/submit-map.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/collaborate/submit-location.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/collaborate/submit-video.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/collaborate/submit-blog.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/icons/data-icons-vis.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connect/images/icons/connect-icons-mobile.jpg</loc>
+    <lastmod>2013-03-08T17:29:57-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/icons/data-icons-geo.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/collaborate/images/icon-location.jpg</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connect/images/icons/connect-icons-photos.jpg</loc>
+    <lastmod>2013-03-08T17:29:57-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connect/images/icons/connect-icons-multimedia.jpg</loc>
+    <lastmod>2013-03-08T17:29:57-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connect/images/icons/connect-icons-widget.jpg</loc>
+    <lastmod>2013-03-08T17:29:57-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connect/images/icons/connect-icons-blogs.jpg</loc>
+    <lastmod>2013-03-08T17:29:57-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/developer/css/portal.css</loc>
+    <lastmod>2013-03-08T17:29:48-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/developer/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/developer/apis/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/collaborate/submit-application.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/style.css</loc>
+    <lastmod>2013-03-08T17:30:04-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/services/financial.html?type=Government</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/financial.html?type=Citizen%20</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/index.html?type=citizen</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/index.html?type=business</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/index.html?type=government</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/financial.html?type=citizen</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/index.html?type=citzen</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/financial.html?type=citzen</loc>
+</url>
+<url>
+    <loc>http://utah.gov/registration/css/portal.css</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/registration/onlineservices.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/registration/docs/TLR_application_tc-895.pdf</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/registration/docs/validate_agreement.pdf</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/registration/billingoptions.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/registration/regcanellation.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/registration/faq.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/css/portal.css</loc>
+    <lastmod>2013-03-08T17:29:57-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/faq.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/trending/css/portal.css</loc>
+    <lastmod>2013-06-04T16:36:50-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/alerts/css/portal.css</loc>
+    <lastmod>2013-03-08T17:29:51-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/alerts/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/alerts/amberalerts.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/alerts/airqualityweather.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/alerts/consumer.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/alerts/disaster.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/alerts/health.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/alerts/nature.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/alerts/nationalsafety.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/alerts/travel.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/education/education-summit-2013.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=40&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=2360&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/categories.html?type=Citizen</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/categories.html?type=Business</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/categories.html?type=Government</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=citizen&#x26;id=2&#x26;category=Agriculture%20and%20Food%20Production</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=citizen&#x26;id=4&#x26;category=Business%20and%20Commerce</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=citizen&#x26;id=6&#x26;category=Communications</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=citizen&#x26;id=8&#x26;category=Education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=citizen&#x26;id=10&#x26;category=Energy%20and%20Utilities</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=citizen&#x26;id=12&#x26;category=Environmental%20Protection</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=citizen&#x26;id=14&#x26;category=Government</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=citizen&#x26;id=16&#x26;category=Health</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=citizen&#x26;id=18&#x26;category=History%20and%20Culture</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=citizen&#x26;id=20&#x26;category=Housing%20and%20Community%20Development</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=citizen&#x26;id=22&#x26;category=Human%20Services%20and%20Social%20Programs</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=citizen&#x26;id=24&#x26;category=Industry%20and%20Technology</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=citizen&#x26;id=26&#x26;category=Jobs,%20Employment,%20and%20Occupations</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=citizen&#x26;id=28&#x26;category=Laws%20and%20Regulations</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=citizen&#x26;id=30&#x26;category=Legal%20Services%20and%20Courts</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=citizen&#x26;id=32&#x26;category=Natural%20Resources</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=citizen&#x26;id=34&#x26;category=Public%20Safety%20and%20Corrections</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=citizen&#x26;id=36&#x26;category=Recreation%20and%20Tourism</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=citizen&#x26;id=38&#x26;category=Taxes%20and%20Government%20Revenue</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=citizen&#x26;id=40&#x26;category=Transportation%20and%20Motor%20Vehicles</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=citizen&#x26;id=42&#x26;category=Voting%20and%20Elections</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=government&#x26;id=2&#x26;category=Agriculture%20and%20Food%20Production</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=government&#x26;id=4&#x26;category=Business%20and%20Commerce</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=government&#x26;id=6&#x26;category=Communications</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=government&#x26;id=8&#x26;category=Education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=government&#x26;id=10&#x26;category=Energy%20and%20Utilities</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=government&#x26;id=12&#x26;category=Environmental%20Protection</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=government&#x26;id=14&#x26;category=Government</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=government&#x26;id=16&#x26;category=Health</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=government&#x26;id=18&#x26;category=History%20and%20Culture</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=government&#x26;id=20&#x26;category=Housing%20and%20Community%20Development</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=government&#x26;id=22&#x26;category=Human%20Services%20and%20Social%20Programs</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=government&#x26;id=24&#x26;category=Industry%20and%20Technology</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=government&#x26;id=26&#x26;category=Jobs,%20Employment,%20and%20Occupations</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=government&#x26;id=28&#x26;category=Laws%20and%20Regulations</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=government&#x26;id=30&#x26;category=Legal%20Services%20and%20Courts</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=government&#x26;id=32&#x26;category=Natural%20Resources</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=government&#x26;id=34&#x26;category=Public%20Safety%20and%20Corrections</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=government&#x26;id=36&#x26;category=Recreation%20and%20Tourism</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=government&#x26;id=38&#x26;category=Taxes%20and%20Government%20Revenue</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=government&#x26;id=40&#x26;category=Transportation%20and%20Motor%20Vehicles</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=government&#x26;id=42&#x26;category=Voting%20and%20Elections</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/financial.html?type=government</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=business&#x26;id=2&#x26;category=Agriculture%20and%20Food%20Production</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=business&#x26;id=4&#x26;category=Business%20and%20Commerce</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=business&#x26;id=6&#x26;category=Communications</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=business&#x26;id=8&#x26;category=Education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=business&#x26;id=10&#x26;category=Energy%20and%20Utilities</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=business&#x26;id=12&#x26;category=Environmental%20Protection</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=business&#x26;id=14&#x26;category=Government</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=business&#x26;id=16&#x26;category=Health</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=business&#x26;id=18&#x26;category=History%20and%20Culture</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=business&#x26;id=20&#x26;category=Housing%20and%20Community%20Development</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=business&#x26;id=22&#x26;category=Human%20Services%20and%20Social%20Programs</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=business&#x26;id=24&#x26;category=Industry%20and%20Technology</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=business&#x26;id=26&#x26;category=Jobs,%20Employment,%20and%20Occupations</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=business&#x26;id=28&#x26;category=Laws%20and%20Regulations</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=business&#x26;id=30&#x26;category=Legal%20Services%20and%20Courts</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=business&#x26;id=32&#x26;category=Natural%20Resources</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=business&#x26;id=34&#x26;category=Public%20Safety%20and%20Corrections</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=business&#x26;id=36&#x26;category=Recreation%20and%20Tourism</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=business&#x26;id=38&#x26;category=Taxes%20and%20Government%20Revenue</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=business&#x26;id=40&#x26;category=Transportation%20and%20Motor%20Vehicles</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=business&#x26;id=42&#x26;category=Voting%20and%20Elections</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/financial.html?type=business</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=40&#x26;&#x26;type=outdoor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=640&#x26;&#x26;type=outdoor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=40&#x26;&#x26;type=commerce</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=560&#x26;&#x26;type=commerce</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=40&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=960&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/taxpayer-receipt/css/layout_core.css</loc>
+    <lastmod>2013-12-03T16:18:34-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/taxpayer-receipt/images/brand/utf_logo.gif</loc>
+    <lastmod>2013-11-18T17:27:37-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/taxpayer-receipt/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/awards/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/collaborate/images/collaborate-bump-blog.png</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/maps/css/portal.css</loc>
+    <lastmod>2013-03-08T17:30:04-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/collaborate/images/collaborate-bump-map.png</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/css/redmont/jquery-ui-1.8.13.custom.css</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/css/style.css</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/ptif-rates.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/images/layout/searchbutton.png</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/ptif-overview.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/ptif-instructions.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/ptif-gasb.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/ptif-forms.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/investments-overview.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/investments-fund-stateschool.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/investments-fund-state.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/investments-fund-retirement.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/investor-overview.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/investor-economic.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/investor-budget.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/investor-offering.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/investor-acdm.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/investor-bonds.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/investor-cafr.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/investor-archive.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/investor-retirement.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/mmc-overview.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/mmc-contact.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/mmc-act.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/mmc-rules.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/mmc-depository.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/mmc-dealer.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/mmc-adviser.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/mmc-forms.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/mmc-meetings.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/mmc-enforcements.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/aboutus-overview.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/aboutus-treasurer.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/aboutus-staff.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/aboutus-initiatives.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/news.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/aboutus-history.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/resources-overview.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/InvReqForm.pdf</loc>
+    <lastmod>2013-03-08T17:30:01-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/newptifform.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/utah-state-treasurer-deposit-investment.pdf</loc>
+    <lastmod>2013-03-08T17:30:01-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/images/icons/uesp.png</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/news-2013-07-12.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/news-2012-01-31.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/news-2011-08-29.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/news-2011-08-15.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/images/icons/icons_Bill-Bug-250.jpg</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/images/icons/treasurer_seal.png</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/css/portal.css</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/davey_logo.jpg</loc>
+    <lastmod>2013-10-30T11:09:16-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award_2010_webby_silver.gif</loc>
+    <lastmod>2013-10-16T10:39:45-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/WebAward2013.png</loc>
+    <lastmod>2013-09-17T14:17:50-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/DGAA-2011.png</loc>
+    <lastmod>2013-09-17T14:17:51-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/NASCIO.png</loc>
+    <lastmod>2013-09-17T14:17:50-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/BOW.png</loc>
+    <lastmod>2013-09-17T14:18:00-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/VEMAAward.png</loc>
+    <lastmod>2013-09-17T14:19:35-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/IMAaward.png</loc>
+    <lastmod>2013-09-17T14:19:29-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/pti2013.png</loc>
+    <lastmod>2013-09-17T14:19:31-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/horizon2013.png</loc>
+    <lastmod>2013-04-16T13:13:55-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/utahinnovation2013.png</loc>
+    <lastmod>2013-04-16T13:13:56-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/bestofstate2013.png</loc>
+    <lastmod>2013-04-16T13:13:56-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-excellencegov.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-davey-2012.gif</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/Digital_States_Logo.gif</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/pti.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/webaward-2012.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/awwards.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/bow2012.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/dgaa.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-govmark.gif</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/vema.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/ima_large_bic.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/designshack.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-cs-support.gif</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/bos-medal.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/Communicator2012.gif</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/HorizonAward.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-w3-2011.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-nascio-recognition-2004.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-2011-botw.gif</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-dgaa.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-best-fit-integrator.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-ima.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-iaca-2008.gif</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/communicator_2011.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/webEnabled.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-bestofstate-2011.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-utah-innovation-logo.gif</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/digital-states-survey.gif</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-silver-davy-2010.gif</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-w3winner_silver_2010.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-aamva.gif</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-webaward-2010.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-bestofstate-2010.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award_2010_webby.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-juggles.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/communicator-2010.gif</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-bestweb-2009.gif</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-gov20.gif</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-webaward-2009.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-designfirms-2009.gif</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-gcn.gif</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-bestofstate-2009.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-silver-davy-2009.gif</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-w3winner_silver_wht.gif</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-rutgers.gif</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-csg.gif</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-act-iac.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-nasca.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-web_award_logo2008.gif</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-iaca-2008.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-bestofstate-2008.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-cded.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award_bestweb.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-bestofstate.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-csea.gif</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-csginno.gif</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award-designfirms.gif</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award_digstat.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/awards/images/award_brown.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/security-logo-medium.gif</loc>
+    <lastmod>2013-03-08T17:29:48-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/logo-cybertrust.png</loc>
+    <lastmod>2013-03-08T17:29:48-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/careers//</loc>
+</url>
+<url>
+    <loc>http://utah.gov/careers//investigate.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/careers//explore.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/careers//find.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=40&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1320&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/headers/governor-herbet-2012-headers-15.png</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-derek-miller.jpg</loc>
+    <lastmod>2013-12-10T14:37:20-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-mike-mower.jpg?v=2</loc>
+    <lastmod>2014-01-24T16:59:14-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-marty-carpenter.jpg?v=2</loc>
+    <lastmod>2014-01-24T16:59:12-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-none.jpg</loc>
+    <lastmod>2013-12-10T14:37:21-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-jacey-skinner.jpg</loc>
+    <lastmod>2014-01-29T11:23:55-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-kristen-cox.jpg</loc>
+    <lastmod>2013-12-10T14:37:21-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-ron-gordon.jpg?v=2</loc>
+    <lastmod>2014-01-29T10:41:31-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-tami-pyfer.jpg</loc>
+    <lastmod>2014-01-28T11:40:36-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-cody-stewart.jpg?v=2</loc>
+    <lastmod>2014-01-24T16:59:14-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-alan-matheson.jpg?v=2</loc>
+    <lastmod>2014-01-28T11:40:36-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-benjamin-onofrio.jpg?v=2</loc>
+    <lastmod>2014-01-28T11:40:36-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-fran-stultz.jpg?v=2</loc>
+    <lastmod>2014-01-24T16:59:14-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-theresa-pinkal.jpg</loc>
+    <lastmod>2013-12-10T14:37:21-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-cherilyn-bradford.jpg</loc>
+    <lastmod>2013-12-10T14:37:20-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-tiffeni-wall.jpg</loc>
+    <lastmod>2014-01-24T16:59:12-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-andrea-hansen.jpg</loc>
+    <lastmod>2013-12-10T14:37:19-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-allyse-robertson.jpg?v=2</loc>
+    <lastmod>2014-01-28T11:40:36-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-nate-mcdonald.jpg?v=2</loc>
+    <lastmod>2014-01-24T16:37:31-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-shannon-simonsen.jpg?v=2</loc>
+    <lastmod>2014-01-28T11:40:36-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-ashlee-buchholtz.jpg</loc>
+    <lastmod>2013-12-10T14:37:19-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-judith-george.jpg</loc>
+    <lastmod>2013-12-10T14:37:21-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-carolynne-loder.jpg</loc>
+    <lastmod>2013-12-10T14:37:20-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-susan-deakin.jpg</loc>
+    <lastmod>2013-12-10T14:37:21-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-tammy-price.jpg</loc>
+    <lastmod>2013-12-10T14:37:21-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-fran-fish.jpg?v=2</loc>
+    <lastmod>2014-01-28T11:40:36-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-mark-eddington.jpg</loc>
+    <lastmod>2013-12-10T14:37:21-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-katriina-adair.jpg</loc>
+    <lastmod>2013-12-10T14:37:21-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/css/style.css</loc>
+    <lastmod>2013-10-24T18:24:55-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/about/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/news/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/contact/request-form.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/contact/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/images/photo-Mark-Thomas.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/images/photo-Spencer-Hadley.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/images/photo-lynette-erickson.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/images/photo-Justin-Lee.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/images/photo-Derek-Brenchley.jpg</loc>
+    <lastmod>2013-11-14T16:21:07-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/images/photo-Jennifer-Joy.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/images/photo-jaclyn-burt.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/images/photo-taylor-sherwood.jpg</loc>
+    <lastmod>2013-06-04T19:51:25-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/images/photo-evan-norman.jpg</loc>
+    <lastmod>2014-01-02T16:26:11-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/open/css/portal.css</loc>
+    <lastmod>2013-04-30T23:43:06-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/advert/utahgov_2013-advert-fullpage-open.jpg</loc>
+    <lastmod>2013-05-01T00:04:06-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/css/portal.css</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/icons/data-icons-statefiles.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/icons/data-icons-state.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/icons/data-icons-vis.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/icons/data-icons-external.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/icons/data-icons-infographic.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/icons/data-icons-local.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/images/countymap.jpg</loc>
+    <lastmod>2013-03-08T17:29:48-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencya.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencyb.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencyc.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencyd.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencye.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencyf.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencyg.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencyh.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencyi.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencyj.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencyk.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencyl.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencym.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencyn.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencyo.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencyp.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencyq.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencyr.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencys.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencyt.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencyu.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencyv.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencyw.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencyx.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencyy.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/agencyz.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/government/secretary-of-state.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/headers/governor-herbet-2012-headers-12.png</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/governor-herbert-headshot.jpg</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/headers/governor-herbet-2012-headers-07.png</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/downloads/utah_governor-cornerstones-24x36.pdf</loc>
+    <lastmod>2013-03-08T17:29:55-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/downloads/utah_governor-cornerstones-pocketcard.pdf</loc>
+    <lastmod>2013-03-08T17:29:55-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/header/features/2014-stateofthestate.png</loc>
+    <lastmod>2014-01-27T15:35:53-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/headers/governor-herbet-2012-headers-06.png</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/budget/FY2014_2015_Recommendations.pdf</loc>
+    <lastmod>2013-12-04T18:10:57-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/budget/FY_2015_BUDGET_ONE_PAGER-PUBLIC_ANNOUNCEMENT.pdf</loc>
+    <lastmod>2013-12-04T11:46:15-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/headers/governor-herbet-2012-headers-03.png</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/headers/governor-herbet-2012-headers-04.png</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/wildfire2012.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/button-search.gif</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/headers/governor-herbet-2012-headers-05.png</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/headers/governor-herbet-2012-headers-01.png</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/headers/governor-herbet-2012-headers-02.png</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/stateofstate/2014StateoftheStateAddress.pdf</loc>
+    <lastmod>2014-01-29T19:42:19-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/Speech-GovernorTransportationSummitRemark.pdf</loc>
+    <lastmod>2013-11-06T10:48:16-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/2013-inaugural-address.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/Speech-HealthcareSpeechtoAmericanEnterpriseInstitute.pdf</loc>
+    <lastmod>2013-03-08T17:29:55-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/stateofstate/2013StateoftheStateAddress.pdf</loc>
+    <lastmod>2013-03-08T17:29:55-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/2013-InuaguralAddress.pdf</loc>
+    <lastmod>2013-03-08T17:29:53-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/2012-state-of-state.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/speeches/unveiling-ten-year-energy-plan.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/Speech-House-Energy-and-Commerce-Testimony-3.1.11.pdf</loc>
+    <lastmod>2013-03-08T17:29:55-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/Speech-House-Natural-Resources-Testimony-3.1.11.pdf</loc>
+    <lastmod>2013-03-08T17:29:55-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/video/heritage-state-rights.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/article.html?article=4169</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/Inaugural-2010-FINAL-speech.pdf</loc>
+    <lastmod>2013-03-08T17:29:55-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/declarations/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/3.22.13GovernorExplainsHB76Veto.pdf</loc>
+    <lastmod>2013-03-22T12:40:47-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/OutdoorRecreationVision.pdf</loc>
+    <lastmod>2013-03-08T17:29:55-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/healthcare/PPACAFiscalClifflettertothePresident.pdf</loc>
+    <lastmod>2013-03-08T17:29:56-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/healthcare/HHSLettertoGovHerbert.pdf</loc>
+    <lastmod>2013-03-08T17:29:56-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/healthcare/SebeliusResponseLtrHerbertDec142012.pdf</loc>
+    <lastmod>2013-03-08T17:29:56-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/10year-stragegic-energy.pdf</loc>
+    <lastmod>2013-03-08T17:29:55-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/headers/governor-herbet-2012-headers-16.png</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-kimberly-hood.jpg</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/appointments-hood.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-leonard-blackham.jpg</loc>
+    <lastmod>2013-06-10T17:01:42-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/appointments-blackham.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-clark-harms.jpg</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/appointments-harms.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-francine-giani.jpg</loc>
+    <lastmod>2013-06-10T17:01:42-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/appointments-giani.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-julie-fisher.jpg</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/appointments-fisher.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-keith-squires.jpg</loc>
+    <lastmod>2013-09-30T12:00:01-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/appointments-squires.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-amanda-smith.jpg</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/appointments-smith.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-edward-leary.jpg</loc>
+    <lastmod>2013-06-11T13:55:13-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/appointments-leary.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-spencer-eccles.jpg</loc>
+    <lastmod>2013-11-14T12:52:15-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/appointments-eccles.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-dave-patton.jpg</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/appointments-patton.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-ann-williamson.jpg</loc>
+    <lastmod>2013-11-22T12:47:23-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/appointments-williamson.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-sherri-hayashi.jpg</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/appointments-hayashi.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-michael-styler.jpg</loc>
+    <lastmod>2013-06-10T17:01:43-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/appointments-styler.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-bruce-johnson.jpg</loc>
+    <lastmod>2013-06-10T17:01:43-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/appointments-johnson.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-mark-vanorden.jpg</loc>
+    <lastmod>2013-06-10T17:01:43-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/appointments-vanorden.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-carlos-braceras.jpg</loc>
+    <lastmod>2013-06-10T17:01:42-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/appointments-braceras.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-debbie-cragun.jpg</loc>
+    <lastmod>2013-06-10T17:01:43-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/appointments-cragun.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-jefferson-burton.jpg</loc>
+    <lastmod>2013-06-10T17:01:43-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/appointments-burton.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-jon-pierpont.jpg</loc>
+    <lastmod>2013-06-10T17:01:43-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/appointments-pierpont.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-sal-petilos.jpg</loc>
+    <lastmod>2013-09-30T12:00:06-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/appointments-petilos.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-rollin-cook.jpg</loc>
+    <lastmod>2013-09-30T12:00:08-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/appointments-cook.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-kiser.jpg</loc>
+    <lastmod>2013-06-10T17:01:40-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/appointments-kiser.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-harter.jpg</loc>
+    <lastmod>2013-10-10T17:09:10-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/appointments-harter.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/cabinet/appointments-depaulis.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/headers/governor-herbet-2012-headers-18.png</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/boards/newboardinformation.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/boards/documents/finalhandbook.pdf</loc>
+    <lastmod>2013-03-08T17:29:57-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/boards/documents/oathofoffice2013.pdf</loc>
+    <lastmod>2013-09-10T17:21:54-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/boards/documents/perdiemform.pdf</loc>
+    <lastmod>2013-03-08T17:29:57-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/contact/media_contacts.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/contact/request_form.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/headers/governor-herbet-2012-headers-19.png</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-gloria-hunt.jpg</loc>
+    <lastmod>2013-12-10T14:37:20-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-fran-fish.jpg</loc>
+    <lastmod>2014-01-28T11:40:36-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-nancy-neilson.jpg</loc>
+    <lastmod>2013-12-10T14:37:21-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-cody-stewart.jpg</loc>
+    <lastmod>2014-01-24T16:59:14-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-ron-gordon.jpg</loc>
+    <lastmod>2014-01-29T10:41:31-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/staff-photos/photo-spencer-cox.jpg</loc>
+    <lastmod>2014-01-06T15:10:12-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/politicians/photo-orrin-hatch.jpg</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/politicians/photo-mike-lee.jpg</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/politicians/photo-rob-bishop.jpg</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/politicians/photo-chris-stewart.jpg</loc>
+    <lastmod>2013-03-22T12:46:52-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/politicians/photo-jason-chaffetz.jpg</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/politicians/photo-jim-matheson.jpg</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/contact/psa-requests.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/headers/governor-herbet-2012-headers-13.png</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/index.html?page=40&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/index.html?page=600&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/news-advisories.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/index.html?category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/headers/governor-herbet-2012-headers-10.png</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/headers/governor-herbet-2012-headers-11.png</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/initiatives/Fresenius.jpg</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/initiatives/DSC_0127.jpg</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/initiatives/DSC_0140.jpg</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/initiatives/Petersen.jpg</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/initiatives/DSC_0019.jpg</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/initiatives/DSC_0015.jpg</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/infographics/infographic-broadband.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/infographics/broadband-infograph-205.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/infographics/unemployment-infograph-205.png</loc>
+    <lastmod>2013-06-26T17:53:38-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/infographics/business-infograph-205.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/infographics/education-infograph-205.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/infographics/residents-infograph-205.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/infographics/stateparks-infograph-205.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/infographics/promontory-infograph-205.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/infographics/dinosar-record-205.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/infographics/unemployment-infograph-940.png</loc>
+    <lastmod>2013-06-26T17:53:38-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/state-data-dea.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/state-data-firmfind.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/state-data-giadb.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/state-data-ibis.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/state-data-infousa.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/state-data-gis.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/state-data-transparency.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/state-data-ugate.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/state-data-uahousing.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/state-data-utahburials.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/state-data-utahconstruction.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/state-data-ued.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/state-data-uen.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/state-data-utahgeo.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/state-data-utahoccupation.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/state-data-utahpopulation.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/state-data-surveydata.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/state-data-utahlibrary.gif</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/state-data-divisionofwaterrights.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/orem-bld.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/google-vis-unemployed.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/google-vis-population.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/ugus.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/excel.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/site-thumbs/external-data-utahlegals.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/services/financial.html?type=Legal</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/financial.html?type=Technology</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/financial.html?type=Agriculture</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/financial.html?type=Education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/financial.html?type=Energy</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/financial.html?type=Health</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/financial.html?type=Housing</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/financial.html?type=Human</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/financial.html?type=Jobs</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/financial.html?type=Natural</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/financial.html?type=Safety</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/financial.html?type=Taxes</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/financial.html?type=Voting</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/financial.html?type=History</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/financial.html?type=Tourism</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/financial.html?type=Transportation</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/infographics/business-infograph-940.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/infographics/education-infograph-940.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/generalbenefits.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/generallegal.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/generalhealth.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/generalfinancial.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/generaltransportation.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/generallifestyle.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/generaleducation.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/generalgeneral.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/images/general_big.jpg</loc>
+    <lastmod>2013-03-08T17:30:04-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/seniorsbenefits.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/seniorstransportation.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/seniorslifestyle.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/seniorseducation.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/images/seniors_big.jpg</loc>
+    <lastmod>2013-03-08T17:30:04-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/seniorsgeneral.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/neighbor/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/infographics/residents-infograph-940.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/infographics/stateparks-infograph-940.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/caregiverbenefits.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/caregiverfinancial.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/caregiverlegal.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/caregiverhousing.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/caregiverhealth.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/caregivertransportation.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/caregiverlifestyle.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/caregivereducation.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/caregivergeneral.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/seniors/images/caregivers_big.jpg</loc>
+    <lastmod>2013-03-08T17:30:04-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/infographics/promontory-infograph-940.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connectplus/css/mobile.css</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connectplus/css/tablet.css</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connectplus/css/style.css</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connectplus/images/apple-touch-icon.png</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connectplus/js/jquery.jtweetsanywhere-1.2.1.css</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connectplus/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connectplus/photos.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connectplus/video.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connectplus/services.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/connect/images/screenshots/qr-scr-sm.jpg</loc>
+    <lastmod>2013-03-08T17:29:57-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connect/images/screenshots/flipboard-general-sm.jpg</loc>
+    <lastmod>2013-03-08T17:29:57-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/developer/apis/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/developer/apis/locations.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/developer/apis/search.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/developer/apis/publicnotices.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/registration/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/registration/ccbilling.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/registration/acbilling.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/registration/mmbilling.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/registration/embilling.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/alerts/fire.png</loc>
+    <lastmod>2013-03-08T17:29:51-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Citizen&#x26;id=2&#x26;category=Agriculture%20and%20Food%20Production</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Citizen&#x26;id=4&#x26;category=Business%20and%20Commerce</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Citizen&#x26;id=6&#x26;category=Communications</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Citizen&#x26;id=8&#x26;category=Education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Citizen&#x26;id=10&#x26;category=Energy%20and%20Utilities</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Citizen&#x26;id=12&#x26;category=Environmental%20Protection</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Citizen&#x26;id=14&#x26;category=Government</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Citizen&#x26;id=16&#x26;category=Health</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Citizen&#x26;id=18&#x26;category=History%20and%20Culture</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Citizen&#x26;id=20&#x26;category=Housing%20and%20Community%20Development</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Citizen&#x26;id=22&#x26;category=Human%20Services%20and%20Social%20Programs</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Citizen&#x26;id=24&#x26;category=Industry%20and%20Technology</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Citizen&#x26;id=26&#x26;category=Jobs,%20Employment,%20and%20Occupations</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Citizen&#x26;id=28&#x26;category=Laws%20and%20Regulations</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Citizen&#x26;id=30&#x26;category=Legal%20Services%20and%20Courts</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Citizen&#x26;id=32&#x26;category=Natural%20Resources</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Citizen&#x26;id=34&#x26;category=Public%20Safety%20and%20Corrections</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Citizen&#x26;id=36&#x26;category=Recreation%20and%20Tourism</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Citizen&#x26;id=38&#x26;category=Taxes%20and%20Government%20Revenue</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Citizen&#x26;id=40&#x26;category=Transportation%20and%20Motor%20Vehicles</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Citizen&#x26;id=42&#x26;category=Voting%20and%20Elections</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Business&#x26;id=2&#x26;category=Agriculture%20and%20Food%20Production</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Business&#x26;id=4&#x26;category=Business%20and%20Commerce</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Business&#x26;id=6&#x26;category=Communications</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Business&#x26;id=8&#x26;category=Education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Business&#x26;id=10&#x26;category=Energy%20and%20Utilities</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Business&#x26;id=12&#x26;category=Environmental%20Protection</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Business&#x26;id=14&#x26;category=Government</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Business&#x26;id=16&#x26;category=Health</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Business&#x26;id=18&#x26;category=History%20and%20Culture</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Business&#x26;id=20&#x26;category=Housing%20and%20Community%20Development</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Business&#x26;id=22&#x26;category=Human%20Services%20and%20Social%20Programs</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Business&#x26;id=24&#x26;category=Industry%20and%20Technology</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Business&#x26;id=26&#x26;category=Jobs,%20Employment,%20and%20Occupations</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Business&#x26;id=28&#x26;category=Laws%20and%20Regulations</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Business&#x26;id=30&#x26;category=Legal%20Services%20and%20Courts</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Business&#x26;id=32&#x26;category=Natural%20Resources</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Business&#x26;id=34&#x26;category=Public%20Safety%20and%20Corrections</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Business&#x26;id=36&#x26;category=Recreation%20and%20Tourism</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Business&#x26;id=38&#x26;category=Taxes%20and%20Government%20Revenue</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Business&#x26;id=40&#x26;category=Transportation%20and%20Motor%20Vehicles</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Business&#x26;id=42&#x26;category=Voting%20and%20Elections</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=0&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=80&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=2320&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Government&#x26;id=2&#x26;category=Agriculture%20and%20Food%20Production</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Government&#x26;id=4&#x26;category=Business%20and%20Commerce</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Government&#x26;id=6&#x26;category=Communications</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Government&#x26;id=8&#x26;category=Education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Government&#x26;id=10&#x26;category=Energy%20and%20Utilities</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Government&#x26;id=12&#x26;category=Environmental%20Protection</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Government&#x26;id=14&#x26;category=Government</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Government&#x26;id=16&#x26;category=Health</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Government&#x26;id=18&#x26;category=History%20and%20Culture</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Government&#x26;id=20&#x26;category=Housing%20and%20Community%20Development</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Government&#x26;id=22&#x26;category=Human%20Services%20and%20Social%20Programs</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Government&#x26;id=24&#x26;category=Industry%20and%20Technology</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Government&#x26;id=26&#x26;category=Jobs,%20Employment,%20and%20Occupations</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Government&#x26;id=28&#x26;category=Laws%20and%20Regulations</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Government&#x26;id=30&#x26;category=Legal%20Services%20and%20Courts</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Government&#x26;id=32&#x26;category=Natural%20Resources</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Government&#x26;id=34&#x26;category=Public%20Safety%20and%20Corrections</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Government&#x26;id=36&#x26;category=Recreation%20and%20Tourism</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Government&#x26;id=38&#x26;category=Taxes%20and%20Government%20Revenue</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Government&#x26;id=40&#x26;category=Transportation%20and%20Motor%20Vehicles</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Government&#x26;id=42&#x26;category=Voting%20and%20Elections</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Citizen</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Business</loc>
+</url>
+<url>
+    <loc>http://utah.gov/services/category_detail.html?type=Government</loc>
+</url>
+<url>
+    <loc>http://utah.gov/multimedia/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=0&#x26;&#x26;type=outdoor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=600&#x26;&#x26;type=outdoor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=80&#x26;&#x26;type=outdoor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=0&#x26;&#x26;type=commerce</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=520&#x26;&#x26;type=commerce</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=80&#x26;&#x26;type=commerce</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=0&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=80&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=920&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/ptif-stats-quarterly.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/PTIFInstructionsInformation.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/images/icons/pdf-icon_32.gif</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/images/charts/PS-ITF-6-30-13.jpg</loc>
+    <lastmod>2013-08-01T11:24:47-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investments-fund-stateschool/Inv_Report_2013Q4.pdf</loc>
+    <lastmod>2014-02-26T18:37:37-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investments-fund-stateschool/Inv_Report_2013Q3.pdf</loc>
+    <lastmod>2014-01-24T16:54:45-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investments-fund-stateschool/Inv_Report_2013Q2.pdf</loc>
+    <lastmod>2014-01-24T16:54:46-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/images/charts/School-Fund-Income-FY13.jpg</loc>
+    <lastmod>2013-08-01T11:24:46-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/ptif-gasb/GASB31.pdf</loc>
+    <lastmod>2014-01-24T16:45:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/images/charts/PermanentStateTrustFundTobaccoSettlementDeposItsInMillionsDollars.png</loc>
+    <lastmod>2013-08-01T11:24:46-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/images/charts/OPEB-6-30-13.jpg</loc>
+    <lastmod>2013-08-01T11:24:46-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-economic/Economic_Summary_1_29_2014.pdf</loc>
+    <lastmod>2014-02-06T10:46:05-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-economic/2012_ERG_11_20_2012.pdf</loc>
+    <lastmod>2013-03-08T17:30:01-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-economic/2014UtahEconomicOutlook.pdf</loc>
+    <lastmod>2014-02-20T10:50:18-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-economic/2012TaxCommissionAnnualStatisticalReport.pdf</loc>
+    <lastmod>2013-09-03T10:53:34-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-economic/AR13_FINAL.pdf</loc>
+    <lastmod>2014-02-06T10:39:22-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-acdm/2013_Utah_Continuing_Disclosure.pdf</loc>
+    <lastmod>2014-02-06T10:36:54-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/CAFR/13UTCAFR.pdf</loc>
+    <lastmod>2014-02-06T10:24:11-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-bonds/fStateofUtah$226.175MGO2013.pdf</loc>
+    <lastmod>2013-08-05T11:14:04-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-bonds/fStateofUtahSBOA$15.610MLRRev$11.7MTax2012AB.pdf</loc>
+    <lastmod>2013-03-08T17:30:01-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-bonds/Utah%20Rev%20Recap%202010ABC%20OS.pdf</loc>
+    <lastmod>2013-03-08T17:30:00-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-economic/2013EconomicOutlook.pdf</loc>
+    <lastmod>2013-03-08T17:30:01-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-economic/2012EconomicOutlook.pdf</loc>
+    <lastmod>2013-03-08T17:30:01-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-economic/2011EconomicOutlook.pdf</loc>
+    <lastmod>2013-03-08T17:30:01-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-economic/2011ERG.pdf</loc>
+    <lastmod>2013-03-08T17:30:01-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/Economic%20Report%20to%20the%20Governor/2010ERG.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/Economic%20Report%20to%20the%20Governor/2009ERG.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/Economic%20Report%20to%20the%20Governor/2008ERG.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/Economic%20Report%20to%20the%20Governor/2007ERG.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY14/TC23_3_SEP_13.pdf</loc>
+    <lastmod>2014-02-19T17:45:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY14/TC23_4_OCT_13.pdf</loc>
+    <lastmod>2014-02-19T17:45:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY14/TC23_6_DEC_13.pdf</loc>
+    <lastmod>2014-02-19T17:45:06-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY14/TC23_7_JAN_14.pdf</loc>
+    <lastmod>2014-02-19T17:45:07-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY13/TC23.9.2012.pdf</loc>
+    <lastmod>2013-09-20T14:44:21-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY13/TC23.10.2012.pdf</loc>
+    <lastmod>2013-09-20T14:44:21-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY13/TC23.11.2012.pdf</loc>
+    <lastmod>2013-09-20T14:44:21-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY13/TC23.12.2012.pdf</loc>
+    <lastmod>2013-09-20T14:44:21-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY13/TC23.1.2013.pdf</loc>
+    <lastmod>2013-09-20T14:44:21-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY13/TC23.8.FEB.13.pdf</loc>
+    <lastmod>2013-09-20T14:44:18-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY13/TC23.9.MAR.13.pdf</loc>
+    <lastmod>2013-09-20T14:44:18-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY13/TC23.10.APR.13.pdf</loc>
+    <lastmod>2013-09-20T14:44:18-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY13/TC23.11.MAY.13.pdf</loc>
+    <lastmod>2013-09-20T14:44:18-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY13/TC23.12.JUN.13.pdf</loc>
+    <lastmod>2013-09-20T14:44:18-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-budget/TC23.9.2011.PDF</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY12/TC23.10.2011.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY12/TC23.11.2011.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY12/TC23.12.2011.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY12/TC23.1.2012.pdf</loc>
+    <lastmod>2013-09-20T14:44:11-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY12/TC23.2.2012.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY12/TC23.3.2012.pdf</loc>
+    <lastmod>2013-09-20T14:44:11-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY12/TC23.4.2012.pdf</loc>
+    <lastmod>2013-09-20T14:44:11-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY12/TC23.5.2012.pdf</loc>
+    <lastmod>2013-09-20T14:44:11-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY12/TC23.6.2012.pdf</loc>
+    <lastmod>2013-09-20T14:44:11-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY11/TC23.9.2010.PDF</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY11/TC23.11.2010.PDF</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY11/TC23.12.2010.PDF</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY11/TC23.1.2011.PDF</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY11/TC23.2.2011.PDF</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY11/TC23.3.2011.PDF</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-budget/TC23.4.2011.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-budget/TC23.5.2011.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-budget/TC23.6.2011.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY10/TC23.9.2009.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY10/TC23.10.2009.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY10/TC23.11.2009.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY10/TC23.12.2009.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY10/TC23.1.2010.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY10/TC23.2.2010.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY10/TC23.3.2010.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY10/TC23.4.2010.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY10/TC23.5.2010.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY10/TC23.6.2010.PDF</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY09/TC23.9.2008.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY09/TC23.10.2008.PDF</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY09/TC23.11.2008.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY09/TC23.12.2008.PDF</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY09/TC23.2.2009.PDF</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY09/TC23.3.2009.PDF</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY09/TC-23.4.2009.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY09/TC23.5.2009.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY09/TC23.6.2009.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY08/TC23.9.2007.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY08/TC23.10.2007.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY08/TC23.11.2007.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY08/TC23.12.2007.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY08/TC23.1.2008.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY08/TC23.2.2008.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY08/TC23.3.2008.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY08/TC23.4.2008.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY08/TC23.5.2008.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TC-23/FY08/TC-23.6.2008.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-budget/FY2012_Annual_Financial_Highlights.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-budget/FY2011_Annual_Financial_Highlights.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-budget/FY%202010%20Annual%20Financial%20Highlights.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/Annual%20Financial%20Highlights/FY%202009%20Annual%20Financial%20Highlights.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/Annual%20Financial%20Highlights/FY%202008%20Annual%20Financial%20Highlights.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/Annual%20Financial%20Highlights/FY%202007%20Annual%20Financial%20Highlights.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/Annual%20Financial%20Highlights/FY%202006%20Annual%20Financial%20Highlights.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/Annual%20Budget%20Summary/2011%20Budget%20Summary.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/Annual%20Budget%20Summary/2010%20Budget%20Summary.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/Annual%20Budget%20Summary/2009%20Budget%20Summary.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/Annual%20Budget%20Summary/2008%20Budget%20Summary.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/Annual%20Budget%20Summary/2007%20Budget%20Summary.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/CAFR/12UTCAFR.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/CAFR/11UTCAFR.pdf</loc>
+    <lastmod>2014-02-06T10:24:07-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/CAFR/2010%20CAFR.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/CAFR/2009%20CAFR.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/CAFR/2008%20CAFR.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-economic/2011AnnualStatisticalReport.pdf</loc>
+    <lastmod>2013-03-08T17:30:01-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-economic/2010AnnualStatisticalReport.pdf</loc>
+    <lastmod>2013-03-08T17:30:01-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TCStatReports/2009annual.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TCStatReports/2008annual.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TCStatReports/2007annual.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-economic/2011TaxCommissionAnnualReport.pdf</loc>
+    <lastmod>2013-03-08T17:30:01-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-economic/2010AnnualReport.pdf</loc>
+    <lastmod>2013-03-08T17:30:01-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TCAnnualReports/fy09report.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-retirement/2012%20URS%20Report%20LR.pdf</loc>
+    <lastmod>2013-05-22T23:23:43-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TCAnnualReports/fy08report.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-archive/TCAnnualReports/fy07report.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-budget/13_Final_Report_Financial_Highlights_October_Issue.pdf</loc>
+    <lastmod>2014-02-20T17:56:24-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/investor-budget/2013%20Budget%20Summary.pdf</loc>
+    <lastmod>2013-03-08T17:30:02-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-act/utahMoneyManagement-Act2013.pdf</loc>
+    <lastmod>2013-06-03T17:23:03-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-forms/MMCD&#x26;I.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-forms/MMC.628-15.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-forms/MMC.628-16.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-rules/MMCRULES.5.12.2011.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-meetings/MEETNOT0313.doc</loc>
+    <lastmod>2013-03-20T13:32:38-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-meetings/MEETNOT0213.doc</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-meetings/MMCAgenda.10.18.2012.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-meetings/MMCAgenda.9.20.2012.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-meetings/MMCAgenda.8.23.2012.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-meetings/MMCAgenda.6.21.2012.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-meetings/MMCAgenda.5.17.2012.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-meetings/MMCAgenda.4.26.2012.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-meetings/MMCAgenda.3.15.2012.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-meetings/MMCAgenda.2.16.2012.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-meetings/MMCAgenda.1.19.2012.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-meetings/MMCAgenda.12.15.2011.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-meetings/MMCAgenda.10.27.2011.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-meetings/MMCAgenda.09.22.2011.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-meetings/MMCAgenda.08.25.2011.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-meetings/MMCAgenda.06.16.2011.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-meetings/MMCAgenda.4.21.2011.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-meetings/MMCAgenda.3.17.2011.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-meetings/MMCAgenda.2.17.2011.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-meetings/MMCAgenda.01.20.2011.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-meetings/MMCAgenda.12.16.2010.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/mmc-meetings/MMCAgenda.10.21.2010.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/images/vanity/portrait-richard-ellis.jpg</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/images/icons/utah-believe-bug.jpg</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/news-2012-09-17.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/news-2012-08-02.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/images/news/news-2011-08-29.jpg</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/careers//css/portal.css</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/careers//index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/careers//glossary.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/careers//resources.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/careers//tips.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/careers//faq.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/careers//partners.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/careers//images/utahfutures.jpg</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=0&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=80&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1280&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/images/logos-olympicexplore.png</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/docs/Request-for-Seal-Usage.pdf</loc>
+    <lastmod>2013-11-20T11:56:37-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/images/bttn-governor-herbert.jpg</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/contact/speaker-request.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/contact/meeting-request.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/contact/event-request.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/contact/visit-offices.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/docs/CDC-AGLandsTransferHB148.pdf</loc>
+    <lastmod>2013-03-08T17:29:50-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/docs/CDC-AGLandsTransferHB148SummaryInteractive.pdf</loc>
+    <lastmod>2013-03-08T17:29:50-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/news/index.html?page=40&#x26;&#x26;category=lt-governor-bell-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/stateofstate/2012-01-25_GARYRHERBERT_STATEOFTHESTATE.pdf</loc>
+    <lastmod>2013-03-08T17:29:55-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/stateofstate/StateoftheState_Activity.pdf</loc>
+    <lastmod>2013-03-08T17:29:55-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/speeches/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/video/state-of-the-state-2011.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/Energy-Initiatives-Imperatives.pdf</loc>
+    <lastmod>2013-03-08T17:29:55-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/article.html?article=2944</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/article.html?article=2654</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/declarations/faq.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/declarations/samplerequest.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/declarations/agreement.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-petilos.jpg</loc>
+    <lastmod>2013-09-12T14:51:21-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-cook.jpg</loc>
+    <lastmod>2013-09-12T14:51:22-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/appointments/photo-palmer-depaulis.jpg</loc>
+    <lastmod>2013-06-11T13:55:13-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/headers/governor-herbet-2012-headers-22.png</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/index.html?page=0&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/index.html?page=560&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/headers/governor-herbet-2012-headers-14.png</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/news-advisories.html?page=40&#x26;&#x26;category=governor-herbert-press-advisory</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/news-advisories.html?page=160&#x26;&#x26;category=governor-herbert-press-advisory</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/index.html?page=80&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/infographics/infographic-broadband-lg.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/infographics/broadband-infograph-570.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connectcache/flickr/stateofutah.html</loc>
+    <lastmod>2014-02-28T10:00:27-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connectcache/flickr/rideuta.html</loc>
+    <lastmod>2014-02-28T10:00:27-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connectcache/flickr/utahnationalguard.html</loc>
+    <lastmod>2014-02-28T10:00:28-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/connectcache/flickr/utahdot.html</loc>
+    <lastmod>2014-02-28T10:00:28-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/developers/css/portal.css</loc>
+    <lastmod>2013-03-08T17:29:49-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/developers/apis/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/developers/apis/locations.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/developers/apis/search.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/developers/apis/publicnotices.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=120&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=2280&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/multimedia/css/portal.css</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=560&#x26;&#x26;type=outdoor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=120&#x26;&#x26;type=outdoor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=480&#x26;&#x26;type=commerce</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=120&#x26;&#x26;type=commerce</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=120&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/ptif-stats/PTIFStats20131231.pdf</loc>
+    <lastmod>2014-01-17T16:34:42-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/ptif-stats/PTIFStats20130930.pdf</loc>
+    <lastmod>2013-11-05T17:10:45-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/ptif-stats/PTIFStats20130630.pdf</loc>
+    <lastmod>2013-08-28T16:06:42-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/ptif-stats/PTIFStats20130331.pdf</loc>
+    <lastmod>2013-04-23T23:15:15-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/ptif-stats/PTIFStats20121231.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/ptif-stats/PTIFStats20120930.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/ptif-stats/PTIFStats20120630.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/ptif-stats/PTIFStats20120331.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/ptif-stats/PTIFStats20111231.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/treasurer/documents/ptif-stats/PTIFStats20110930.pdf</loc>
+    <lastmod>2013-03-08T17:29:58-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=880&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=120&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1240&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/ltgovernor/news/index.html?page=0&#x26;&#x26;category=lt-governor-bell-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/?page=40&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/?page=600&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/images/headers/governor-herbet-2012-headers-23.png</loc>
+    <lastmod>2013-03-08T17:29:52-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/declarations/TeachChildrenToSaveDay.pdf</loc>
+    <lastmod>2013-03-08T17:29:56-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/declarations/LightningSafetyAwarenessWeek.pdf</loc>
+    <lastmod>2013-03-08T17:29:56-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/declarations/UtahGreatOutdoorsMonth.pdf</loc>
+    <lastmod>2013-03-08T17:29:56-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/news-advisories.html?page=0&#x26;&#x26;category=governor-herbert-press-advisory</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/news-advisories.html?page=80&#x26;&#x26;category=governor-herbert-press-advisory</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/index.html?page=520&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/news-advisories.html?page=120&#x26;&#x26;category=governor-herbert-press-advisory</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/CentralUtahWaterProject.pdf</loc>
+    <lastmod>2013-06-03T12:30:10-05:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/index.html?page=120&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/data/images/infographics/broadband-infograph-940.png</loc>
+    <lastmod>2013-03-08T17:30:03-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/developers/apis/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/developers/</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=160&#x26;&#x26;type=outdoor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=2240&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=520&#x26;&#x26;type=outdoor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=160&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=160&#x26;&#x26;type=commerce</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=440&#x26;&#x26;type=commerce</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=160&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=160&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=840&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1200&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/?page=0&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/?page=80&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/?page=560&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/developers/index.html</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/index.html?page=480&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/index.html?page=160&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=480&#x26;&#x26;type=outdoor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=200&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=2200&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=200&#x26;&#x26;type=outdoor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=200&#x26;&#x26;type=commerce</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=200&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=200&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=400&#x26;&#x26;type=commerce</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=800&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1160&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/?page=120&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/?page=520&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/index.html?page=440&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/budget/2014_Recommendation_Book.pdf</loc>
+    <lastmod>2013-03-08T17:29:55-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/docs/budget/FY2014BUDGETANNOUNCEMENT.pdf</loc>
+    <lastmod>2013-03-08T17:29:55-06:00</lastmod>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/index.html?page=200&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=240&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=440&#x26;&#x26;type=outdoor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=2160&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=240&#x26;&#x26;type=commerce</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=240&#x26;&#x26;type=outdoor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=240&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=240&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=360&#x26;&#x26;type=commerce</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=760&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/?page=160&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/?page=480&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/index.html?page=400&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/index.html?page=240&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=280&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=400&#x26;&#x26;type=outdoor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1120&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=280&#x26;&#x26;type=commerce</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=2120&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=280&#x26;&#x26;type=outdoor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=280&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=320&#x26;&#x26;type=commerce</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=280&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/?page=200&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=720&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/?page=440&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/index.html?page=280&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/index.html?page=360&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1080&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=320&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=360&#x26;&#x26;type=outdoor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=2080&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=320&#x26;&#x26;type=outdoor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=320&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=320&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/?page=240&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=680&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/index.html?page=320&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/?page=400&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=360&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1040&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=2040&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=360&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=360&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/?page=280&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=640&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/?page=360&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=400&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=400&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1000&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=2000&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=400&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/governor/news_media/?page=320&#x26;&#x26;category=governor-herbert-press-release</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=440&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=600&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=440&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=440&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=960&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=560&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=480&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=920&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=520&#x26;&#x26;type=education</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=880&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=480&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=840&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1960&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=480&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=800&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1920&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=520&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=520&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=760&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1880&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=560&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=560&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=720&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=600&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1840&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=600&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=680&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=640&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1800&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=640&#x26;&#x26;type=governor</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=680&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1760&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=720&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1720&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=760&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1680&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=800&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1640&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=840&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1600&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=880&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1560&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=920&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1520&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=960&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1480&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1000&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1440&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1040&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1400&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1080&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1360&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1120&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1320&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1160&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1280&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1200&#x26;&#x26;type=news</loc>
+</url>
+<url>
+    <loc>http://utah.gov/whatsnew.html?page=1240&#x26;&#x26;type=news</loc>
+</url>
+</urlset>
