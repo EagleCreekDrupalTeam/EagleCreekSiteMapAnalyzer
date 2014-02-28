@@ -168,7 +168,6 @@ public class XML {
 
     public String printResults() {
         
-        
         String output = "";
         
         output += ("Number of pages: " + sumPages + "\n");
