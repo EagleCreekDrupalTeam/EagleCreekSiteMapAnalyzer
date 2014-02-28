@@ -8,10 +8,6 @@ package xmlsitereader;
 import java.io.FileNotFoundException;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.table.AbstractTableModel;
-import javax.swing.table.TableModel;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -274,7 +270,10 @@ public class GUIReader extends javax.swing.JFrame {
                     default:
                 }
             }
-            tableModel.setDataVector(data, columnNames); 
+            tableModel.setDataVector(data, columnNames);
+            urlTable.getColumnModel().getColumn(1).setMaxWidth(70);
+            urlTable.getColumnModel().getColumn(2).setMaxWidth(70);
+            urlTable.getColumnModel().getColumn(3).setMaxWidth(70);
         }
 
     }
