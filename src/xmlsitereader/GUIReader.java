@@ -10,8 +10,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
@@ -54,7 +52,7 @@ public class GUIReader extends javax.swing.JFrame {
     private void initComponents() {
 
         filterButtonGroup = new javax.swing.ButtonGroup();
-        jLabel1 = new javax.swing.JLabel();
+        fileLabel = new javax.swing.JLabel();
         browseButton = new javax.swing.JButton();
         analyzeButton = new javax.swing.JButton();
         fileField = new javax.swing.JTextField();
@@ -69,17 +67,16 @@ public class GUIReader extends javax.swing.JFrame {
         documentRadioButton = new javax.swing.JRadioButton();
         pageRadioButton = new javax.swing.JRadioButton();
         openUrlButton = new javax.swing.JButton();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
 
         allRadioButton.setSelected(true);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Eagle Creek Sitemap Analyzer v1.0");
         setBackground(new java.awt.Color(255, 255, 255));
+        setBounds(new java.awt.Rectangle(100, 100, 0, 0));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jLabel1.setText("File:");
+        fileLabel.setText("File:");
 
         browseButton.setText("Browse");
         browseButton.addActionListener(new java.awt.event.ActionListener() {
@@ -126,6 +123,7 @@ public class GUIReader extends javax.swing.JFrame {
 
         filterButtonGroup.add(allRadioButton);
         allRadioButton.setText("All");
+        allRadioButton.setEnabled(false);
         allRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 allRadioButtonActionPerformed(evt);
@@ -134,6 +132,7 @@ public class GUIReader extends javax.swing.JFrame {
 
         filterButtonGroup.add(imageRadioButton);
         imageRadioButton.setText("Image");
+        imageRadioButton.setEnabled(false);
         imageRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 imageRadioButtonActionPerformed(evt);
@@ -142,6 +141,7 @@ public class GUIReader extends javax.swing.JFrame {
 
         filterButtonGroup.add(documentRadioButton);
         documentRadioButton.setText("Document");
+        documentRadioButton.setEnabled(false);
         documentRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 documentRadioButtonActionPerformed(evt);
@@ -150,6 +150,7 @@ public class GUIReader extends javax.swing.JFrame {
 
         filterButtonGroup.add(pageRadioButton);
         pageRadioButton.setText("Page");
+        pageRadioButton.setEnabled(false);
         pageRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pageRadioButtonActionPerformed(evt);
@@ -163,14 +164,6 @@ public class GUIReader extends javax.swing.JFrame {
                 openUrlButtonActionPerformed(evt);
             }
         });
-
-        jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
-
-        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -199,7 +192,7 @@ public class GUIReader extends javax.swing.JFrame {
                                 .addGap(29, 29, 29)
                                 .addComponent(openUrlButton))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
+                                .addComponent(fileLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(fileField, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -215,7 +208,7 @@ public class GUIReader extends javax.swing.JFrame {
                 .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(browseButton)
-                    .addComponent(jLabel1)
+                    .addComponent(fileLabel)
                     .addComponent(fileField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(analyzeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
@@ -227,7 +220,7 @@ public class GUIReader extends javax.swing.JFrame {
                     .addComponent(pageRadioButton)
                     .addComponent(openUrlButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(scrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 431, Short.MAX_VALUE)
+                .addComponent(scrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 452, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -350,7 +343,11 @@ public class GUIReader extends javax.swing.JFrame {
             xml.parseXML();
             xml.calculateResults();
             jTextArea1.setText(xml.printResults());
-            buildTable("all");            
+            buildTable("all");
+            allRadioButton.setEnabled(true);
+            pageRadioButton.setEnabled(true);
+            documentRadioButton.setEnabled(true);
+            imageRadioButton.setEnabled(true);
 
         } catch (FileNotFoundException fnfe) {
             System.out.println(fnfe);
@@ -453,14 +450,11 @@ public class GUIReader extends javax.swing.JFrame {
     private javax.swing.JButton browseButton;
     private javax.swing.JRadioButton documentRadioButton;
     private javax.swing.JTextField fileField;
+    private javax.swing.JLabel fileLabel;
     private javax.swing.ButtonGroup filterButtonGroup;
     private javax.swing.JRadioButton imageRadioButton;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton openUrlButton;
