@@ -12,7 +12,7 @@ import org.w3c.dom.NodeList;
 
 /**
  *
- ** @author Stephen Paden 
+ ** @author Stephen Paden and Curtis Conner
  ** Company: Eagle Creek Software Services 
  ** Date: 2/26/2014
  *
@@ -50,6 +50,7 @@ public class XML {
     
     public void setFile(File file) {
         this.file = file;
+        setFileName(file.getName());
     }
     
     public File getFile() {
@@ -132,13 +133,16 @@ public class XML {
         return sumTotal = sumPages + sumDocuments + sumOtherItems + queryStrings;
     }
 
-    public void printResults() {
-        System.out.println();
-        System.out.println("Number of pages: " + sumPages);
-        System.out.println("Number of documents: " + sumDocuments);
-        System.out.println("Number of other items: " + sumOtherItems);
-        System.out.println("Number of dynamic paths: " + queryStrings);
-        System.out.println("Total number of elements: " + calculateResults());
+    public String printResults() {
+        String output = "";
+        
+        output += ("Number of pages: " + sumPages);
+        output +=("Number of documents: " + sumDocuments);
+        output +=("Number of other items: " + sumOtherItems);
+        output +=("Number of dynamic paths: " + queryStrings);
+        output +=("Total number of elements: " + calculateResults());
+        
+        return output;
     }
     
     public String createReport() {

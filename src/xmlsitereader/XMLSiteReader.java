@@ -1,5 +1,7 @@
 package xmlsitereader;
 
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -40,13 +42,16 @@ public class XMLSiteReader {
         public static final String frameTitle = "Eagle Creek Sitemap Analyzer";
         public static final int frameHeight = 1300;
         public static final int frameWidth = 768;
+        private String[] columnNames = {"URL", "Page", "Document", "Image"};
+        private Object[][] data;
         private JMenuBar menuBar;
         private JMenu fileMenu, optionsMenu, helpMenu;
         private JButton fileButton, analyzeButton;
         private XMLSiteReaderPanel panel; //Not sure if we need the custom Panel class
-        private JPanel panel2;
+        private JPanel mainPanel, topPanel, centerPanel;
         private JFileChooser chooser;
         private JTable table;
+        private JScrollPane scrollPane;
         private XML xml;
         
         
@@ -65,6 +70,7 @@ public class XMLSiteReader {
             menuBar.add(optionsMenu);
             helpMenu = new JMenu("Help");
             menuBar.add(helpMenu);
+
             panel = new XMLSiteReaderPanel();
             GroupLayout layout = new GroupLayout(panel);
             panel.setLayout(layout);
@@ -72,18 +78,37 @@ public class XMLSiteReader {
             layout.setAutoCreateGaps(true);
             layout.setAutoCreateContainerGaps(true);
             
+
+            
+            mainPanel = new JPanel();
+            mainPanel.setLayout(new BorderLayout());
+            topPanel = new JPanel();
+            mainPanel.add(topPanel, BorderLayout.PAGE_START);
+            centerPanel = new JPanel();
+            mainPanel.add(centerPanel, BorderLayout.CENTER);
+
+
             fileButton = new JButton("Browse");
             fileButton.addActionListener(new BrowseButtonListener());
             analyzeButton = new JButton("Analyze");
             analyzeButton.setEnabled(false);
             analyzeButton.addActionListener(new AnalyzeButtonListener());
+
             
             panel.add(fileButton);
             panel.add(analyzeButton);
             chooser = new JFileChooser();
             
+
+                    
+            //panel.add(fileButton, BorderLayout.PAGE_START);
+            //panel.add(analyzeButton, BorderLayout.PAGE_START);
+            topPanel.add(fileButton);
+            topPanel.add(analyzeButton);
+            chooser = new JFileChooser();       
+
             
-            add(panel);
+            add(mainPanel);
             setTitle(frameTitle);  	
             setSize(frameWidth, frameWidth);
             setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -94,8 +119,7 @@ public class XMLSiteReader {
             URL[] urls = xml.getURLs();
             System.out.println("Number of URLs " + urls.length);
             
-            String[] columnNames = {"URL", "Page", "Document", "Image"};
-            Object[][] data = new Object[urls.length][columnNames.length];
+            data = new Object[urls.length][columnNames.length];
             for (int i = 2; i < urls.length; i++) {
                 for (int j = 0; j < columnNames.length; j++) {
                     switch (j) {
@@ -121,10 +145,17 @@ public class XMLSiteReader {
             }
             
             table = new JTable(data, columnNames);
+
             JScrollPane scrollPane = new JScrollPane(table);
             panel.add(scrollPane);
             add(panel);
             panel.repaint();       
+
+            scrollPane = new JScrollPane(table);
+            centerPanel.add(scrollPane);           
+            mainPanel.repaint();
+            
+
             
         }
         
