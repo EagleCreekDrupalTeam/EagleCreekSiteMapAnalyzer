@@ -166,19 +166,16 @@ public class XML {
         sumRSSFeeds = 0;
     }
 
-    public String printResults() {
-        
-        String output = "";
-        
+    public String printResults() {        
+        String output = "";        
         output += ("Number of pages: " + sumPages + "\n");
         output += ("Number of documents: " + sumDocuments + "\n");
         output += ("Number of images: " + sumImages + "\n");
         output += ("Number of videos: " + sumVideos + "\n");
         output += ("Number of rss feeds: " + sumRSSFeeds + "\n");
         output += ("Number of dynamic paths: " + queryStrings + "\n");
-        output += ("------------------------------------------------\n")
-        output +=("Total number of elements: " + calculateResults());
-        
+        output += ("------------------------------------------------\n");
+        output +=("Total number of elements: " + calculateResults());        
         return output;
     }
     
