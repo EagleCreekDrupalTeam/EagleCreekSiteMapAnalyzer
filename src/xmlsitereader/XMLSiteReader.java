@@ -65,7 +65,7 @@ public class XMLSiteReader {
             menuBar.add(optionsMenu);
             helpMenu = new JMenu("Help");
             menuBar.add(helpMenu);
-            
+            panel = new XMLSiteReaderPanel();
             GroupLayout layout = new GroupLayout(panel);
             panel.setLayout(layout);
             
@@ -77,7 +77,7 @@ public class XMLSiteReader {
             analyzeButton = new JButton("Analyze");
             analyzeButton.setEnabled(false);
             analyzeButton.addActionListener(new AnalyzeButtonListener());
-            panel = new XMLSiteReaderPanel();
+            
             panel.add(fileButton);
             panel.add(analyzeButton);
             chooser = new JFileChooser();
@@ -124,13 +124,12 @@ public class XMLSiteReader {
             JScrollPane scrollPane = new JScrollPane(table);
             panel.add(scrollPane);
             add(panel);
-            panel.repaint();
-            
+            panel.repaint();       
             
         }
         
         private class BrowseButtonListener implements ActionListener {
-
+                @Override
 		public void actionPerformed(ActionEvent event) {
                     
                     int returnOption = chooser.showOpenDialog(panel);
@@ -163,12 +162,12 @@ public class XMLSiteReader {
                         default :
                             JOptionPane.showMessageDialog(null, "Something went wrong.", "Error", JOptionPane.ERROR_MESSAGE);
                             analyzeButton.setEnabled(false);
-                    }
-                        
+                    }                        
 		}
 	}
         
         private class AnalyzeButtonListener implements ActionListener {
+            @Override
             public void actionPerformed(ActionEvent event) {
                 try {
                     xml.parseXML();
@@ -177,8 +176,7 @@ public class XMLSiteReader {
                     
                 }
             }
-        }
-        
+        }        
     }
     
     class XMLSiteReaderPanel extends JPanel {
