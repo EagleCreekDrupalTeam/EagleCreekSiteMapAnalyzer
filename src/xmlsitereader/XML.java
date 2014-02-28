@@ -24,12 +24,14 @@ public class XML {
     private int sumImages = 0;
     private int sumOtherItems = 0;
     private int sumTotal = 0;
+    private int sumVideos = 0;
+    private int sumRSSFeeds = 0;
     private String fileName;
     private File file;
     private URL[] urls;
     private String[] fullPaths;
     private final ArrayList<String> documentExtensions = new ArrayList(Arrays.asList(".doc", ".docx", ".pdf", ".txt", ".odt",".odg", ".csv", ".xls", ".xlsx"));
-    private final ArrayList<String> pageExtensions = new ArrayList(Arrays.asList(".htm", ".html", ".asp", ".jsp", ".php"));
+    private final ArrayList<String> pageExtensions = new ArrayList(Arrays.asList(".htm", ".html", ".asp", ".jsp", ".php", ".aspx"));
     private final ArrayList<String> imageExtensions = new ArrayList(Arrays.asList(".gif", ".jpg", ".png", ".jpeg", ".bmp"));
    
     private static int queryStrings = 0;
@@ -138,7 +140,9 @@ public class XML {
         
         output += ("Number of pages: " + sumPages + "\n");
         output +=("Number of documents: " + sumDocuments + "\n");
-        output +=("Number of other items: " + sumOtherItems + "\n");
+        output +=("Number of images: " + sumImages + "\n");
+        output +=("Number of videos: " + sumVideos + "\n");
+        output +=("Number of rss feeds: " + sumRSSFeeds + "\n");
         output +=("Number of dynamic paths: " + queryStrings + "\n");
         output +=("Total number of elements: " + calculateResults());
         
