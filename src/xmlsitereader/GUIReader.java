@@ -23,7 +23,7 @@ public class GUIReader extends javax.swing.JFrame {
 
     private XML xml = new XML();
     private Object[][] data;
-    private String[] columnNames = {"URL", "Page", "Document", "Image"};
+    private String[] columnNames = {"Line#", "URL", "Page", "Document", "Image"};
     private String urlToOpen;
     private DefaultTableModel tableModel = new DefaultTableModel(data, columnNames){  
         public boolean isCellEditable(int row, int column){  
@@ -109,9 +109,10 @@ public class GUIReader extends javax.swing.JFrame {
             }
         });
         scrollPane.setViewportView(urlTable);
-        urlTable.getColumnModel().getColumn(1).setMaxWidth(70);
+        urlTable.getColumnModel().getColumn(0).setMaxWidth(70);
         urlTable.getColumnModel().getColumn(2).setMaxWidth(70);
         urlTable.getColumnModel().getColumn(3).setMaxWidth(70);
+        urlTable.getColumnModel().getColumn(4).setMaxWidth(70);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -254,9 +255,10 @@ public class GUIReader extends javax.swing.JFrame {
         buildData(urls);
             
         tableModel.setDataVector(data, columnNames);
-        urlTable.getColumnModel().getColumn(1).setMaxWidth(70);
+        urlTable.getColumnModel().getColumn(0).setMaxWidth(70);
         urlTable.getColumnModel().getColumn(2).setMaxWidth(70);
         urlTable.getColumnModel().getColumn(3).setMaxWidth(70);
+        urlTable.getColumnModel().getColumn(4).setMaxWidth(70);
     }
     /**
      * Method to build an Object[][] from a URL[]
@@ -269,18 +271,21 @@ public class GUIReader extends javax.swing.JFrame {
             for (int j = 0; j < columnNames.length; j++) {
                 switch (j) {
                     case 0:
+                        data[i][j] = new Integer(i + 1);
+                        break;
+                    case 1:
                         System.out.println(urls[i].getURL());
                         data[i][j] = urls[i].getURL();
                         break;
-                    case 1:
+                    case 2:
                         data[i][j] = urls[i].isPage();
                         System.out.println(urls[i].isPage());
                         break;
-                    case 2:
+                    case 3:
                         data[i][j] = urls[i].isDocument();
                         System.out.println(urls[i].isDocument());
                         break;
-                    case 3:
+                    case 4:
                         data[i][j] = urls[i].isImage();
                         System.out.println(urls[i].isImage());
                         break;
