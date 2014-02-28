@@ -136,10 +136,10 @@ public class XML {
     public String printResults() {
         String output = "";
         
-        output += ("Number of pages: " + sumPages);
-        output +=("Number of documents: " + sumDocuments);
-        output +=("Number of other items: " + sumOtherItems);
-        output +=("Number of dynamic paths: " + queryStrings);
+        output += ("Number of pages: " + sumPages + "\n");
+        output +=("Number of documents: " + sumDocuments + "\n");
+        output +=("Number of other items: " + sumOtherItems + "\n");
+        output +=("Number of dynamic paths: " + queryStrings + "\n");
         output +=("Total number of elements: " + calculateResults());
         
         return output;
