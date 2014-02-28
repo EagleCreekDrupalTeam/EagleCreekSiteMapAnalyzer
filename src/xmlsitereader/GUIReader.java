@@ -10,8 +10,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
@@ -54,7 +52,7 @@ public class GUIReader extends javax.swing.JFrame {
     private void initComponents() {
 
         filterButtonGroup = new javax.swing.ButtonGroup();
-        jLabel1 = new javax.swing.JLabel();
+        fileLabel = new javax.swing.JLabel();
         browseButton = new javax.swing.JButton();
         analyzeButton = new javax.swing.JButton();
         fileField = new javax.swing.JTextField();
@@ -69,16 +67,16 @@ public class GUIReader extends javax.swing.JFrame {
         documentRadioButton = new javax.swing.JRadioButton();
         pageRadioButton = new javax.swing.JRadioButton();
         openUrlButton = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
 
         allRadioButton.setSelected(true);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Eagle Creek Sitemap Analyzer v1.0");
         setBackground(new java.awt.Color(255, 255, 255));
+        setBounds(new java.awt.Rectangle(100, 100, 0, 0));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jLabel1.setText("File:");
+        fileLabel.setText("File:");
 
         browseButton.setText("Browse");
         browseButton.addActionListener(new java.awt.event.ActionListener() {
@@ -125,6 +123,7 @@ public class GUIReader extends javax.swing.JFrame {
 
         filterButtonGroup.add(allRadioButton);
         allRadioButton.setText("All");
+        allRadioButton.setEnabled(false);
         allRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 allRadioButtonActionPerformed(evt);
@@ -133,6 +132,7 @@ public class GUIReader extends javax.swing.JFrame {
 
         filterButtonGroup.add(imageRadioButton);
         imageRadioButton.setText("Image");
+        imageRadioButton.setEnabled(false);
         imageRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 imageRadioButtonActionPerformed(evt);
@@ -141,6 +141,7 @@ public class GUIReader extends javax.swing.JFrame {
 
         filterButtonGroup.add(documentRadioButton);
         documentRadioButton.setText("Document");
+        documentRadioButton.setEnabled(false);
         documentRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 documentRadioButtonActionPerformed(evt);
@@ -149,6 +150,7 @@ public class GUIReader extends javax.swing.JFrame {
 
         filterButtonGroup.add(pageRadioButton);
         pageRadioButton.setText("Page");
+        pageRadioButton.setEnabled(false);
         pageRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pageRadioButtonActionPerformed(evt);
@@ -162,12 +164,6 @@ public class GUIReader extends javax.swing.JFrame {
                 openUrlButtonActionPerformed(evt);
             }
         });
-
-        jLabel4.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        jLabel4.setText("Eagle Creek Sitemap Analyzer v1.0");
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
-        jLabel5.setText("Choose .xml file to analyze");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -199,6 +195,8 @@ public class GUIReader extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5)
                             .addGroup(layout.createSequentialGroup()
+                                .addComponent(fileLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(fileField, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(browseButton)
@@ -211,34 +209,23 @@ public class GUIReader extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(43, 43, 43)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(browseButton)
-                                    .addComponent(jLabel1)
-                                    .addComponent(fileField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(analyzeButton)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(13, 13, 13)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(allRadioButton)
-                            .addComponent(imageRadioButton)
-                            .addComponent(documentRadioButton)
-                            .addComponent(pageRadioButton)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(69, 69, 69)
-                        .addComponent(jLabel5)))
-                .addGap(18, 18, 18)
-                .addComponent(openUrlButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(scrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 419, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
+                .addGap(43, 43, 43)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(browseButton)
+                    .addComponent(fileLabel)
+                    .addComponent(fileField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(analyzeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(allRadioButton)
+                    .addComponent(imageRadioButton)
+                    .addComponent(documentRadioButton)
+                    .addComponent(pageRadioButton)
+                    .addComponent(openUrlButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(scrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 452, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
                 .addGap(4, 4, 4)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -360,7 +347,11 @@ public class GUIReader extends javax.swing.JFrame {
             xml.parseXML();
             xml.calculateResults();
             jTextArea1.setText(xml.printResults());
-            buildTable("all");            
+            buildTable("all");
+            allRadioButton.setEnabled(true);
+            pageRadioButton.setEnabled(true);
+            documentRadioButton.setEnabled(true);
+            imageRadioButton.setEnabled(true);
 
         } catch (FileNotFoundException fnfe) {
             System.out.println(fnfe);
@@ -463,13 +454,11 @@ public class GUIReader extends javax.swing.JFrame {
     private javax.swing.JButton browseButton;
     private javax.swing.JRadioButton documentRadioButton;
     private javax.swing.JTextField fileField;
+    private javax.swing.JLabel fileLabel;
     private javax.swing.ButtonGroup filterButtonGroup;
     private javax.swing.JRadioButton imageRadioButton;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton openUrlButton;
