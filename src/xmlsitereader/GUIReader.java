@@ -23,7 +23,7 @@ public class GUIReader extends javax.swing.JFrame {
 
     private XML xml = new XML();
     private Object[][] data;
-    private String[] columnNames = {"Line#", "URL", "Page", "Document", "Image"};
+    private String[] columnNames = {"Line#", "URL", "Extension", "Page", "Document", "Image"};
     private String urlToOpen;
     private DefaultTableModel tableModel = new DefaultTableModel(data, columnNames){  
         public boolean isCellEditable(int row, int column){  
@@ -114,6 +114,7 @@ public class GUIReader extends javax.swing.JFrame {
         urlTable.getColumnModel().getColumn(2).setMaxWidth(70);
         urlTable.getColumnModel().getColumn(3).setMaxWidth(70);
         urlTable.getColumnModel().getColumn(4).setMaxWidth(70);
+        urlTable.getColumnModel().getColumn(5).setMaxWidth(70);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -219,7 +220,7 @@ public class GUIReader extends javax.swing.JFrame {
                     .addComponent(fileLabel)
                     .addComponent(fileField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(analyzeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(analyzeButton))
                 .addGap(13, 13, 13)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -267,6 +268,7 @@ public class GUIReader extends javax.swing.JFrame {
         urlTable.getColumnModel().getColumn(2).setMaxWidth(70);
         urlTable.getColumnModel().getColumn(3).setMaxWidth(70);
         urlTable.getColumnModel().getColumn(4).setMaxWidth(70);
+        urlTable.getColumnModel().getColumn(5).setMaxWidth(70);
     }
     /**
      * Method to build an Object[][] from a URL[]
@@ -286,14 +288,18 @@ public class GUIReader extends javax.swing.JFrame {
                         data[i][j] = urls[i].getURL();
                         break;
                     case 2:
+                        data[i][j] = urls[i].getExtension();
+                        System.out.println(urls[i].getExtension());
+                        break;
+                    case 3:
                         data[i][j] = urls[i].isPage();
                         System.out.println(urls[i].isPage());
                         break;
-                    case 3:
+                    case 4:
                         data[i][j] = urls[i].isDocument();
                         System.out.println(urls[i].isDocument());
                         break;
-                    case 4:
+                    case 5:
                         data[i][j] = urls[i].isImage();
                         System.out.println(urls[i].isImage());
                         break;
@@ -383,7 +389,7 @@ public class GUIReader extends javax.swing.JFrame {
      * @param evt 
      */
     private void imageRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imageRadioButtonActionPerformed
-       buildTable("iamge");
+       buildTable("image");
        openUrlButton.setEnabled(false);
     }//GEN-LAST:event_imageRadioButtonActionPerformed
     /**

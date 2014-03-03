@@ -108,38 +108,43 @@ public class XML {
                 
                 for (int i = 0; i < fullPaths.length; i++) {
                     boolean stored = false; //Flag to see if we've had a match
-                    //Check to see if url is for a document
-                    for (String extension : documentExtensions) {
-                        if (fullPaths[i].toLowerCase().endsWith(extension)) {
-                            urls[i] = new URL(fullPaths[i], Boolean.FALSE, Boolean.TRUE, Boolean.FALSE);
-                            documentURLs.add(new URL(fullPaths[i], Boolean.FALSE, Boolean.TRUE, Boolean.FALSE));
-                            sumDocuments++;
-                            stored = true;
-                        }
-                    }
-                    //Check to see if url is for a page
+                    //Check to see if url is for a page first
                     for (String extension : pageExtensions) {
-                        if (fullPaths[i].toLowerCase().endsWith(extension)) {
-                            urls[i] = new URL(fullPaths[i], Boolean.TRUE, Boolean.FALSE, Boolean.FALSE);
-                            pageURLs.add(new URL(fullPaths[i], Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
+                        if (fullPaths[i].toLowerCase().contains(extension)) {
+                            urls[i] = new URL(fullPaths[i], extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE);
+                            pageURLs.add(new URL(fullPaths[i], extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
                             sumPages++;
                             stored = true;
                         }                    
                     }
-                    //Check to see if url is for an image
-                    for (String extension : imageExtensions) {
-                        if (fullPaths[i].toLowerCase().endsWith(extension)) {
-                            urls[i] = new URL(fullPaths[i], Boolean.FALSE, Boolean.FALSE, Boolean.TRUE);
-                            imageURLs.add(new URL(fullPaths[i], Boolean.FALSE, Boolean.FALSE, Boolean.TRUE));
-                            
-                            sumImages++;
-                            stored = true;
-                        } 
-                    }
-                    
+                    //If the url wasn't a page check to see if url is for a document
                     if (!stored) {
-                        urls[i] = new URL(fullPaths[i], Boolean.TRUE, Boolean.FALSE, Boolean.FALSE);
-                        pageURLs.add(new URL(fullPaths[i], Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
+                        for (String extension : documentExtensions) {
+                            if (fullPaths[i].toLowerCase().contains(extension)) {
+                                urls[i] = new URL(fullPaths[i], extension, Boolean.FALSE, Boolean.TRUE, Boolean.FALSE);
+                                documentURLs.add(new URL(fullPaths[i], extension, Boolean.FALSE, Boolean.TRUE, Boolean.FALSE));
+                                sumDocuments++;
+                                stored = true;
+                            }
+                        }
+                    }                    
+                    //If the url wasn't a page or document heck to see if url is for an image
+                    if (!stored) {
+                        for (String extension : imageExtensions) {
+                            if (fullPaths[i].toLowerCase().contains(extension)) {
+                                urls[i] = new URL(fullPaths[i], extension, Boolean.FALSE, Boolean.FALSE, Boolean.TRUE);
+                                imageURLs.add(new URL(fullPaths[i], extension, Boolean.FALSE, Boolean.FALSE, Boolean.TRUE));
+
+                                sumImages++;
+                                stored = true;
+                            } 
+                        }
+                    }
+                    //If the url didn't contain any of the extensions we are checking for check to see if it
+                    if (!stored) {
+                        String extension = "other";
+                        urls[i] = new URL(fullPaths[i], extension,  Boolean.TRUE, Boolean.FALSE, Boolean.FALSE);
+                        pageURLs.add(new URL(fullPaths[i], extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
                         sumPages++;
                     }
                     
