@@ -22,6 +22,9 @@
     </Property>
     <Property name="name" type="java.lang.String" value="guiReaderFrame" noResource="true"/>
   </Properties>
+  <AccessibilityProperties>
+    <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value=""/>
+  </AccessibilityProperties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
@@ -45,57 +48,56 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="resultsScrollPane" alignment="1" max="32767" attributes="0"/>
-                  <Component id="scrollPane" max="32767" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="scrollPane" pref="1536" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          <Component id="analyzeButton" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="titleLabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="allRadioButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="pageRadioButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="documentRadioButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="imageRadioButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="openUrlButton" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="documentTypesLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pageTypesLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="imageTypesLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fileLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="documentTypesField" max="32767" attributes="0"/>
+                                          <Component id="imageTypesField" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="pageTypesField" alignment="0" pref="186" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="updatePageTypeButton" min="-2" max="-2" attributes="0"/>
+                                          <Component id="updateDocumentTypeButton" min="-2" max="-2" attributes="0"/>
+                                          <Component id="updateImageTypeButton" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="fileLabel" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="fileField" min="-2" pref="244" max="-2" attributes="0"/>
+                                      <Component id="fileField" min="-2" pref="186" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="browseButton" max="32767" attributes="0"/>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="allRadioButton" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="pageRadioButton" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="documentRadioButton" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="imageRadioButton" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                                      <Component id="openUrlButton" min="-2" max="-2" attributes="0"/>
-                                  </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                              <Component id="analyzeButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="110" max="32767" attributes="0"/>
                           </Group>
+                          <Component id="titleLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
-                      <Component id="pageExtensionsLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="pageExtensionScrollPane" min="-2" pref="200" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                      <Component id="documentExtensionsLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="documentExtensionScrollPane" min="-2" pref="200" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-                      <Component id="imageExtensionsLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="imageExtensionScrollPane" min="-2" pref="200" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -108,42 +110,42 @@
               <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
               <Component id="titleLabel" min="-2" pref="42" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="browseButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="fileLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="fileField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="analyzeButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="pageExtensionsLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
-                              <Component id="openUrlButton" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="allRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="imageRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="documentRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="pageRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="documentExtensionScrollPane" alignment="0" max="32767" attributes="0"/>
-                      <Component id="imageExtensionScrollPane" alignment="0" max="32767" attributes="0"/>
-                      <Component id="pageExtensionScrollPane" alignment="0" pref="158" max="32767" attributes="0"/>
-                  </Group>
-                  <Component id="documentExtensionsLabel" min="-2" max="-2" attributes="0"/>
-                  <Component id="imageExtensionsLabel" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="browseButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fileLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fileField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="pageTypesLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="pageTypesField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="updatePageTypeButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="documentTypesLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="documentTypesField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="updateDocumentTypeButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="imageTypesLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="imageTypesField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="updateImageTypeButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="analyzeButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="allRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="imageRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="documentRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="pageRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="openUrlButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="scrollPane" pref="412" max="32767" attributes="0"/>
+              <Component id="scrollPane" pref="408" max="32767" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
@@ -304,71 +306,59 @@
         <Property name="text" type="java.lang.String" value="Eagle Creek SiteMap Analyzer v1.0"/>
       </Properties>
     </Component>
-    <Container class="javax.swing.JScrollPane" name="pageExtensionScrollPane">
-      <Properties>
-        <Property name="horizontalScrollBar" type="javax.swing.JScrollBar" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="null"/>
-        </Property>
-      </Properties>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JTextArea" name="pageExtensionsTextArea">
-          <Properties>
-            <Property name="columns" type="int" value="20"/>
-            <Property name="rows" type="int" value="5"/>
-          </Properties>
-        </Component>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JScrollPane" name="documentExtensionScrollPane">
-      <Properties>
-        <Property name="horizontalScrollBar" type="javax.swing.JScrollBar" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="null"/>
-        </Property>
-      </Properties>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JTextArea" name="documentExtensionsTextArea">
-          <Properties>
-            <Property name="columns" type="int" value="20"/>
-            <Property name="rows" type="int" value="5"/>
-          </Properties>
-        </Component>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JScrollPane" name="imageExtensionScrollPane">
-      <Properties>
-        <Property name="horizontalScrollBar" type="javax.swing.JScrollBar" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="null"/>
-        </Property>
-      </Properties>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JTextArea" name="imageExtensionsTextArea">
-          <Properties>
-            <Property name="columns" type="int" value="20"/>
-            <Property name="rows" type="int" value="5"/>
-          </Properties>
-        </Component>
-      </SubComponents>
-    </Container>
-    <Component class="javax.swing.JLabel" name="pageExtensionsLabel">
+    <Component class="javax.swing.JLabel" name="pageTypesLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Page Types:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="documentExtensionsLabel">
+    <Component class="javax.swing.JLabel" name="documentTypesLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Document Types:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="imageExtensionsLabel">
+    <Component class="javax.swing.JLabel" name="imageTypesLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Image Types:"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="pageTypesField">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="pageTypesField.setText(pageTypes);"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JTextField" name="documentTypesField">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="documentTypesField.setText(documentTypes);"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JTextField" name="imageTypesField">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="imageTypesField.setText(imageTypes);"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="updatePageTypeButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Update"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="updatePageTypeButton.setEnabled(false);"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="updateDocumentTypeButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Update"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="updateDocumentTypeButton.setEnabled(false);"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="updateImageTypeButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Update"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="updateImageTypeButton.setEnabled(false);"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>
