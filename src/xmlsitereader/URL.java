@@ -6,7 +6,7 @@ package xmlsitereader;
  ** Date: 2/27/2014
  *
  */
-public class URL {
+public class URL implements Comparable {
     private String urlPath;
     private String extension;
     private Boolean isPage;
@@ -53,6 +53,11 @@ public class URL {
     }    
     public Boolean isImage() { 
         return isImage; 
+    }
+    @Override
+    public int compareTo(Object obj) {
+        URL url1 = (URL)obj;       
+        return this.getExtension().compareTo(url1.getExtension());
     }
     
 
