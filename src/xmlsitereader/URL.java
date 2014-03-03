@@ -22,14 +22,30 @@ public class URL {
     }
     
     // get & set
-    public void setURLPath(String urlPath) { this.urlPath =  urlPath; }
-    public void setIsPage(Boolean page) { this.isPage = page; }    
-    public void setIsDocument(Boolean document) { this.isDocument = document; }    
-    public void setIsImage(Boolean image) { this.isImage = image; }    
-    public String getURL() { return urlPath; }    
-    public Boolean isPage() { return isPage; }    
-    public Boolean isDocument() { return isDocument; }    
-    public Boolean isImage() { return isImage; }
+    public void setURLPath(String urlPath) { 
+        this.urlPath =  urlPath; 
+    }
+    public void setIsPage(Boolean page) { 
+        this.isPage = page; 
+    }    
+    public void setIsDocument(Boolean document) { 
+        this.isDocument = document; 
+    }    
+    public void setIsImage(Boolean image) { 
+        this.isImage = image; 
+    }    
+    public String getURL() { 
+        return urlPath; 
+    }    
+    public Boolean isPage() { 
+        return isPage; 
+    }    
+    public Boolean isDocument() { 
+        return isDocument; 
+    }    
+    public Boolean isImage() { 
+        return isImage; 
+    }
     
 
 }
