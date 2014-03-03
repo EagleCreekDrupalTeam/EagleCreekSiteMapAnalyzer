@@ -58,8 +58,8 @@ public class GUIReader extends javax.swing.JFrame {
         fileField = new javax.swing.JTextField();
         scrollPane = new javax.swing.JScrollPane();
         urlTable = new javax.swing.JTable();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        resultsScrollPane = new javax.swing.JScrollPane();
+        resultsTextArea = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         allRadioButton = new javax.swing.JRadioButton();
@@ -67,7 +67,16 @@ public class GUIReader extends javax.swing.JFrame {
         documentRadioButton = new javax.swing.JRadioButton();
         pageRadioButton = new javax.swing.JRadioButton();
         openUrlButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        titleLabel = new javax.swing.JLabel();
+        pageExtensionScrollPane = new javax.swing.JScrollPane();
+        pageExtensionsTextArea = new javax.swing.JTextArea();
+        documentExtensionScrollPane = new javax.swing.JScrollPane();
+        documentExtensionsTextArea = new javax.swing.JTextArea();
+        imageExtensionScrollPane = new javax.swing.JScrollPane();
+        imageExtensionsTextArea = new javax.swing.JTextArea();
+        pageExtensionsLabel = new javax.swing.JLabel();
+        documentExtensionsLabel = new javax.swing.JLabel();
+        imageExtensionsLabel = new javax.swing.JLabel();
 
         allRadioButton.setSelected(true);
 
@@ -76,6 +85,7 @@ public class GUIReader extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         setBounds(new java.awt.Rectangle(100, 100, 0, 0));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setName("guiReaderFrame"); // NOI18N
 
         fileLabel.setText("File:");
 
@@ -116,9 +126,9 @@ public class GUIReader extends javax.swing.JFrame {
         urlTable.getColumnModel().getColumn(4).setMaxWidth(70);
         urlTable.getColumnModel().getColumn(5).setMaxWidth(70);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane3.setViewportView(jTextArea1);
+        resultsTextArea.setColumns(20);
+        resultsTextArea.setRows(5);
+        resultsScrollPane.setViewportView(resultsTextArea);
 
         jLabel2.setText("Results:");
 
@@ -168,8 +178,32 @@ public class GUIReader extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel1.setText("Eagle Creek SiteMap Analyzer v1.0");
+        titleLabel.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        titleLabel.setText("Eagle Creek SiteMap Analyzer v1.0");
+
+        pageExtensionScrollPane.setHorizontalScrollBar(null);
+
+        pageExtensionsTextArea.setColumns(20);
+        pageExtensionsTextArea.setRows(5);
+        pageExtensionScrollPane.setViewportView(pageExtensionsTextArea);
+
+        documentExtensionScrollPane.setHorizontalScrollBar(null);
+
+        documentExtensionsTextArea.setColumns(20);
+        documentExtensionsTextArea.setRows(5);
+        documentExtensionScrollPane.setViewportView(documentExtensionsTextArea);
+
+        imageExtensionScrollPane.setHorizontalScrollBar(null);
+
+        imageExtensionsTextArea.setColumns(20);
+        imageExtensionsTextArea.setRows(5);
+        imageExtensionScrollPane.setViewportView(imageExtensionsTextArea);
+
+        pageExtensionsLabel.setText("Page Types:");
+
+        documentExtensionsLabel.setText("Document Types:");
+
+        imageExtensionsLabel.setText("Image Types:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -178,15 +212,16 @@ public class GUIReader extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(resultsScrollPane, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(scrollPane)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(scrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1428, Short.MAX_VALUE))
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(titleLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
@@ -208,38 +243,60 @@ public class GUIReader extends javax.swing.JFrame {
                                         .addGap(29, 29, 29)
                                         .addComponent(openUrlButton)))
                                 .addGap(4, 4, 4)
-                                .addComponent(analyzeButton)))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                                .addComponent(analyzeButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(75, 75, 75)
+                        .addComponent(pageExtensionsLabel)
+                        .addGap(18, 18, 18)
+                        .addComponent(pageExtensionScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(65, 65, 65)
+                        .addComponent(documentExtensionsLabel)
+                        .addGap(18, 18, 18)
+                        .addComponent(documentExtensionScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(62, 62, 62)
+                        .addComponent(imageExtensionsLabel)
+                        .addGap(18, 18, 18)
+                        .addComponent(imageExtensionScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(11, 11, 11)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(browseButton)
-                    .addComponent(fileLabel)
-                    .addComponent(fileField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(analyzeButton))
+                .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(124, 124, 124)
-                        .addComponent(openUrlButton))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(allRadioButton)
-                            .addComponent(imageRadioButton)
-                            .addComponent(documentRadioButton)
-                            .addComponent(pageRadioButton))))
+                            .addComponent(browseButton)
+                            .addComponent(fileLabel)
+                            .addComponent(fileField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(analyzeButton)
+                            .addComponent(pageExtensionsLabel))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(124, 124, 124)
+                                .addComponent(openUrlButton))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel3)
+                                    .addComponent(allRadioButton)
+                                    .addComponent(imageRadioButton)
+                                    .addComponent(documentRadioButton)
+                                    .addComponent(pageRadioButton)))))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(documentExtensionScrollPane, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(imageExtensionScrollPane, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(pageExtensionScrollPane, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE))
+                    .addComponent(documentExtensionsLabel)
+                    .addComponent(imageExtensionsLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(scrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+                .addComponent(scrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 412, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addGap(11, 11, 11)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(resultsScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -366,7 +423,7 @@ public class GUIReader extends javax.swing.JFrame {
             xml.resetCounts();
             xml.parseXML();
             xml.calculateResults();
-            jTextArea1.setText(xml.printResults());
+            resultsTextArea.setText(xml.printResults());
             buildTable("all");
             allRadioButton.setEnabled(true);
             pageRadioButton.setEnabled(true);
@@ -472,19 +529,28 @@ public class GUIReader extends javax.swing.JFrame {
     private javax.swing.JRadioButton allRadioButton;
     private javax.swing.JButton analyzeButton;
     private javax.swing.JButton browseButton;
+    private javax.swing.JScrollPane documentExtensionScrollPane;
+    private javax.swing.JLabel documentExtensionsLabel;
+    private javax.swing.JTextArea documentExtensionsTextArea;
     private javax.swing.JRadioButton documentRadioButton;
     private javax.swing.JTextField fileField;
     private javax.swing.JLabel fileLabel;
     private javax.swing.ButtonGroup filterButtonGroup;
+    private javax.swing.JScrollPane imageExtensionScrollPane;
+    private javax.swing.JLabel imageExtensionsLabel;
+    private javax.swing.JTextArea imageExtensionsTextArea;
     private javax.swing.JRadioButton imageRadioButton;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton openUrlButton;
+    private javax.swing.JScrollPane pageExtensionScrollPane;
+    private javax.swing.JLabel pageExtensionsLabel;
+    private javax.swing.JTextArea pageExtensionsTextArea;
     private javax.swing.JRadioButton pageRadioButton;
+    private javax.swing.JScrollPane resultsScrollPane;
+    private javax.swing.JTextArea resultsTextArea;
     private javax.swing.JScrollPane scrollPane;
+    private javax.swing.JLabel titleLabel;
     private javax.swing.JTable urlTable;
     // End of variables declaration//GEN-END:variables
 }
