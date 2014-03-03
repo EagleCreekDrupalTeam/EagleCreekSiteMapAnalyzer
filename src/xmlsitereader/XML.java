@@ -180,9 +180,7 @@ public class XML {
     }
     
     public String createReport() {
-        String output = "";
-        
-        
+        String output = "";     
         
         
         return output;
