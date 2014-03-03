@@ -34,7 +34,7 @@ public class XML {
     private ArrayList<URL> imageURLs;
     private String[] fullPaths;
     private final ArrayList<String> documentExtensions = new ArrayList(Arrays.asList(".doc", ".docx", ".pdf", ".txt", ".odt",".odg", ".csv", ".xls", ".xlsx"));
-    private final ArrayList<String> pageExtensions = new ArrayList(Arrays.asList(".htm", ".html", ".asp", ".jsp", ".php", ".aspx"));
+    private final ArrayList<String> pageExtensions = new ArrayList(Arrays.asList(".htm", ".html", ".asp", ".jsp", ".php", ".aspx", ".shtml", ".pl"));
     private final ArrayList<String> imageExtensions = new ArrayList(Arrays.asList(".gif", ".jpg", ".png", ".jpeg", ".bmp"));
    
     private static int queryStrings = 0;
