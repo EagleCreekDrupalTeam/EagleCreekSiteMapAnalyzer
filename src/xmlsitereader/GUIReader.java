@@ -191,19 +191,50 @@ public class GUIReader extends javax.swing.JFrame {
         imageTypesLabel.setText("Image Types:");
 
         pageTypesField.setText(pageTypes);
+        pageTypesField.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        pageTypesField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                pageTypesFieldKeyTyped(evt);
+            }
+        });
 
         documentTypesField.setText(documentTypes);
+        documentTypesField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                documentTypesFieldKeyTyped(evt);
+            }
+        });
 
         imageTypesField.setText(imageTypes);
+        imageTypesField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                imageTypesFieldKeyTyped(evt);
+            }
+        });
 
         updatePageTypeButton.setText("Update");
         updatePageTypeButton.setEnabled(false);
+        updatePageTypeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updatePageTypeButtonActionPerformed(evt);
+            }
+        });
 
         updateDocumentTypeButton.setText("Update");
         updateDocumentTypeButton.setEnabled(false);
+        updateDocumentTypeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateDocumentTypeButtonActionPerformed(evt);
+            }
+        });
 
         updateImageTypeButton.setText("Update");
         updateImageTypeButton.setEnabled(false);
+        updateImageTypeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateImageTypeButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -491,6 +522,37 @@ public class GUIReader extends javax.swing.JFrame {
             catch (IOException | URISyntaxException ioe) {}
         }
     }//GEN-LAST:event_openUrlButtonActionPerformed
+
+    private void pageTypesFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pageTypesFieldKeyTyped
+        updatePageTypeButton.setEnabled(true);
+    }//GEN-LAST:event_pageTypesFieldKeyTyped
+
+    private void updatePageTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updatePageTypeButtonActionPerformed
+        String extensions = pageTypesField.getText();
+        xml.setPageExtensions(extensions);
+        updatePageTypeButton.setEnabled(false);
+                
+    }//GEN-LAST:event_updatePageTypeButtonActionPerformed
+
+    private void updateDocumentTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateDocumentTypeButtonActionPerformed
+        String extensions = documentTypesField.getText();
+        xml.setDocumentExtensions(extensions);
+        updateDocumentTypeButton.setEnabled(false);
+    }//GEN-LAST:event_updateDocumentTypeButtonActionPerformed
+
+    private void updateImageTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateImageTypeButtonActionPerformed
+        String extensions = imageTypesField.getText();
+        xml.setImageExtensions(extensions);
+        updateImageTypeButton.setEnabled(false);
+    }//GEN-LAST:event_updateImageTypeButtonActionPerformed
+
+    private void documentTypesFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_documentTypesFieldKeyTyped
+        updateDocumentTypeButton.setEnabled(true);
+    }//GEN-LAST:event_documentTypesFieldKeyTyped
+
+    private void imageTypesFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_imageTypesFieldKeyTyped
+        updateImageTypeButton.setEnabled(true);
+    }//GEN-LAST:event_imageTypesFieldKeyTyped
 
     /**
      * @param args the command line arguments

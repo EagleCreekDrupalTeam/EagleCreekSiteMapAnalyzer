@@ -79,6 +79,18 @@ public class XML {
         return imageURLs.toArray(new URL[imageURLs.size()]);
     }
     
+    public void setPageExtensions(String extensions) {
+        this.pageExtensions = split(extensions);
+    }
+    
+    public void setDocumentExtensions(String extensions) {
+        this.documentExtensions = split(extensions);
+    }
+    
+    public void setImageExtensions(String extensions) {
+        this.imageExtensions = split(extensions);
+    }
+    
     public String getPageExtensions() {
         return join(pageExtensions, ",");
     }
@@ -178,8 +190,7 @@ public class XML {
     }
     
     public String join(ArrayList<String> list, String delimiter) {
-        StringBuilder builder = new StringBuilder();
-        
+        StringBuilder builder = new StringBuilder();        
         Iterator iter = list.iterator();
         while (iter.hasNext()) {
             builder.append(iter.next());
@@ -189,6 +200,15 @@ public class XML {
             builder.append(delimiter);
         }
         return builder.toString();
+    }
+    
+    public ArrayList<String> split(String extensions) {
+        String[] temp = extensions.split(",");
+        for (String s : temp) {
+            System.out.println(s);
+        }
+    
+        return new ArrayList<String>(Arrays.asList(temp));
     }
 
     public int calculateResults() {
