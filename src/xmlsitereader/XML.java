@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Iterator;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
@@ -35,9 +36,9 @@ public class XML {
     private ArrayList<URL> pageURLs;
     private ArrayList<URL> imageURLs;
     private String[] fullPaths;
-    private final ArrayList<String> documentExtensions = new ArrayList(Arrays.asList(".doc", ".docx", ".pdf", ".txt", ".odt",".odg", ".csv", ".xls", ".xlsx"));
-    private final ArrayList<String> pageExtensions = new ArrayList(Arrays.asList(".htm", ".html", ".asp", ".jsp", ".php", ".aspx", ".shtml"));
-    private final ArrayList<String> imageExtensions = new ArrayList(Arrays.asList(".gif", ".jpg", ".png", ".jpeg", ".bmp"));
+    private ArrayList<String> documentExtensions = new ArrayList(Arrays.asList(".doc", ".docx", ".pdf", ".txt", ".odt",".odg", ".csv", ".xls", ".xlsx"));
+    private ArrayList<String> pageExtensions = new ArrayList(Arrays.asList(".htm", ".html", ".asp", ".jsp", ".php", ".aspx", ".shtml"));
+    private ArrayList<String> imageExtensions = new ArrayList(Arrays.asList(".gif", ".jpg", ".png", ".jpeg", ".bmp"));
    
     private static int queryStrings = 0;
     
@@ -76,6 +77,30 @@ public class XML {
     }
     public URL[] getImageURLs() {
         return imageURLs.toArray(new URL[imageURLs.size()]);
+    }
+    
+    public void setPageExtensions(String extensions) {
+        this.pageExtensions = split(extensions);
+    }
+    
+    public void setDocumentExtensions(String extensions) {
+        this.documentExtensions = split(extensions);
+    }
+    
+    public void setImageExtensions(String extensions) {
+        this.imageExtensions = split(extensions);
+    }
+    
+    public String getPageExtensions() {
+        return join(pageExtensions, ",");
+    }
+    
+    public String getDocumentExtensions() {
+        return join(documentExtensions, ",");
+    }
+    
+    public String getImageExtensions() {
+        return join(imageExtensions, ",");
     }
     
         
@@ -162,6 +187,28 @@ public class XML {
         Collections.sort(pageURLs);
         Collections.sort(documentURLs);
         Collections.sort(imageURLs);
+    }
+    
+    public String join(ArrayList<String> list, String delimiter) {
+        StringBuilder builder = new StringBuilder();        
+        Iterator iter = list.iterator();
+        while (iter.hasNext()) {
+            builder.append(iter.next());
+            if (!iter.hasNext()) {
+            break;                  
+            }
+            builder.append(delimiter);
+        }
+        return builder.toString();
+    }
+    
+    public ArrayList<String> split(String extensions) {
+        String[] temp = extensions.split(",");
+        for (String s : temp) {
+            System.out.println(s);
+        }
+    
+        return new ArrayList<String>(Arrays.asList(temp));
     }
 
     public int calculateResults() {
