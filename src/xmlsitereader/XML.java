@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
@@ -28,13 +30,13 @@ public class XML {
     private static int sumRSSFeeds = 0;
     private String fileName;
     private File file;
-    private URL[] urls;
+    private ArrayList<URL> urls;
     private ArrayList<URL> documentURLs;
     private ArrayList<URL> pageURLs;
     private ArrayList<URL> imageURLs;
     private String[] fullPaths;
     private final ArrayList<String> documentExtensions = new ArrayList(Arrays.asList(".doc", ".docx", ".pdf", ".txt", ".odt",".odg", ".csv", ".xls", ".xlsx"));
-    private final ArrayList<String> pageExtensions = new ArrayList(Arrays.asList(".htm", ".html", ".asp", ".jsp", ".php", ".aspx", ".shtml", ".pl"));
+    private final ArrayList<String> pageExtensions = new ArrayList(Arrays.asList(".htm", ".html", ".asp", ".jsp", ".php", ".aspx", ".shtml"));
     private final ArrayList<String> imageExtensions = new ArrayList(Arrays.asList(".gif", ".jpg", ".png", ".jpeg", ".bmp"));
    
     private static int queryStrings = 0;
@@ -62,12 +64,8 @@ public class XML {
         return file;
     }
     
-    public void setURLs(URL[] urls) {
-        this.urls = urls;
-    }
-    
     public URL[] getURLs() {
-        return urls;
+        return urls.toArray(new URL[urls.size()]);
     }
     
     public URL[] getDocumentURLs() {
@@ -101,7 +99,7 @@ public class XML {
                     fullPaths[i] = newNode.getTextContent();
                 }
                 
-                urls = new URL[nodeList.getLength()];
+                urls = new ArrayList<>();
                 documentURLs = new ArrayList<>();
                 pageURLs = new ArrayList<>();
                 imageURLs = new ArrayList<>();
@@ -111,7 +109,7 @@ public class XML {
                     //Check to see if url is for a page first
                     for (String extension : pageExtensions) {
                         if (fullPaths[i].toLowerCase().contains(extension)) {
-                            urls[i] = new URL(fullPaths[i], extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE);
+                            urls.add(new URL(fullPaths[i], extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
                             pageURLs.add(new URL(fullPaths[i], extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
                             sumPages++;
                             stored = true;
@@ -121,7 +119,7 @@ public class XML {
                     if (!stored) {
                         for (String extension : documentExtensions) {
                             if (fullPaths[i].toLowerCase().contains(extension)) {
-                                urls[i] = new URL(fullPaths[i], extension, Boolean.FALSE, Boolean.TRUE, Boolean.FALSE);
+                                urls.add(new URL(fullPaths[i], extension, Boolean.FALSE, Boolean.TRUE, Boolean.FALSE));
                                 documentURLs.add(new URL(fullPaths[i], extension, Boolean.FALSE, Boolean.TRUE, Boolean.FALSE));
                                 sumDocuments++;
                                 stored = true;
@@ -132,7 +130,7 @@ public class XML {
                     if (!stored) {
                         for (String extension : imageExtensions) {
                             if (fullPaths[i].toLowerCase().contains(extension)) {
-                                urls[i] = new URL(fullPaths[i], extension, Boolean.FALSE, Boolean.FALSE, Boolean.TRUE);
+                                urls.add(new URL(fullPaths[i], extension, Boolean.FALSE, Boolean.FALSE, Boolean.TRUE));
                                 imageURLs.add(new URL(fullPaths[i], extension, Boolean.FALSE, Boolean.FALSE, Boolean.TRUE));
 
                                 sumImages++;
@@ -143,7 +141,7 @@ public class XML {
                     //If the url didn't contain any of the extensions we are checking for check to see if it
                     if (!stored) {
                         String extension = "other";
-                        urls[i] = new URL(fullPaths[i], extension,  Boolean.TRUE, Boolean.FALSE, Boolean.FALSE);
+                        urls.add(new URL(fullPaths[i], extension,  Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
                         pageURLs.add(new URL(fullPaths[i], extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
                         sumPages++;
                     }
@@ -155,10 +153,19 @@ public class XML {
             System.out.println(e);
         }
         
+        sortUrls();
+        
+    }
+    
+    public void sortUrls() {
+        Collections.sort(urls);
+        Collections.sort(pageURLs);
+        Collections.sort(documentURLs);
+        Collections.sort(imageURLs);
     }
 
     public int calculateResults() {
-        return sumTotal = sumPages + sumDocuments + sumOtherItems + queryStrings;
+        return sumTotal = sumPages + sumDocuments + sumImages;
     }
     
     public void resetCounts() {
