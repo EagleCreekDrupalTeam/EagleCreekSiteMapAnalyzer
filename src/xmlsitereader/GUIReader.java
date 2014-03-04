@@ -506,7 +506,10 @@ public class GUIReader extends javax.swing.JFrame {
        buildTable("page");
        openUrlButton.setEnabled(false);
     }//GEN-LAST:event_pageRadioButtonActionPerformed
-
+    /**
+     * Get url of selected row so it can be opened in a browser
+     * @param evt 
+     */
     private void urlTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_urlTableMouseClicked
         JTable tempTable = (JTable)evt.getSource();
         urlToOpen = tempTable.getValueAt(tempTable.getSelectedRow(), tempTable.getSelectedColumn()).toString();
@@ -525,34 +528,52 @@ public class GUIReader extends javax.swing.JFrame {
             catch (IOException | URISyntaxException ioe) {}
         }
     }//GEN-LAST:event_openUrlButtonActionPerformed
-
+    /**
+     * Once text is being changed in the pageTypesField enable its update button
+     * @param evt 
+     */
     private void pageTypesFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pageTypesFieldKeyTyped
         updatePageTypeButton.setEnabled(true);
     }//GEN-LAST:event_pageTypesFieldKeyTyped
-
+    /**
+     * Get the new page extension arguments and set them in the XML object
+     * @param evt 
+     */
     private void updatePageTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updatePageTypeButtonActionPerformed
         String extensions = pageTypesField.getText();
         xml.setPageExtensions(extensions);
         updatePageTypeButton.setEnabled(false);
                 
     }//GEN-LAST:event_updatePageTypeButtonActionPerformed
-
+    /**
+     * Get the new document extension arguments and set them in the XML object
+     * @param evt 
+     */
     private void updateDocumentTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateDocumentTypeButtonActionPerformed
         String extensions = documentTypesField.getText();
         xml.setDocumentExtensions(extensions);
         updateDocumentTypeButton.setEnabled(false);
     }//GEN-LAST:event_updateDocumentTypeButtonActionPerformed
-
+    /**
+     * Get the new image extension arguments and set them in the XML object
+     * @param evt 
+     */
     private void updateImageTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateImageTypeButtonActionPerformed
         String extensions = imageTypesField.getText();
         xml.setImageExtensions(extensions);
         updateImageTypeButton.setEnabled(false);
     }//GEN-LAST:event_updateImageTypeButtonActionPerformed
-
+    /**
+     * Once text is being changed in the documentTypesField enable its update button
+     * @param evt 
+     */
     private void documentTypesFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_documentTypesFieldKeyTyped
         updateDocumentTypeButton.setEnabled(true);
     }//GEN-LAST:event_documentTypesFieldKeyTyped
-
+    /**
+     * Once text is being changed in the imageTypesField enable its update button
+     * @param evt 
+     */
     private void imageTypesFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_imageTypesFieldKeyTyped
         updateImageTypeButton.setEnabled(true);
     }//GEN-LAST:event_imageTypesFieldKeyTyped
