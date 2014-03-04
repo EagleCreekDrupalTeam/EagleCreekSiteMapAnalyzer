@@ -191,6 +191,7 @@ public class GUIReader extends javax.swing.JFrame {
         imageTypesLabel.setText("Image Types:");
 
         pageTypesField.setText(pageTypes);
+        pageTypesField.setToolTipText("Enter page extensions separated by a comma.");
         pageTypesField.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         pageTypesField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -199,6 +200,7 @@ public class GUIReader extends javax.swing.JFrame {
         });
 
         documentTypesField.setText(documentTypes);
+        documentTypesField.setToolTipText("Enter document extensions separated by a comma.");
         documentTypesField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 documentTypesFieldKeyTyped(evt);
@@ -206,6 +208,7 @@ public class GUIReader extends javax.swing.JFrame {
         });
 
         imageTypesField.setText(imageTypes);
+        imageTypesField.setToolTipText("Enter image extensions separated by a comma.");
         imageTypesField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 imageTypesFieldKeyTyped(evt);
