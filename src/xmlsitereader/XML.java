@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.Iterator;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -36,7 +35,7 @@ public class XML {
     private ArrayList<URL> pageURLs;
     private ArrayList<URL> imageURLs;
     private String[] fullPaths;
-    private ArrayList<String> documentExtensions = new ArrayList(Arrays.asList(".doc", ".docx", ".pdf", ".txt", ".odt",".odg", ".csv", ".xls", ".xlsx"));
+    private ArrayList<String> documentExtensions = new ArrayList(Arrays.asList(".doc", ".docx", ".pdf", ".txt", ".odt",".odg", ".csv", ".xls", ".xlsx", ".xlt"));
     private ArrayList<String> pageExtensions = new ArrayList(Arrays.asList(".htm", ".html", ".asp", ".jsp", ".php", ".aspx", ".shtml"));
     private ArrayList<String> imageExtensions = new ArrayList(Arrays.asList(".gif", ".jpg", ".png", ".jpeg", ".bmp"));
    
@@ -80,15 +79,15 @@ public class XML {
     }
     
     public void setPageExtensions(String extensions) {
-        this.pageExtensions = split(extensions);
+        this.pageExtensions = split(extensions, ",");
     }
     
     public void setDocumentExtensions(String extensions) {
-        this.documentExtensions = split(extensions);
+        this.documentExtensions = split(extensions, ",");
     }
     
     public void setImageExtensions(String extensions) {
-        this.imageExtensions = split(extensions);
+        this.imageExtensions = split(extensions, ",");
     }
     
     public String getPageExtensions() {
@@ -103,7 +102,10 @@ public class XML {
         return join(imageExtensions, ",");
     }
     
-        
+    /**
+     * Parses through the xml sitemap to build the lists of urls
+     * @throws FileNotFoundException 
+     */    
     public void parseXML() throws FileNotFoundException {
 
         try {
@@ -113,7 +115,7 @@ public class XML {
                 Document doc = newBuilder.parse(file);
                 doc.getDocumentElement().normalize();            
                 
-                NodeList nodeList = doc.getElementsByTagName("loc");
+                NodeList nodeList = doc.getElementsByTagName("loc"); 
                 
                 System.out.println("Number of Nodes: " + nodeList.getLength());
                 
@@ -181,14 +183,21 @@ public class XML {
         sortUrls();
         
     }
-    
+    /**
+     * Sort all the lists
+     */
     public void sortUrls() {
         Collections.sort(urls);
         Collections.sort(pageURLs);
         Collections.sort(documentURLs);
         Collections.sort(imageURLs);
     }
-    
+    /**
+     * Join a list of Strings as one String separated by a given delimeter
+     * @param list
+     * @param delimiter
+     * @return 
+     */
     public String join(ArrayList<String> list, String delimiter) {
         StringBuilder builder = new StringBuilder();        
         Iterator iter = list.iterator();
@@ -201,20 +210,30 @@ public class XML {
         }
         return builder.toString();
     }
-    
-    public ArrayList<String> split(String extensions) {
-        String[] temp = extensions.split(",");
+    /**
+     * Split a String into a list of Strings at a given delimeter
+     * @param extensions
+     * @param delimeter
+     * @return 
+     */
+    public ArrayList<String> split(String extensions, String delimeter) {
+        String[] temp = extensions.split(delimeter);
         for (String s : temp) {
             System.out.println(s);
         }
     
         return new ArrayList<String>(Arrays.asList(temp));
     }
-
+    /**
+     * Sum up the counts of the different types of urls
+     * @return 
+     */
     public int calculateResults() {
         return sumTotal = sumPages + sumDocuments + sumImages;
     }
-    
+    /**
+     * Reset url counts so analysis can be ran more than once
+     */
     public void resetCounts() {
         sumPages = 0;
         sumDocuments = 0;
@@ -224,7 +243,10 @@ public class XML {
         sumVideos = 0;
         sumRSSFeeds = 0;
     }
-
+    /**
+     * Build a String with the results to be displayed
+     * @return 
+     */
     public String printResults() {
         
         String output = "";
