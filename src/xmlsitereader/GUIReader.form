@@ -120,12 +120,6 @@
                   <Component id="browseButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="fileLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="fileField" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="browseButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="fileLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="fileField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel1" alignment="3" min="-2" pref="42" max="-2" attributes="0"/>
-                  </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
