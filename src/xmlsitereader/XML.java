@@ -198,7 +198,7 @@ public class XML {
         sortUrls();
         
     }
-    public true checkForQueryString(String fullPath) {
+    public boolean checkForQueryString(String fullPath) {
         if (fullPath.contains("?")) {
             int queryIndex = fullPath.indexOf("?");
             String baseURL = fullPath.substring(0, queryIndex);
