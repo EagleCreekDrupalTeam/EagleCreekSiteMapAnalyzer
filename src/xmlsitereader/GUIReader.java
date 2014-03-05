@@ -615,19 +615,28 @@ public class GUIReader extends javax.swing.JFrame {
     private void imageTypesFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_imageTypesFieldKeyTyped
         updateImageTypeButton.setEnabled(true);
     }//GEN-LAST:event_imageTypesFieldKeyTyped
-
+    /**
+     * Reset page types to the default page types
+     * @param evt 
+     */
     private void resetPageTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetPageTypeButtonActionPerformed
         pageTypes = xml.getDefaultPageExtensions();
         pageTypesField.setText(pageTypes);
         resetPageTypeButton.setEnabled(false);
     }//GEN-LAST:event_resetPageTypeButtonActionPerformed
-
+    /**
+     * Reset image types to the default image types
+     * @param evt 
+     */
     private void resetImageTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetImageTypeButtonActionPerformed
         imageTypes = xml.getDefaultImageExtensions();
         imageTypesField.setText(imageTypes);
         resetImageTypeButton.setEnabled(false);
     }//GEN-LAST:event_resetImageTypeButtonActionPerformed
-
+    /**
+     * Reset document types to the default document types
+     * @param evt 
+     */
     private void resetDocumentTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetDocumentTypeButtonActionPerformed
         documentTypes = xml.getDefaultDocumentExtensions();
         documentTypesField.setText(documentTypes);
