@@ -35,9 +35,12 @@ public class XML {
     private ArrayList<URL> pageURLs;
     private ArrayList<URL> imageURLs;
     private String[] fullPaths;
-    private ArrayList<String> documentExtensions = new ArrayList(Arrays.asList(".doc", ".docx", ".pdf", ".txt", ".odt",".odg", ".csv", ".xls", ".xlsx", ".xlt"));
-    private ArrayList<String> pageExtensions = new ArrayList(Arrays.asList(".htm", ".html", ".asp", ".jsp", ".php", ".aspx", ".shtml"));
-    private ArrayList<String> imageExtensions = new ArrayList(Arrays.asList(".gif", ".jpg", ".png", ".jpeg", ".bmp"));
+    private ArrayList<String> defaultDocumentExtensions = new ArrayList(Arrays.asList(".doc", ".docx", ".pdf", ".txt", ".odt",".odg", ".csv", ".xls", ".xlsx", ".xlt"));
+    private ArrayList<String> defaultPageExtensions = new ArrayList(Arrays.asList(".htm", ".html", ".asp", ".jsp", ".php", ".aspx", ".shtml"));
+    private ArrayList<String> defaultImageExtensions = new ArrayList(Arrays.asList(".gif", ".jpg", ".png", ".jpeg", ".bmp"));
+    private ArrayList<String> updatedDocumentExtensions = new ArrayList<String>();
+    private ArrayList<String> updatedPageExtensions = new ArrayList<String>();
+    private ArrayList<String> updatedImageExtensions = new ArrayList<String>();
    
     private static int queryStrings = 0;
     
@@ -79,27 +82,39 @@ public class XML {
     }
     
     public void setPageExtensions(String extensions) {
-        this.pageExtensions = split(extensions, ",");
+        this.updatedPageExtensions = split(extensions, ",");
     }
     
     public void setDocumentExtensions(String extensions) {
-        this.documentExtensions = split(extensions, ",");
+        this.updatedDocumentExtensions = split(extensions, ",");
     }
     
     public void setImageExtensions(String extensions) {
-        this.imageExtensions = split(extensions, ",");
+        this.updatedImageExtensions = split(extensions, ",");
     }
     
     public String getPageExtensions() {
-        return join(pageExtensions, ",");
+        return join(updatedPageExtensions, ",");
     }
     
     public String getDocumentExtensions() {
-        return join(documentExtensions, ",");
+        return join(updatedDocumentExtensions, ",");
     }
     
     public String getImageExtensions() {
-        return join(imageExtensions, ",");
+        return join(updatedImageExtensions, ",");
+    }
+    
+    public String getDefaultPageExtensions() {
+        return join(defaultPageExtensions, ",");
+    }
+    
+    public String getDefaultDocumentExtensions() {
+        return join(defaultDocumentExtensions, ",");
+    }
+    
+    public String getDefaultImageExtensions() {
+        return join(defaultImageExtensions, ",");
     }
     
     /**
@@ -134,7 +149,7 @@ public class XML {
                 for (int i = 0; i < fullPaths.length; i++) {
                     boolean stored = false; //Flag to see if we've had a match
                     //Check to see if url is for a page first
-                    for (String extension : pageExtensions) {
+                    for (String extension : defaultPageExtensions) {
                         if (fullPaths[i].toLowerCase().contains(extension)) {
                             urls.add(new URL(fullPaths[i], extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
                             pageURLs.add(new URL(fullPaths[i], extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
@@ -144,7 +159,7 @@ public class XML {
                     }
                     //If the url wasn't a page check to see if url is for a document
                     if (!stored) {
-                        for (String extension : documentExtensions) {
+                        for (String extension : defaultDocumentExtensions) {
                             if (fullPaths[i].toLowerCase().contains(extension)) {
                                 urls.add(new URL(fullPaths[i], extension, Boolean.FALSE, Boolean.TRUE, Boolean.FALSE));
                                 documentURLs.add(new URL(fullPaths[i], extension, Boolean.FALSE, Boolean.TRUE, Boolean.FALSE));
@@ -155,7 +170,7 @@ public class XML {
                     }                    
                     //If the url wasn't a page or document heck to see if url is for an image
                     if (!stored) {
-                        for (String extension : imageExtensions) {
+                        for (String extension : defaultImageExtensions) {
                             if (fullPaths[i].toLowerCase().contains(extension)) {
                                 urls.add(new URL(fullPaths[i], extension, Boolean.FALSE, Boolean.FALSE, Boolean.TRUE));
                                 imageURLs.add(new URL(fullPaths[i], extension, Boolean.FALSE, Boolean.FALSE, Boolean.TRUE));

@@ -25,9 +25,9 @@ public class GUIReader extends javax.swing.JFrame {
     private Object[][] data;
     private String[] columnNames = {"Line#", "URL", "Extension", "Page", "Document", "Image"};
     private String urlToOpen;
-    private String pageTypes = xml.getPageExtensions();
-    private String documentTypes = xml.getDocumentExtensions();
-    private String imageTypes = xml.getImageExtensions();
+    private String pageTypes = xml.getDefaultPageExtensions();
+    private String documentTypes = xml.getDefaultDocumentExtensions();
+    private String imageTypes = xml.getDefaultImageExtensions();
     private DefaultTableModel tableModel = new DefaultTableModel(data, columnNames){  
         public boolean isCellEditable(int row, int column){  
         return false;
@@ -80,6 +80,9 @@ public class GUIReader extends javax.swing.JFrame {
         updatePageTypeButton = new javax.swing.JButton();
         updateDocumentTypeButton = new javax.swing.JButton();
         updateImageTypeButton = new javax.swing.JButton();
+        resetDocumentTypeButton = new javax.swing.JButton();
+        resetImageTypeButton = new javax.swing.JButton();
+        resetPageTypeButton = new javax.swing.JButton();
 
         allRadioButton.setSelected(true);
 
@@ -239,6 +242,30 @@ public class GUIReader extends javax.swing.JFrame {
             }
         });
 
+        resetDocumentTypeButton.setText("Reset");
+        resetDocumentTypeButton.setEnabled(false);
+        resetDocumentTypeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetDocumentTypeButtonActionPerformed(evt);
+            }
+        });
+
+        resetImageTypeButton.setText("Reset");
+        resetImageTypeButton.setEnabled(false);
+        resetImageTypeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetImageTypeButtonActionPerformed(evt);
+            }
+        });
+
+        resetPageTypeButton.setText("Reset");
+        resetPageTypeButton.setEnabled(false);
+        resetPageTypeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetPageTypeButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -264,6 +291,7 @@ public class GUIReader extends javax.swing.JFrame {
                                 .addComponent(imageRadioButton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(openUrlButton))
+                            .addComponent(titleLabel)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(documentTypesLabel)
@@ -285,8 +313,12 @@ public class GUIReader extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(fileField, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(browseButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                            .addComponent(titleLabel))
+                                        .addComponent(browseButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(resetDocumentTypeButton)
+                                    .addComponent(resetImageTypeButton)
+                                    .addComponent(resetPageTypeButton))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -304,17 +336,20 @@ public class GUIReader extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(pageTypesLabel)
                     .addComponent(pageTypesField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(updatePageTypeButton))
+                    .addComponent(updatePageTypeButton)
+                    .addComponent(resetPageTypeButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(documentTypesLabel)
                     .addComponent(documentTypesField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(updateDocumentTypeButton))
+                    .addComponent(updateDocumentTypeButton)
+                    .addComponent(resetDocumentTypeButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(imageTypesLabel)
                     .addComponent(imageTypesField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(updateImageTypeButton))
+                    .addComponent(updateImageTypeButton)
+                    .addComponent(resetImageTypeButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(analyzeButton)
                 .addGap(12, 12, 12)
@@ -543,6 +578,7 @@ public class GUIReader extends javax.swing.JFrame {
         String extensions = pageTypesField.getText();
         xml.setPageExtensions(extensions);
         updatePageTypeButton.setEnabled(false);
+        resetPageTypeButton.setEnabled(true);
                 
     }//GEN-LAST:event_updatePageTypeButtonActionPerformed
     /**
@@ -553,6 +589,7 @@ public class GUIReader extends javax.swing.JFrame {
         String extensions = documentTypesField.getText();
         xml.setDocumentExtensions(extensions);
         updateDocumentTypeButton.setEnabled(false);
+        resetDocumentTypeButton.setEnabled(true);
     }//GEN-LAST:event_updateDocumentTypeButtonActionPerformed
     /**
      * Get the new image extension arguments and set them in the XML object
@@ -562,6 +599,7 @@ public class GUIReader extends javax.swing.JFrame {
         String extensions = imageTypesField.getText();
         xml.setImageExtensions(extensions);
         updateImageTypeButton.setEnabled(false);
+        resetImageTypeButton.setEnabled(true);
     }//GEN-LAST:event_updateImageTypeButtonActionPerformed
     /**
      * Once text is being changed in the documentTypesField enable its update button
@@ -577,6 +615,24 @@ public class GUIReader extends javax.swing.JFrame {
     private void imageTypesFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_imageTypesFieldKeyTyped
         updateImageTypeButton.setEnabled(true);
     }//GEN-LAST:event_imageTypesFieldKeyTyped
+
+    private void resetPageTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetPageTypeButtonActionPerformed
+        pageTypes = xml.getDefaultPageExtensions();
+        pageTypesField.setText(pageTypes);
+        resetPageTypeButton.setEnabled(false);
+    }//GEN-LAST:event_resetPageTypeButtonActionPerformed
+
+    private void resetImageTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetImageTypeButtonActionPerformed
+        imageTypes = xml.getDefaultImageExtensions();
+        imageTypesField.setText(imageTypes);
+        resetImageTypeButton.setEnabled(false);
+    }//GEN-LAST:event_resetImageTypeButtonActionPerformed
+
+    private void resetDocumentTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetDocumentTypeButtonActionPerformed
+        documentTypes = xml.getDefaultDocumentExtensions();
+        documentTypesField.setText(documentTypes);
+        resetDocumentTypeButton.setEnabled(false);
+    }//GEN-LAST:event_resetDocumentTypeButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -632,6 +688,9 @@ public class GUIReader extends javax.swing.JFrame {
     private javax.swing.JRadioButton pageRadioButton;
     private javax.swing.JTextField pageTypesField;
     private javax.swing.JLabel pageTypesLabel;
+    private javax.swing.JButton resetDocumentTypeButton;
+    private javax.swing.JButton resetImageTypeButton;
+    private javax.swing.JButton resetPageTypeButton;
     private javax.swing.JScrollPane resultsScrollPane;
     private javax.swing.JTextArea resultsTextArea;
     private javax.swing.JScrollPane scrollPane;
