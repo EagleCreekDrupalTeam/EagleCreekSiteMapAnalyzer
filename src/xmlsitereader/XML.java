@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Iterator;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -41,6 +42,7 @@ public class XML {
     private ArrayList<String> updatedDocumentExtensions = new ArrayList<String>();
     private ArrayList<String> updatedPageExtensions = new ArrayList<String>();
     private ArrayList<String> updatedImageExtensions = new ArrayList<String>();
+    private HashMap<String, Integer> pagedURLs = new HashMap<String, Integer>();
    
     private static int queryStrings = 0;
     
@@ -151,10 +153,27 @@ public class XML {
                     //Check to see if url is for a page first
                     for (String extension : defaultPageExtensions) {
                         if (fullPaths[i].toLowerCase().contains(extension)) {
-                            urls.add(new URL(fullPaths[i], extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
-                            pageURLs.add(new URL(fullPaths[i], extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
-                            sumPages++;
-                            stored = true;
+                            if (fullPaths[i].contains("?")) {
+                                int queryIndex = fullPaths[i].indexOf("?");
+                                String baseURL = fullPaths[i].substring(0, queryIndex);
+                                if (isDuplicateURL(baseURL)) {                                    
+                                    pagedURLs.put(baseURL, new Integer(pagedURLs.get(baseURL).intValue() + 1));
+                                    stored = true;
+                                }
+                                else {
+                                    pagedURLs.put(baseURL, new Integer(1));
+                                    urls.add(new URL(baseURL, extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
+                                    pageURLs.add(new URL(baseURL, extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
+                                    sumPages++;
+                                    stored = true;
+                                }
+                            }
+                            else {
+                                urls.add(new URL(fullPaths[i], extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
+                                pageURLs.add(new URL(fullPaths[i], extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
+                                sumPages++;
+                                stored = true;
+                            }
                         }                    
                     }
                     //If the url wasn't a page check to see if url is for a document
@@ -198,12 +217,30 @@ public class XML {
         sortUrls();
         
     }
-    public boolean checkForQueryString(String fullPath) {
+    public void checkForQueryString(String fullPath) {
         if (fullPath.contains("?")) {
             int queryIndex = fullPath.indexOf("?");
             String baseURL = fullPath.substring(0, queryIndex);
+            for (URL url : urls) {
+                if (url.getURL().equals(baseURL)) {
+                    
+                }
+                else {
+                    
+                }
+            }
         }
-        return true;
+        else {
+            
+        }
+    }
+    public boolean isDuplicateURL(String baseURL) {
+        for (URL url : urls) {
+            if (url.getURL().equals(baseURL)) {
+                return true;
+            }
+        }
+        return false;
     }
     /**
      * Sort all the lists
