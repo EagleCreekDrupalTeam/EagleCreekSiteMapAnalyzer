@@ -10,5 +10,4 @@ Features
 
 Authors
 --------
-Curtis Conner
-Stephen Paden
+Curtis Conner, Stephen Paden
