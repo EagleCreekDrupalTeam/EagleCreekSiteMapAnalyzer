@@ -10,6 +10,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.Enumeration;
+import javax.swing.AbstractButton;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
@@ -466,6 +468,7 @@ public class GUIReader extends javax.swing.JFrame {
                     try {
                         xml.parseXML();
                         analyzeButton.setEnabled(true);
+                        analyzeButton.requestFocus();
                     } catch (FileNotFoundException e) {
                         System.out.println(e);
                     }
@@ -495,17 +498,27 @@ public class GUIReader extends javax.swing.JFrame {
             xml.parseXML();
             xml.calculateResults();
             resultsTextArea.setText(xml.printResults());
-            buildTable("all");
+            buildTable(getSelectedFilterButton().toLowerCase());
             allRadioButton.setEnabled(true);
             pageRadioButton.setEnabled(true);
             documentRadioButton.setEnabled(true);
             imageRadioButton.setEnabled(true);
-
         } catch (FileNotFoundException fnfe) {
             System.out.println(fnfe);
         }
     }//GEN-LAST:event_analyzeButtonActionPerformed
 
+    private String getSelectedFilterButton() {
+        for (Enumeration<AbstractButton> buttons = filterButtonGroup.getElements(); buttons.hasMoreElements();) {
+                AbstractButton button = buttons.nextElement();
+
+                if (button.isSelected()) {  
+                    return button.getText();
+                }
+            }
+        return "All";
+    }
+        
     private void fileFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fileFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fileFieldActionPerformed
@@ -620,6 +633,7 @@ public class GUIReader extends javax.swing.JFrame {
      * @param evt 
      */
     private void resetPageTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetPageTypeButtonActionPerformed
+        xml.resetPageExtensions();
         pageTypes = xml.getDefaultPageExtensions();
         pageTypesField.setText(pageTypes);
         resetPageTypeButton.setEnabled(false);
@@ -629,6 +643,7 @@ public class GUIReader extends javax.swing.JFrame {
      * @param evt 
      */
     private void resetImageTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetImageTypeButtonActionPerformed
+        xml.resetImageExtensions();
         imageTypes = xml.getDefaultImageExtensions();
         imageTypesField.setText(imageTypes);
         resetImageTypeButton.setEnabled(false);
@@ -638,6 +653,7 @@ public class GUIReader extends javax.swing.JFrame {
      * @param evt 
      */
     private void resetDocumentTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetDocumentTypeButtonActionPerformed
+        xml.resetDocumentExtensions();
         documentTypes = xml.getDefaultDocumentExtensions();
         documentTypesField.setText(documentTypes);
         resetDocumentTypeButton.setEnabled(false);
