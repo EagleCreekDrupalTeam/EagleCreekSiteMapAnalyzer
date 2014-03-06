@@ -7,3 +7,7 @@ Features
 - Extensions for pages, documents, and images to search for are customizable.
 - Sorting based on url type.
 - Select a url and click Open URL to open the link in default browser.
+
+Authors
+--------
+Curtis Conner, Stephen Paden
