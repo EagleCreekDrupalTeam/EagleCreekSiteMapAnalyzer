@@ -187,7 +187,7 @@ public class GUIReader extends javax.swing.JFrame {
         });
 
         titleLabel.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        titleLabel.setText("Eagle Creek SiteMap Analyzer v1.0");
+        titleLabel.setText("Eagle Creek SiteMap Analyzer");
 
         pageTypesLabel.setText("Page Types:");
 
