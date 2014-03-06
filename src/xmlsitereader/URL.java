@@ -44,7 +44,7 @@ public class URL implements Comparable {
     }
     public String getExtension() {
         return extension;
-    }
+    }    
     public Boolean isPage() { 
         return isPage; 
     }    
@@ -54,6 +54,11 @@ public class URL implements Comparable {
     public Boolean isImage() { 
         return isImage; 
     }
+    /**
+     * Compares the extensions to sort alphabetically
+     * @param obj
+     * @return 
+     */
     @Override
     public int compareTo(Object obj) {
         URL url1 = (URL)obj;       

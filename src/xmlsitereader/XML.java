@@ -7,8 +7,10 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Formatter;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
@@ -26,10 +28,7 @@ public class XML {
     private static int sumPages = 0;
     private static int sumDocuments = 0;
     private static int sumImages = 0;
-    private static int sumOtherItems = 0;
     private static int sumTotal = 0;
-    private static int sumVideos = 0;
-    private static int sumRSSFeeds = 0;
     private String fileName;
     private File file;
     private ArrayList<URL> urls;
@@ -37,17 +36,27 @@ public class XML {
     private ArrayList<URL> pageURLs;
     private ArrayList<URL> imageURLs;
     private String[] fullPaths;
-    private ArrayList<String> defaultDocumentExtensions = new ArrayList(Arrays.asList(".doc", ".docx", ".pdf", ".txt", ".odt", ".odg", ".csv", ".xls", ".xlsx", ".xlt"));
-    private ArrayList<String> defaultPageExtensions = new ArrayList(Arrays.asList(".htm", ".html", ".asp", ".jsp", ".php", ".aspx", ".shtml"));
+    
+    private ArrayList<String> defaultDocumentExtensions = new ArrayList(Arrays.asList(".docx", ".doc", ".pdf", ".txt", ".odt",".odg", ".csv", ".xls", ".xlsx", ".xlt"));
+    private ArrayList<String> defaultPageExtensions = new ArrayList(Arrays.asList(".html", ".htm", ".aspx", ".jsp", ".php", ".asp", ".shtml"));
     private ArrayList<String> defaultImageExtensions = new ArrayList(Arrays.asList(".gif", ".jpg", ".png", ".jpeg", ".bmp"));
-    private ArrayList<String> updatedDocumentExtensions = new ArrayList<String>();
-    private ArrayList<String> updatedPageExtensions = new ArrayList<String>();
-    private ArrayList<String> updatedImageExtensions = new ArrayList<String>();
+        
+    private ArrayList<String> updatedDocumentExtensions = new ArrayList();
+    private ArrayList<String> updatedPageExtensions = new ArrayList();
+    private ArrayList<String> updatedImageExtensions = new ArrayList();
+        
+    private ArrayList<Pattern> documentExtensionPatterns = new ArrayList<Pattern>();
+    private ArrayList<Pattern> pageExtensionPatterns = new ArrayList<Pattern>();
+    private ArrayList<Pattern> imageExtensionPatterns = new ArrayList<Pattern>();
+   
 
-    private static int queryStrings = 0;
-    private Formatter output;
-
+    private HashMap<String, Integer> queriedURLs = new HashMap<String, Integer>();
+    
     public XML() {
+        //Initialize the pattern lists from the default extension lists 
+        buildPatterns(documentExtensionPatterns, defaultDocumentExtensions);
+        buildPatterns(pageExtensionPatterns, defaultPageExtensions);
+        buildPatterns(imageExtensionPatterns, defaultImageExtensions);
     }
 
     public XML(String fName) {
@@ -89,16 +98,37 @@ public class XML {
 
     public void setPageExtensions(String extensions) {
         this.updatedPageExtensions = split(extensions, ",");
+        pageExtensionPatterns.clear();
+        buildPatterns(pageExtensionPatterns, updatedPageExtensions);
     }
 
     public void setDocumentExtensions(String extensions) {
-        this.updatedDocumentExtensions = split(extensions, ",");
+        this.updatedDocumentExtensions = new ArrayList(split(extensions, ","));
+        documentExtensionPatterns.clear();
+        buildPatterns(documentExtensionPatterns, updatedDocumentExtensions);
     }
 
-    public void setImageExtensions(String extensions) {
+    public void setImageExtensions(String extensions) {        
         this.updatedImageExtensions = split(extensions, ",");
+        imageExtensionPatterns.clear();
+        buildPatterns(imageExtensionPatterns, updatedImageExtensions);
     }
 
+    public void resetPageExtensions()  {
+        pageExtensionPatterns.clear();
+        buildPatterns(pageExtensionPatterns, defaultPageExtensions);
+    }
+    
+    public void resetDocumentExtensions() {
+        documentExtensionPatterns.clear();
+        buildPatterns(documentExtensionPatterns, defaultDocumentExtensions);
+    }
+    
+    public void resetImageExtensions() {
+        imageExtensionPatterns.clear();
+        buildPatterns(imageExtensionPatterns, defaultImageExtensions);
+    }
+    
     public String getPageExtensions() {
         return join(updatedPageExtensions, ",");
     }
@@ -122,7 +152,21 @@ public class XML {
     public String getDefaultImageExtensions() {
         return join(defaultImageExtensions, ",");
     }
-
+    /**
+     * Builds list of Patterns from the list of Strings, resets lists if append is false
+     * @param patterns
+     * @param extensions
+     * @param append 
+     */
+    public void buildPatterns(ArrayList<Pattern> patterns, ArrayList<String> extensions) {
+        System.out.println("Before: " + patterns.size());
+        for (String extension : extensions) {
+            patterns.add(Pattern.compile(extension + "$"));
+        }
+        System.out.println("After build: " + patterns.size());
+                
+    }
+    
     /**
      * Parses through the xml sitemap to build the lists of urls
      *
@@ -154,22 +198,36 @@ public class XML {
                 imageURLs = new ArrayList<>();
 
                 for (int i = 0; i < fullPaths.length; i++) {
+                    String fullPath = fullPaths[i];
                     boolean stored = false; //Flag to see if we've had a match
                     //Check to see if url is for a page first
-                    for (String extension : defaultPageExtensions) {
-                        if (fullPaths[i].toLowerCase().contains(extension)) {
-                            urls.add(new URL(fullPaths[i], extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
-                            pageURLs.add(new URL(fullPaths[i], extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
+                    for (Pattern pattern : pageExtensionPatterns) {
+                        //Check for query string first
+                        if (fullPath.contains("?")) {
+                            fullPath = getBaseURL(fullPath);
+                            if (isDuplicateURL(fullPath)) {
+                                queriedURLs.put(fullPath, new Integer(queriedURLs.get(fullPath).intValue() + 1));
+                                stored = true;
+                            }
+                            else {
+                                queriedURLs.put(fullPath, new Integer(1));
+                            }
+                        }
+                        Matcher matcher = pattern.matcher(fullPath.toLowerCase());
+                        if (matcher.find() && !stored) {
+                            urls.add(new URL(fullPath, matcher.group(), Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
+                            pageURLs.add(new URL(fullPath, matcher.group(), Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
                             sumPages++;
                             stored = true;
                         }
                     }
                     //If the url wasn't a page check to see if url is for a document
                     if (!stored) {
-                        for (String extension : defaultDocumentExtensions) {
-                            if (fullPaths[i].toLowerCase().contains(extension)) {
-                                urls.add(new URL(fullPaths[i], extension, Boolean.FALSE, Boolean.TRUE, Boolean.FALSE));
-                                documentURLs.add(new URL(fullPaths[i], extension, Boolean.FALSE, Boolean.TRUE, Boolean.FALSE));
+                        for (Pattern pattern : documentExtensionPatterns) {
+                            Matcher matcher = pattern.matcher(fullPath.toLowerCase());
+                            if (matcher.find()) {
+                                urls.add(new URL(fullPath, matcher.group(), Boolean.FALSE, Boolean.TRUE, Boolean.FALSE));
+                                documentURLs.add(new URL(fullPath, matcher.group(), Boolean.FALSE, Boolean.TRUE, Boolean.FALSE));
                                 sumDocuments++;
                                 stored = true;
                             }
@@ -177,10 +235,11 @@ public class XML {
                     }
                     //If the url wasn't a page or document heck to see if url is for an image
                     if (!stored) {
-                        for (String extension : defaultImageExtensions) {
-                            if (fullPaths[i].toLowerCase().contains(extension)) {
-                                urls.add(new URL(fullPaths[i], extension, Boolean.FALSE, Boolean.FALSE, Boolean.TRUE));
-                                imageURLs.add(new URL(fullPaths[i], extension, Boolean.FALSE, Boolean.FALSE, Boolean.TRUE));
+                        for (Pattern pattern : imageExtensionPatterns) {
+                            Matcher matcher = pattern.matcher(fullPath.toLowerCase());
+                            if (matcher.find()) {
+                                urls.add(new URL(fullPath, matcher.group(), Boolean.FALSE, Boolean.FALSE, Boolean.TRUE));
+                                imageURLs.add(new URL(fullPath, matcher.group(), Boolean.FALSE, Boolean.FALSE, Boolean.TRUE));
 
                                 sumImages++;
                                 stored = true;
@@ -190,8 +249,8 @@ public class XML {
                     //If the url didn't contain any of the extensions we are checking for check to see if it
                     if (!stored) {
                         String extension = "other";
-                        urls.add(new URL(fullPaths[i], extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
-                        pageURLs.add(new URL(fullPaths[i], extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
+                        urls.add(new URL(fullPath, extension,  Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
+                        pageURLs.add(new URL(fullPath, extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
                         sumPages++;
                     }
 
@@ -206,6 +265,29 @@ public class XML {
 
     }
 
+    /**
+     * Get the base url from one with a query string
+     * @param url
+     * @return 
+     */
+    public String getBaseURL(String url) {
+        int queryIndex = url.indexOf("?");
+        return url.substring(0, queryIndex);
+    }
+    /**
+     * Check the list of urls for a duplicate
+     * @param baseURL
+     * @return 
+     */
+    public boolean isDuplicateURL(String baseURL) {
+        for (URL url : urls) {
+            if (url.getURL().equals(baseURL)) {
+                System.out.println(baseURL);
+                return true;
+            }
+        }
+        return false;
+    }
     /**
      * Sort all the lists
      */
@@ -268,10 +350,7 @@ public class XML {
         sumPages = 0;
         sumDocuments = 0;
         sumImages = 0;
-        sumOtherItems = 0;
         sumTotal = 0;
-        sumVideos = 0;
-        sumRSSFeeds = 0;
     }
 
     /**
@@ -280,33 +359,16 @@ public class XML {
      * @return
      */
     public String printResults() {
-
-        String output = "";
-
-        output += ("Number of pages: " + sumPages + "\n");
-        output += ("Number of documents: " + sumDocuments + "\n");
-        output += ("Number of images: " + sumImages + "\n");
-
-        // add later
-        // output +=("Number of videos: " + sumVideos + "\n");
-        // output +=("Number of rss feeds: " + sumRSSFeeds + "\n");
-        // output +=("Number of dynamic paths: " + queryStrings + "\n");
-        output += ("Total number of elements: " + calculateResults());
-
-        return output;
+       StringBuilder builder = new StringBuilder();
+        builder.append("Number of pages: ").append(sumPages).append("\n");
+        builder.append("Number of documents: ").append(sumDocuments).append("\n");
+        builder.append("Number of images: ").append(sumImages).append("\n");
+        builder.append("Total number of elements: ").append(calculateResults());
+       
+        return builder.toString();
     }
 
-    public void openReport() throws IOException {
-        try {
-            output = new Formatter("report.rtf");
-        } catch (SecurityException se) {
-            System.out.println("You do not have access to this file or directory." + se);
-            System.exit(1);
-        } catch (FileNotFoundException fnfe) {
-            System.out.println("Error opening or creating the file." + fnfe);
-            System.exit(1);
-        }
-    }
+    
 
     // added by Stephen Paden, 3/6/14
     public void createReport() throws FileNotFoundException {
