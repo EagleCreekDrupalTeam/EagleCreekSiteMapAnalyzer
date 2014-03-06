@@ -2,9 +2,12 @@ package xmlsitereader;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Formatter;
 import java.util.Iterator;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -14,13 +17,12 @@ import org.w3c.dom.NodeList;
 
 /**
  *
- ** @author Stephen Paden and Curtis Conner
- ** Company: Eagle Creek Software Services 
- ** Date: 2/26/2014
+ ** @author Stephen Paden and Curtis Conner * Company: Eagle Creek Software
+ * Services * Date: 2/26/2014
  *
  */
-
 public class XML {
+
     private static int sumPages = 0;
     private static int sumDocuments = 0;
     private static int sumImages = 0;
@@ -35,17 +37,19 @@ public class XML {
     private ArrayList<URL> pageURLs;
     private ArrayList<URL> imageURLs;
     private String[] fullPaths;
-    private ArrayList<String> defaultDocumentExtensions = new ArrayList(Arrays.asList(".doc", ".docx", ".pdf", ".txt", ".odt",".odg", ".csv", ".xls", ".xlsx", ".xlt"));
+    private ArrayList<String> defaultDocumentExtensions = new ArrayList(Arrays.asList(".doc", ".docx", ".pdf", ".txt", ".odt", ".odg", ".csv", ".xls", ".xlsx", ".xlt"));
     private ArrayList<String> defaultPageExtensions = new ArrayList(Arrays.asList(".htm", ".html", ".asp", ".jsp", ".php", ".aspx", ".shtml"));
     private ArrayList<String> defaultImageExtensions = new ArrayList(Arrays.asList(".gif", ".jpg", ".png", ".jpeg", ".bmp"));
     private ArrayList<String> updatedDocumentExtensions = new ArrayList<String>();
     private ArrayList<String> updatedPageExtensions = new ArrayList<String>();
     private ArrayList<String> updatedImageExtensions = new ArrayList<String>();
-   
+
     private static int queryStrings = 0;
-    
+    private Formatter output;
+
     public XML() {
     }
+
     public XML(String fName) {
         fileName = fName;
     }
@@ -53,74 +57,77 @@ public class XML {
     public void setFileName(String fName) {
         fileName = fName;
     }
-    
+
     public String getFileName() {
         return fileName;
     }
-    
+
     public void setFile(File file) {
         this.file = file;
         setFileName(file.getName());
     }
-    
+
     public File getFile() {
         return file;
     }
-    
+
     public URL[] getURLs() {
         return urls.toArray(new URL[urls.size()]);
     }
-    
+
     public URL[] getDocumentURLs() {
         return documentURLs.toArray(new URL[documentURLs.size()]);
     }
+
     public URL[] getPageURLs() {
         return pageURLs.toArray(new URL[pageURLs.size()]);
     }
+
     public URL[] getImageURLs() {
         return imageURLs.toArray(new URL[imageURLs.size()]);
     }
-    
+
     public void setPageExtensions(String extensions) {
         this.updatedPageExtensions = split(extensions, ",");
     }
-    
+
     public void setDocumentExtensions(String extensions) {
         this.updatedDocumentExtensions = split(extensions, ",");
     }
-    
+
     public void setImageExtensions(String extensions) {
         this.updatedImageExtensions = split(extensions, ",");
     }
-    
+
     public String getPageExtensions() {
         return join(updatedPageExtensions, ",");
     }
-    
+
     public String getDocumentExtensions() {
         return join(updatedDocumentExtensions, ",");
     }
-    
+
     public String getImageExtensions() {
         return join(updatedImageExtensions, ",");
     }
-    
+
     public String getDefaultPageExtensions() {
         return join(defaultPageExtensions, ",");
     }
-    
+
     public String getDefaultDocumentExtensions() {
         return join(defaultDocumentExtensions, ",");
     }
-    
+
     public String getDefaultImageExtensions() {
         return join(defaultImageExtensions, ",");
     }
-    
+
     /**
      * Parses through the xml sitemap to build the lists of urls
-     * @throws FileNotFoundException 
-     */    
+     *
+     * @throws FileNotFoundException
+     */
     public void parseXML() throws FileNotFoundException {
 
         try {
@@ -128,24 +135,24 @@ public class XML {
                 DocumentBuilderFactory newDocumentBuilderFactory = DocumentBuilderFactory.newInstance();
                 DocumentBuilder newBuilder = newDocumentBuilderFactory.newDocumentBuilder();
                 Document doc = newBuilder.parse(file);
-                doc.getDocumentElement().normalize();            
-                
-                NodeList nodeList = doc.getElementsByTagName("loc"); 
-                
+                doc.getDocumentElement().normalize();
+
+                NodeList nodeList = doc.getElementsByTagName("loc");
+
                 System.out.println("Number of Nodes: " + nodeList.getLength());
-                
+
                 fullPaths = new String[nodeList.getLength()];
-                
+
                 for (int i = 0; i < nodeList.getLength(); i++) {
                     Node newNode = nodeList.item(i);
                     fullPaths[i] = newNode.getTextContent();
                 }
-                
+
                 urls = new ArrayList<>();
                 documentURLs = new ArrayList<>();
                 pageURLs = new ArrayList<>();
                 imageURLs = new ArrayList<>();
-                
+
                 for (int i = 0; i < fullPaths.length; i++) {
                     boolean stored = false; //Flag to see if we've had a match
                     //Check to see if url is for a page first
@@ -155,7 +162,7 @@ public class XML {
                             pageURLs.add(new URL(fullPaths[i], extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
                             sumPages++;
                             stored = true;
-                        }                    
+                        }
                     }
                     //If the url wasn't a page check to see if url is for a document
                     if (!stored) {
@@ -167,7 +174,7 @@ public class XML {
                                 stored = true;
                             }
                         }
-                    }                    
+                    }
                     //If the url wasn't a page or document heck to see if url is for an image
                     if (!stored) {
                         for (String extension : defaultImageExtensions) {
@@ -177,27 +184,28 @@ public class XML {
 
                                 sumImages++;
                                 stored = true;
-                            } 
+                            }
                         }
                     }
                     //If the url didn't contain any of the extensions we are checking for check to see if it
                     if (!stored) {
                         String extension = "other";
-                        urls.add(new URL(fullPaths[i], extension,  Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
+                        urls.add(new URL(fullPaths[i], extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
                         pageURLs.add(new URL(fullPaths[i], extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
                         sumPages++;
                     }
-                    
+
                 }
                 System.out.println("Base element :" + doc.getDocumentElement().getNodeName());
             }
         } catch (Exception e) {
             System.out.println(e);
         }
-        
+
         sortUrls();
-        
+
     }
+
     /**
      * Sort all the lists
      */
@@ -207,45 +215,52 @@ public class XML {
         Collections.sort(documentURLs);
         Collections.sort(imageURLs);
     }
+
     /**
      * Join a list of Strings as one String separated by a given delimeter
+     *
      * @param list
      * @param delimiter
-     * @return 
+     * @return
      */
     public String join(ArrayList<String> list, String delimiter) {
-        StringBuilder builder = new StringBuilder();        
+        StringBuilder builder = new StringBuilder();
         Iterator iter = list.iterator();
         while (iter.hasNext()) {
             builder.append(iter.next());
             if (!iter.hasNext()) {
-            break;                  
+                break;
             }
             builder.append(delimiter);
         }
         return builder.toString();
     }
+
     /**
      * Split a String into a list of Strings at a given delimeter
+     *
      * @param extensions
      * @param delimeter
-     * @return 
+     * @return
      */
     public ArrayList<String> split(String extensions, String delimeter) {
         String[] temp = extensions.split(delimeter);
         for (String s : temp) {
             System.out.println(s);
         }
-    
+
         return new ArrayList<String>(Arrays.asList(temp));
     }
+
     /**
      * Sum up the counts of the different types of urls
-     * @return 
+     *
+     * @return
      */
     public int calculateResults() {
         return sumTotal = sumPages + sumDocuments + sumImages;
     }
+
     /**
      * Reset url counts so analysis can be ran more than once
      */
@@ -258,31 +273,82 @@ public class XML {
         sumVideos = 0;
         sumRSSFeeds = 0;
     }
+
     /**
      * Build a String with the results to be displayed
-     * @return 
+     *
+     * @return
      */
     public String printResults() {
-        
+
         String output = "";
-        
+
         output += ("Number of pages: " + sumPages + "\n");
-        output +=("Number of documents: " + sumDocuments + "\n");
-        output +=("Number of images: " + sumImages + "\n");
-        //output +=("Number of videos: " + sumVideos + "\n");
-        //output +=("Number of rss feeds: " + sumRSSFeeds + "\n");
-        //output +=("Number of dynamic paths: " + queryStrings + "\n");
-        output +=("Total number of elements: " + calculateResults());
-        
+        output += ("Number of documents: " + sumDocuments + "\n");
+        output += ("Number of images: " + sumImages + "\n");
+
+        // add later
+        // output +=("Number of videos: " + sumVideos + "\n");
+        // output +=("Number of rss feeds: " + sumRSSFeeds + "\n");
+        // output +=("Number of dynamic paths: " + queryStrings + "\n");
+        output += ("Total number of elements: " + calculateResults());
+
         return output;
     }
-    
-    public String createReport() {
-        String output = "";
-        
-        
-        
-        
-        return output;
+
+    public void openReport() throws IOException {
+        try {
+            output = new Formatter("report.rtf");
+        } catch (SecurityException se) {
+            System.out.println("You do not have access to this file or directory." + se);
+            System.exit(1);
+        } catch (FileNotFoundException fnfe) {
+            System.out.println("Error opening or creating the file." + fnfe);
+            System.exit(1);
+        }
+    }
+
+    // added by Stephen Paden, 3/6/14
+    public void createReport() throws FileNotFoundException {
+        PrintWriter newPrintWriter = new PrintWriter("report.xls");
+        try {
+
+            newPrintWriter.write("********************************************\n");
+            newPrintWriter.write("Page URLS: \n");
+            newPrintWriter.write("********************************************\n");
+
+            
+            newPrintWriter.write(pageURLs.toString().replace(",", "")
+                                                    .replace("[", "")
+                                                    .replace("]", "") + "\n");
+            newPrintWriter.write("");
+
+            newPrintWriter.write("********************************************\n");
+            newPrintWriter.write("Document URLS: \n");
+            newPrintWriter.write("********************************************\n");
+
+            newPrintWriter.write(documentURLs.toString().replace(",", "")
+                                                        .replace("[", "")
+                                                        .replace("]", "") + "\n");
+            newPrintWriter.write("");
+
+            newPrintWriter.write("********************************************\n");
+            newPrintWriter.write("Image URLs: \n");
+            newPrintWriter.write("********************************************\n");
+
+            newPrintWriter.write(imageURLs.toString().replace(",", "")
+                                                     .replace("[", "")
+                                                     .replace("]", "") + "\n");
+            newPrintWriter.write("********************************************\n");
+            newPrintWriter.write("Summary: \n");
+            newPrintWriter.write("********************************************\n");
+            newPrintWriter.write(printResults() + "\n");
+
+            newPrintWriter.close();
+
+        } catch (SecurityException se) {
+            System.out.println(se);
+        }
+
     }
 }

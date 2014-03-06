@@ -83,6 +83,7 @@ public class GUIReader extends javax.swing.JFrame {
         resetDocumentTypeButton = new javax.swing.JButton();
         resetImageTypeButton = new javax.swing.JButton();
         resetPageTypeButton = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         allRadioButton.setSelected(true);
 
@@ -266,6 +267,13 @@ public class GUIReader extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("Generate Report");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -276,21 +284,22 @@ public class GUIReader extends javax.swing.JFrame {
                     .addComponent(resultsScrollPane, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(scrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1536, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(allRadioButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(pageRadioButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(documentRadioButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(imageRadioButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(openUrlButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
-                            .addComponent(analyzeButton)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(allRadioButton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(pageRadioButton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(documentRadioButton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(imageRadioButton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(openUrlButton))
                             .addComponent(titleLabel)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -318,7 +327,8 @@ public class GUIReader extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(resetDocumentTypeButton)
                                     .addComponent(resetImageTypeButton)
-                                    .addComponent(resetPageTypeButton))))
+                                    .addComponent(resetPageTypeButton)))
+                            .addComponent(analyzeButton))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -359,7 +369,8 @@ public class GUIReader extends javax.swing.JFrame {
                     .addComponent(imageRadioButton)
                     .addComponent(documentRadioButton)
                     .addComponent(pageRadioButton)
-                    .addComponent(openUrlButton))
+                    .addComponent(openUrlButton)
+                    .addComponent(jButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(scrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 408, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
@@ -490,7 +501,7 @@ public class GUIReader extends javax.swing.JFrame {
     private void analyzeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_analyzeButtonActionPerformed
 
         try {            
-               
+            
             xml.resetCounts();
             xml.parseXML();
             xml.calculateResults();
@@ -499,7 +510,7 @@ public class GUIReader extends javax.swing.JFrame {
             allRadioButton.setEnabled(true);
             pageRadioButton.setEnabled(true);
             documentRadioButton.setEnabled(true);
-            imageRadioButton.setEnabled(true);
+            imageRadioButton.setEnabled(true);   
 
         } catch (FileNotFoundException fnfe) {
             System.out.println(fnfe);
@@ -634,10 +645,18 @@ public class GUIReader extends javax.swing.JFrame {
         resetDocumentTypeButton.setEnabled(false);
     }//GEN-LAST:event_resetDocumentTypeButtonActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        try {
+            xml.createReport();
+        } catch (FileNotFoundException fnfe) {
+            System.out.println(fnfe);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String args[]) throws IOException {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -659,7 +678,9 @@ public class GUIReader extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(GUIReader.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
+        //</editor-fold>     
+        
+        
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -682,6 +703,7 @@ public class GUIReader extends javax.swing.JFrame {
     private javax.swing.JRadioButton imageRadioButton;
     private javax.swing.JTextField imageTypesField;
     private javax.swing.JLabel imageTypesLabel;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JButton openUrlButton;

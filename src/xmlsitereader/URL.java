@@ -60,5 +60,12 @@ public class URL implements Comparable {
         return this.getExtension().compareTo(url1.getExtension());
     }
     
+    @Override
+    public String toString() {
+        
+        String output = (getURL() + "\n"); 
+        return output;
+    }
+    
 
 }
