@@ -215,7 +215,7 @@ public class XML {
                             }
                         }
                         Matcher matcher = pattern.matcher(fullPath.toLowerCase());
-                        if (matcher.find()) {
+                        if (matcher.find() && !stored) {
                             urls.add(new URL(fullPath, matcher.group(), Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
                             pageURLs.add(new URL(fullPath, matcher.group(), Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
                             sumPages++;
@@ -282,6 +282,7 @@ public class XML {
     public boolean isDuplicateURL(String baseURL) {
         for (URL url : urls) {
             if (url.getURL().equals(baseURL)) {
+                System.out.println(baseURL);
                 return true;
             }
         }
