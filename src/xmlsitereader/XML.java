@@ -27,10 +27,7 @@ public class XML {
     private static int sumPages = 0;
     private static int sumDocuments = 0;
     private static int sumImages = 0;
-    private static int sumOtherItems = 0;
     private static int sumTotal = 0;
-    private static int sumVideos = 0;
-    private static int sumRSSFeeds = 0;
     private String fileName;
     private File file;
     private ArrayList<URL> urls;
@@ -52,10 +49,6 @@ public class XML {
     private ArrayList<Pattern> imageExtensionPatterns = new ArrayList<Pattern>();
     
     private HashMap<String, Integer> queriedURLs = new HashMap<String, Integer>();
-    
-    private Pattern test = Pattern.compile("hello");
-   
-    private static int queryStrings = 0;
     
     public XML() {
         //Initialize the pattern lists from the default extension lists 
@@ -343,28 +336,20 @@ public class XML {
         sumPages = 0;
         sumDocuments = 0;
         sumImages = 0;
-        sumOtherItems = 0;
         sumTotal = 0;
-        sumVideos = 0;
-        sumRSSFeeds = 0;
     }
     /**
      * Build a String with the results to be displayed
      * @return 
      */
     public String printResults() {
-        
-        String output = "";
-        
-        output += ("Number of pages: " + sumPages + "\n");
-        output +=("Number of documents: " + sumDocuments + "\n");
-        output +=("Number of images: " + sumImages + "\n");
-        //output +=("Number of videos: " + sumVideos + "\n");
-        //output +=("Number of rss feeds: " + sumRSSFeeds + "\n");
-        //output +=("Number of dynamic paths: " + queryStrings + "\n");
-        output +=("Total number of elements: " + calculateResults());
-        
-        return output;
+        StringBuilder builder = new StringBuilder();
+        builder.append("Number of pages: ").append(sumPages).append("\n");
+        builder.append("Number of documents: ").append(sumDocuments).append("\n");
+        builder.append("Number of images: ").append(sumImages).append("\n");
+        builder.append("Total number of elements: ").append(calculateResults());
+       
+        return builder.toString();
     }
     
     public String createReport() {
