@@ -341,13 +341,5 @@ public class XML {
        
         return builder.toString();
     }
-    
-    public String createReport() {
-        String output = "";
-        
-        
-        
-        
-        return output;
-    }
+
 }
