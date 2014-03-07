@@ -186,7 +186,7 @@ public class GUIReader extends javax.swing.JFrame {
         });
 
         titleLabel.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        titleLabel.setText("Eagle Creek SiteMap Analyzer v1.0");
+        titleLabel.setText("Eagle Creek SiteMap Analyzer");
 
         pageTypesLabel.setText("Page Types:");
 
@@ -436,24 +436,19 @@ public class GUIReader extends javax.swing.JFrame {
                         data[i][j] = new Integer(i + 1);
                         break;
                     case 1:
-                        System.out.println(urls[i].getURL());
                         data[i][j] = urls[i].getURL();
                         break;
                     case 2:
                         data[i][j] = urls[i].getExtension();
-                        System.out.println(urls[i].getExtension());
                         break;
                     case 3:
                         data[i][j] = urls[i].isPage();
-                        System.out.println(urls[i].isPage());
                         break;
                     case 4:
                         data[i][j] = urls[i].isDocument();
-                        System.out.println(urls[i].isDocument());
                         break;
                     case 5:
                         data[i][j] = urls[i].isImage();
-                        System.out.println(urls[i].isImage());
                         break;
                     default:
                 }

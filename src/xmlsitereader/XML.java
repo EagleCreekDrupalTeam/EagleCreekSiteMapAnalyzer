@@ -38,8 +38,8 @@ public class XML {
     private ArrayList<URL> pageURLs;
     private ArrayList<URL> imageURLs;
     private String[] fullPaths;
-
-    private ArrayList<String> defaultDocumentExtensions = new ArrayList(Arrays.asList(".docx", ".doc", ".pdf", ".txt", ".odt", ".odg", ".csv", ".xls", ".xlsx", ".xlt"));
+    
+    private ArrayList<String> defaultDocumentExtensions = new ArrayList(Arrays.asList(".docx", ".doc", ".pdf", ".txt", ".odt",".odg", ".csv", ".xls", ".xlsx", ".xlt", ".ppt"));
     private ArrayList<String> defaultPageExtensions = new ArrayList(Arrays.asList(".html", ".htm", ".aspx", ".jsp", ".php", ".asp", ".shtml"));
     private ArrayList<String> defaultImageExtensions = new ArrayList(Arrays.asList(".gif", ".jpg", ".png", ".jpeg", ".bmp"));
 
@@ -163,12 +163,10 @@ public class XML {
      * @param append
      */
     public void buildPatterns(ArrayList<Pattern> patterns, ArrayList<String> extensions) {
-        System.out.println("Before: " + patterns.size());
+        
         for (String extension : extensions) {
             patterns.add(Pattern.compile(extension + "$"));
-        }
-        System.out.println("After build: " + patterns.size());
-
+        }                        
     }
 
     /**
@@ -183,12 +181,10 @@ public class XML {
                 DocumentBuilderFactory newDocumentBuilderFactory = DocumentBuilderFactory.newInstance();
                 DocumentBuilder newBuilder = newDocumentBuilderFactory.newDocumentBuilder();
                 Document doc = newBuilder.parse(file);
-                doc.getDocumentElement().normalize();
-
-                NodeList nodeList = doc.getElementsByTagName("loc");
-
-                System.out.println("Number of Nodes: " + nodeList.getLength());
-
+                doc.getDocumentElement().normalize();            
+                
+                NodeList nodeList = doc.getElementsByTagName("loc");             
+                
                 fullPaths = new String[nodeList.getLength()];
 
                 for (int i = 0; i < nodeList.getLength(); i++) {
@@ -258,7 +254,6 @@ public class XML {
                     }
 
                 }
-                System.out.println("Base element :" + doc.getDocumentElement().getNodeName());
             }
         } catch (Exception e) {
             System.out.println(e);
@@ -288,7 +283,6 @@ public class XML {
     public boolean isDuplicateURL(String baseURL) {
         for (URL url : urls) {
             if (url.getURL().equals(baseURL)) {
-                System.out.println(baseURL);
                 return true;
             }
         }
@@ -334,10 +328,6 @@ public class XML {
      */
     public ArrayList<String> split(String extensions, String delimeter) {
         String[] temp = extensions.split(delimeter);
-        for (String s : temp) {
-            System.out.println(s);
-        }
-
         return new ArrayList<String>(Arrays.asList(temp));
     }
 
