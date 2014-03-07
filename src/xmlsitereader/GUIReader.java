@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package xmlsitereader;
 
 import java.awt.Desktop;
@@ -19,7 +14,9 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author cconner
+ ** @author Curtis Conner & Stephen Paden * Company: Eagle Creek Software
+ * Services * Date: 2/27/2014
+ *
  */
 public class GUIReader extends javax.swing.JFrame {
 
@@ -30,21 +27,22 @@ public class GUIReader extends javax.swing.JFrame {
     private String pageTypes = xml.getDefaultPageExtensions();
     private String documentTypes = xml.getDefaultDocumentExtensions();
     private String imageTypes = xml.getDefaultImageExtensions();
-    private DefaultTableModel tableModel = new DefaultTableModel(data, columnNames){  
-        public boolean isCellEditable(int row, int column){  
-        return false;
+    private DefaultTableModel tableModel = new DefaultTableModel(data, columnNames) {
+        public boolean isCellEditable(int row, int column) {
+            return false;
         }
+
         public Class<?> getColumnClass(int columnIndex) {
             return data[0][columnIndex].getClass();
         }
-    };  
+    };
 
     /**
      * Creates new form GUIReader
      */
     public GUIReader() {
         initComponents();
-        
+
     }
 
     /**
@@ -85,7 +83,7 @@ public class GUIReader extends javax.swing.JFrame {
         resetDocumentTypeButton = new javax.swing.JButton();
         resetImageTypeButton = new javax.swing.JButton();
         resetPageTypeButton = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnGenerateReport = new javax.swing.JButton();
 
         allRadioButton.setSelected(true);
 
@@ -269,10 +267,10 @@ public class GUIReader extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Generate Report");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnGenerateReport.setText("Generate Report");
+        btnGenerateReport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnGenerateReportActionPerformed(evt);
             }
         });
 
@@ -283,26 +281,32 @@ public class GUIReader extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(resultsScrollPane, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(scrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1536, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(allRadioButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(pageRadioButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(documentRadioButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(imageRadioButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(openUrlButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(titleLabel)
+                            .addComponent(resultsScrollPane, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(scrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1536, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(allRadioButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(pageRadioButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(documentRadioButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(imageRadioButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(openUrlButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnGenerateReport))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(titleLabel))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(documentTypesLabel)
@@ -331,8 +335,7 @@ public class GUIReader extends javax.swing.JFrame {
                                     .addComponent(resetImageTypeButton)
                                     .addComponent(resetPageTypeButton)))
                             .addComponent(analyzeButton))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -372,7 +375,7 @@ public class GUIReader extends javax.swing.JFrame {
                     .addComponent(documentRadioButton)
                     .addComponent(pageRadioButton)
                     .addComponent(openUrlButton)
-                    .addComponent(jButton1))
+                    .addComponent(btnGenerateReport))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(scrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 408, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
@@ -387,8 +390,10 @@ public class GUIReader extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     /**
-     * Method to build table of information based on which radio button is selected
-     * @param button 
+     * Method to build table of information based on which radio button is
+     * selected
+     *
+     * @param button
      */
     private void buildTable(String button) {
         URL[] urls;
@@ -406,9 +411,9 @@ public class GUIReader extends javax.swing.JFrame {
                 urls = xml.getImageURLs();
                 break;
         }
-        
+
         buildData(urls);
-            
+
         tableModel.setDataVector(data, columnNames);
         urlTable.getColumnModel().getColumn(0).setMaxWidth(70);
         urlTable.getColumnModel().getColumn(2).setMaxWidth(70);
@@ -416,11 +421,12 @@ public class GUIReader extends javax.swing.JFrame {
         urlTable.getColumnModel().getColumn(4).setMaxWidth(70);
         urlTable.getColumnModel().getColumn(5).setMaxWidth(70);
     }
+
     /**
      * Method to build an Object[][] from a URL[]
-     * @param urls 
+     *
+     * @param urls
      */
-     
     private void buildData(URL[] urls) {
         data = new Object[urls.length][columnNames.length];
         for (int i = 0; i < urls.length; i++) {
@@ -455,10 +461,11 @@ public class GUIReader extends javax.swing.JFrame {
         }
     }
 
-/**
- * Open JFileChooser to select a .xml file to parse
- * @param evt 
- */
+    /**
+     * Open JFileChooser to select a .xml file to parse
+     *
+     * @param evt
+     */
     private void browseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_browseButtonActionPerformed
 
         JFileChooser chooser = new JFileChooser();
@@ -466,11 +473,11 @@ public class GUIReader extends javax.swing.JFrame {
 
         switch (returnOption) {
             case JFileChooser.CANCEL_OPTION:
-                
+
                 JOptionPane.showMessageDialog(null, "You must select a file to continue.", "Warning", JOptionPane.WARNING_MESSAGE);
                 analyzeButton.setEnabled(false);
                 fileField.setText("");
-                
+
                 break;
             case JFileChooser.APPROVE_OPTION:
                 if (chooser.getTypeDescription(chooser.getSelectedFile()).toLowerCase().contains("xml")) {
@@ -499,12 +506,13 @@ public class GUIReader extends javax.swing.JFrame {
     }//GEN-LAST:event_browseButtonActionPerformed
     /**
      * Calls parseXML and sets results
-     * @param evt 
+     *
+     * @param evt
      */
     private void analyzeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_analyzeButtonActionPerformed
 
-        try {            
-            
+        try {
+
             xml.resetCounts();
             xml.parseXML();
             xml.calculateResults();
@@ -513,7 +521,7 @@ public class GUIReader extends javax.swing.JFrame {
             allRadioButton.setEnabled(true);
             pageRadioButton.setEnabled(true);
             documentRadioButton.setEnabled(true);
-            imageRadioButton.setEnabled(true);   
+            imageRadioButton.setEnabled(true);
         } catch (FileNotFoundException fnfe) {
             System.out.println(fnfe);
         }
@@ -521,21 +529,22 @@ public class GUIReader extends javax.swing.JFrame {
 
     private String getSelectedFilterButton() {
         for (Enumeration<AbstractButton> buttons = filterButtonGroup.getElements(); buttons.hasMoreElements();) {
-                AbstractButton button = buttons.nextElement();
+            AbstractButton button = buttons.nextElement();
 
-                if (button.isSelected()) {  
-                    return button.getText();
-                }
+            if (button.isSelected()) {
+                return button.getText();
             }
+        }
         return "All";
     }
-        
+
     private void fileFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fileFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fileFieldActionPerformed
     /**
      * Filter table results to show all urls.
-     * @param evt 
+     *
+     * @param evt
      */
     private void allRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_allRadioButtonActionPerformed
         buildTable("all");
@@ -543,15 +552,17 @@ public class GUIReader extends javax.swing.JFrame {
     }//GEN-LAST:event_allRadioButtonActionPerformed
     /**
      * Filter table results to show only urls for images.
-     * @param evt 
+     *
+     * @param evt
      */
     private void imageRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imageRadioButtonActionPerformed
-       buildTable("image");
-       openUrlButton.setEnabled(false);
+        buildTable("image");
+        openUrlButton.setEnabled(false);
     }//GEN-LAST:event_imageRadioButtonActionPerformed
     /**
      * Filter table results to show only urls for documents
-     * @param evt 
+     *
+     * @param evt
      */
     private void documentRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_documentRadioButtonActionPerformed
         buildTable("document");
@@ -559,55 +570,60 @@ public class GUIReader extends javax.swing.JFrame {
     }//GEN-LAST:event_documentRadioButtonActionPerformed
     /**
      * Filter table results to show only urls for pages
-     * @param evt 
+     *
+     * @param evt
      */
     private void pageRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pageRadioButtonActionPerformed
-       buildTable("page");
-       openUrlButton.setEnabled(false);
+        buildTable("page");
+        openUrlButton.setEnabled(false);
     }//GEN-LAST:event_pageRadioButtonActionPerformed
     /**
      * Get url of selected row so it can be opened in a browser
-     * @param evt 
+     *
+     * @param evt
      */
     private void urlTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_urlTableMouseClicked
-        JTable tempTable = (JTable)evt.getSource();
+        JTable tempTable = (JTable) evt.getSource();
         urlToOpen = tempTable.getValueAt(tempTable.getSelectedRow(), tempTable.getSelectedColumn()).toString();
         openUrlButton.setEnabled(true);
     }//GEN-LAST:event_urlTableMouseClicked
     /**
      * Opens default browser to url selected from table.
-     * @param evt 
+     *
+     * @param evt
      */
     private void openUrlButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openUrlButtonActionPerformed
         if (urlToOpen != null) {
-            try 
-            {
+            try {
                 Desktop.getDesktop().browse(new URI(urlToOpen));
-            }           
-            catch (IOException | URISyntaxException ioe) {}
+            } catch (IOException | URISyntaxException ioe) {
+            }
         }
     }//GEN-LAST:event_openUrlButtonActionPerformed
     /**
      * Once text is being changed in the pageTypesField enable its update button
-     * @param evt 
+     *
+     * @param evt
      */
     private void pageTypesFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pageTypesFieldKeyTyped
         updatePageTypeButton.setEnabled(true);
     }//GEN-LAST:event_pageTypesFieldKeyTyped
     /**
      * Get the new page extension arguments and set them in the XML object
-     * @param evt 
+     *
+     * @param evt
      */
     private void updatePageTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updatePageTypeButtonActionPerformed
         String extensions = pageTypesField.getText();
         xml.setPageExtensions(extensions);
         updatePageTypeButton.setEnabled(false);
         resetPageTypeButton.setEnabled(true);
-                
+
     }//GEN-LAST:event_updatePageTypeButtonActionPerformed
     /**
      * Get the new document extension arguments and set them in the XML object
-     * @param evt 
+     *
+     * @param evt
      */
     private void updateDocumentTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateDocumentTypeButtonActionPerformed
         String extensions = documentTypesField.getText();
@@ -617,7 +633,8 @@ public class GUIReader extends javax.swing.JFrame {
     }//GEN-LAST:event_updateDocumentTypeButtonActionPerformed
     /**
      * Get the new image extension arguments and set them in the XML object
-     * @param evt 
+     *
+     * @param evt
      */
     private void updateImageTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateImageTypeButtonActionPerformed
         String extensions = imageTypesField.getText();
@@ -626,22 +643,27 @@ public class GUIReader extends javax.swing.JFrame {
         resetImageTypeButton.setEnabled(true);
     }//GEN-LAST:event_updateImageTypeButtonActionPerformed
     /**
-     * Once text is being changed in the documentTypesField enable its update button
-     * @param evt 
+     * Once text is being changed in the documentTypesField enable its update
+     * button
+     *
+     * @param evt
      */
     private void documentTypesFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_documentTypesFieldKeyTyped
         updateDocumentTypeButton.setEnabled(true);
     }//GEN-LAST:event_documentTypesFieldKeyTyped
     /**
-     * Once text is being changed in the imageTypesField enable its update button
-     * @param evt 
+     * Once text is being changed in the imageTypesField enable its update
+     * button
+     *
+     * @param evt
      */
     private void imageTypesFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_imageTypesFieldKeyTyped
         updateImageTypeButton.setEnabled(true);
     }//GEN-LAST:event_imageTypesFieldKeyTyped
     /**
      * Reset page types to the default page types
-     * @param evt 
+     *
+     * @param evt
      */
     private void resetPageTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetPageTypeButtonActionPerformed
         xml.resetPageExtensions();
@@ -651,7 +673,8 @@ public class GUIReader extends javax.swing.JFrame {
     }//GEN-LAST:event_resetPageTypeButtonActionPerformed
     /**
      * Reset image types to the default image types
-     * @param evt 
+     *
+     * @param evt
      */
     private void resetImageTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetImageTypeButtonActionPerformed
         xml.resetImageExtensions();
@@ -661,7 +684,8 @@ public class GUIReader extends javax.swing.JFrame {
     }//GEN-LAST:event_resetImageTypeButtonActionPerformed
     /**
      * Reset document types to the default document types
-     * @param evt 
+     *
+     * @param evt
      */
     private void resetDocumentTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetDocumentTypeButtonActionPerformed
         xml.resetDocumentExtensions();
@@ -669,14 +693,38 @@ public class GUIReader extends javax.swing.JFrame {
         documentTypesField.setText(documentTypes);
         resetDocumentTypeButton.setEnabled(false);
     }//GEN-LAST:event_resetDocumentTypeButtonActionPerformed
+    /**
+     * Calls createReport() and generates a report in .xls format
+     *
+     * @param evt
+     */
+    private void btnGenerateReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerateReportActionPerformed
+        {
+            JFileChooser newChooser = new JFileChooser();
+            newChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
+            int chooserResult = newChooser.showSaveDialog(this);
+            String defaultExtension = ".xls";
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        try {
-            xml.createReport();
-        } catch (FileNotFoundException fnfe) {
-            System.out.println(fnfe);
+            switch (chooserResult) {
+                case JFileChooser.CANCEL_OPTION:
+                    btnGenerateReport.setEnabled(true);
+                    btnGenerateReport.requestFocus();
+                    break;
+                case JFileChooser.APPROVE_OPTION:
+                    try {
+                        xml.createReport(newChooser.getSelectedFile(), defaultExtension);
+                        btnGenerateReport.setEnabled(true);
+                        btnGenerateReport.requestFocus();
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                case JFileChooser.ERROR_OPTION:
+                    System.out.println("An error has occured.");
+                    break;
+            }
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnGenerateReportActionPerformed
 
     /**
      * @param args the command line arguments
@@ -704,11 +752,10 @@ public class GUIReader extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(GUIReader.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>     
-        
-        
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new GUIReader().setVisible(true);
             }
@@ -719,6 +766,7 @@ public class GUIReader extends javax.swing.JFrame {
     private javax.swing.JRadioButton allRadioButton;
     private javax.swing.JButton analyzeButton;
     private javax.swing.JButton browseButton;
+    private javax.swing.JButton btnGenerateReport;
     private javax.swing.JRadioButton documentRadioButton;
     private javax.swing.JTextField documentTypesField;
     private javax.swing.JLabel documentTypesLabel;
@@ -728,7 +776,6 @@ public class GUIReader extends javax.swing.JFrame {
     private javax.swing.JRadioButton imageRadioButton;
     private javax.swing.JTextField imageTypesField;
     private javax.swing.JLabel imageTypesLabel;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JButton openUrlButton;
