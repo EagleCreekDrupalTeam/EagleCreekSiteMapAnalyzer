@@ -154,12 +154,10 @@ public class XML {
      * @param append 
      */
     public void buildPatterns(ArrayList<Pattern> patterns, ArrayList<String> extensions) {
-        System.out.println("Before: " + patterns.size());
+        
         for (String extension : extensions) {
             patterns.add(Pattern.compile(extension + "$"));
-        }
-        System.out.println("After build: " + patterns.size());
-                
+        }                        
     }
     
     /**
@@ -175,9 +173,7 @@ public class XML {
                 Document doc = newBuilder.parse(file);
                 doc.getDocumentElement().normalize();            
                 
-                NodeList nodeList = doc.getElementsByTagName("loc"); 
-                
-                System.out.println("Number of Nodes: " + nodeList.getLength());
+                NodeList nodeList = doc.getElementsByTagName("loc");             
                 
                 fullPaths = new String[nodeList.getLength()];
                 
@@ -249,7 +245,6 @@ public class XML {
                     }
                     
                 }
-                System.out.println("Base element :" + doc.getDocumentElement().getNodeName());
             }
         } catch (Exception e) {
             System.out.println(e);
@@ -275,7 +270,6 @@ public class XML {
     public boolean isDuplicateURL(String baseURL) {
         for (URL url : urls) {
             if (url.getURL().equals(baseURL)) {
-                System.out.println(baseURL);
                 return true;
             }
         }
@@ -316,10 +310,6 @@ public class XML {
      */
     public ArrayList<String> split(String extensions, String delimeter) {
         String[] temp = extensions.split(delimeter);
-        for (String s : temp) {
-            System.out.println(s);
-        }
-    
         return new ArrayList<String>(Arrays.asList(temp));
     }
     /**
