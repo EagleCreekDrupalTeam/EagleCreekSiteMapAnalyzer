@@ -39,9 +39,9 @@ public class XML {
     private ArrayList<URL> imageURLs;
     private String[] fullPaths;
     
-    private ArrayList<String> defaultDocumentExtensions = new ArrayList(Arrays.asList(".docx", ".doc", ".pdf", ".txt", ".odt",".odg", ".csv", ".xls", ".xlsx", ".xlt", ".ppt"));
+    private ArrayList<String> defaultDocumentExtensions = new ArrayList(Arrays.asList(".docx", ".doc", ".dot", ".pdf", ".txt", ".rft", ".odt",".odg", ".csv", ".xls", ".xlsx", ".xlt", ".ppt", ".pptx"));
     private ArrayList<String> defaultPageExtensions = new ArrayList(Arrays.asList(".html", ".htm", ".aspx", ".jsp", ".php", ".asp", ".shtml"));
-    private ArrayList<String> defaultImageExtensions = new ArrayList(Arrays.asList(".gif", ".jpg", ".png", ".jpeg", ".bmp"));
+    private ArrayList<String> defaultImageExtensions = new ArrayList(Arrays.asList(".gif", ".jpg", ".png", ".jpeg", ".bmp", ".ico"));
 
     private ArrayList<String> updatedDocumentExtensions = new ArrayList();
     private ArrayList<String> updatedPageExtensions = new ArrayList();
