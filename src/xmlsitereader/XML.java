@@ -376,6 +376,7 @@ public class XML {
     public void createReport(File newFile, String defaultExtension) throws FileNotFoundException {
         PrintWriter newPrintWriter = new PrintWriter(newFile + ".xls");
         try {
+            newPrintWriter.write(printResults() + "\n");
             newPrintWriter.write("Eagle Creek Sitemap Analyzer Report for: " + getFileName() + "\n");
             newPrintWriter.write("********************************************\n");
             newPrintWriter.write("Page URLS: \n");
@@ -399,8 +400,7 @@ public class XML {
                     .replace("]", "") + "\n");
             newPrintWriter.write("********************************************\n");
             newPrintWriter.write("Summary: \n");
-            newPrintWriter.write("********************************************\n");
-            newPrintWriter.write(printResults() + "\n");
+            newPrintWriter.write("********************************************\n");            
             newPrintWriter.close();
 
         } catch (SecurityException se) {
