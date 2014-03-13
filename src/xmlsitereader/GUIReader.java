@@ -471,7 +471,8 @@ public class GUIReader extends javax.swing.JFrame {
 
                 break;
             case JFileChooser.APPROVE_OPTION:
-                if (chooser.getTypeDescription(chooser.getSelectedFile()).toLowerCase().contains("xml")) {
+                
+                if (chooser.getDescription(chooser.getSelectedFile()).toLowerCase().endsWith(".xml")) {
                     xml.setFile(chooser.getSelectedFile());
                     fileField.setText(xml.getFileName());
                     try {
