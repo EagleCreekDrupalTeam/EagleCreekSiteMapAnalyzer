@@ -13,8 +13,18 @@ public class URL implements Comparable {
     private Boolean isDocument;
     private Boolean isImage;
 
+    /**
+     * Default empty constructor
+     */
     public URL(){}
-    // "watch his every move, super constructor!" -- Rush
+    /**
+     * Overridden constructor
+     * @param urlPath
+     * @param extension
+     * @param isPage
+     * @param isDocument
+     * @param isImage 
+     */
     public URL(String urlPath, String extension, Boolean isPage, Boolean isDocument, Boolean isImage) {        
         this.urlPath = urlPath;
         this.extension = extension;
@@ -23,42 +33,95 @@ public class URL implements Comparable {
         this.isImage = isImage;
     }
     
-    // get & set
+    /**
+     * 
+     * @param urlPath 
+     */
     public void setURL(String urlPath) { 
         this.urlPath =  urlPath; 
     }
+    /**
+     * 
+     * @param extension 
+     */
     public void setExtension(String extension) {
         this.extension = extension;
     }
+    /**
+     * 
+     * @param page 
+     */
     public void setIsPage(Boolean page) { 
         this.isPage = page; 
     }    
+    /**
+     * 
+     * @param document 
+     */
     public void setIsDocument(Boolean document) { 
         this.isDocument = document; 
     }    
+    /**
+     * 
+     * @param image 
+     */
     public void setIsImage(Boolean image) { 
         this.isImage = image; 
     }    
+    /**
+     * 
+     * @return urlPath
+     */
     public String getURL() { 
         return urlPath; 
     }
+    /**
+     * 
+     * @return extension
+     */
     public String getExtension() {
         return extension;
-    }
+    }    
+    /**
+     * 
+     * @return boolean
+     */
     public Boolean isPage() { 
         return isPage; 
-    }    
+    } 
+    /**
+     * 
+     * @return boolean
+     */
     public Boolean isDocument() { 
         return isDocument; 
-    }    
+    }  
+    /**
+     * 
+     * @return boolean
+     */
     public Boolean isImage() { 
         return isImage; 
     }
+    /**
+     * Compares the extensions to sort alphabetically
+     * @param obj
+     * @return Object
+     */
     @Override
     public int compareTo(Object obj) {
         URL url1 = (URL)obj;       
         return this.getExtension().compareTo(url1.getExtension());
     }
-    
+    /**
+     * Overrides the default toString().
+     * This overridden method is used in createReport().
+     * @return String 
+     */
+    @Override
+    public String toString() {        
+        String output = (getURL() + "\n"); 
+        return output;
+    }  
 
 }
