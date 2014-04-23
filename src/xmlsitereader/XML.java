@@ -205,8 +205,15 @@ public class XML {
                         //Check for query string first
                         if (fullPath.contains("?")) {
                             fullPath = getBaseURL(fullPath);
+                            //Check for a duplicate of the base url
                             if (isDuplicateURL(fullPath)) {
-                                queriedURLs.put(fullPath, new Integer(queriedURLs.get(fullPath).intValue() + 1));
+                                //Check the hashmap to see if the base url is in there
+                                if (queriedURLs.get(fullPath) == null) {
+                                    queriedURLs.put(fullPath, new Integer(1));
+                                }
+                                else {
+                                    queriedURLs.put(fullPath, new Integer(queriedURLs.get(fullPath).intValue() + 1));
+                                }
                                 stored = true;
                             } else {
                                 queriedURLs.put(fullPath, new Integer(1));
