@@ -3,8 +3,6 @@ package xmlsitereader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -21,7 +19,7 @@ import org.w3c.dom.NodeList;
 
 /**
  *
- ** @author Stephen Paden and Curtis Conner * Company: Eagle Creek Software
+ ** @author Curtis Conner and Stephen Paden * Company: Eagle Creek Software
  * Services * Date: 2/26/2014
  *
  */
@@ -96,71 +94,105 @@ public class XML {
     public URL[] getImageURLs() {
         return imageURLs.toArray(new URL[imageURLs.size()]);
     }
-
+/**
+ * Takes user supplied list of extensions 
+ * and updates the list of patterns for Pages
+ * @param extensions 
+ */
     public void setPageExtensions(String extensions) {
         this.updatedPageExtensions = split(extensions, ",");
         pageExtensionPatterns.clear();
         buildPatterns(pageExtensionPatterns, updatedPageExtensions);
     }
-
+/**
+ * Takes user supplied list of extensions
+ * and updates the list of patterns for Documents
+ * @param extensions 
+ */
     public void setDocumentExtensions(String extensions) {
         this.updatedDocumentExtensions = new ArrayList(split(extensions, ","));
         documentExtensionPatterns.clear();
         buildPatterns(documentExtensionPatterns, updatedDocumentExtensions);
     }
-
+/**
+ * Takes user supplied list of extensions
+ * and updates the list of patterns for Images
+ * @param extensions 
+ */
     public void setImageExtensions(String extensions) {
         this.updatedImageExtensions = split(extensions, ",");
         imageExtensionPatterns.clear();
         buildPatterns(imageExtensionPatterns, updatedImageExtensions);
     }
-
+/**
+ * Resets list patterns for Pages to default
+ */
     public void resetPageExtensions() {
         pageExtensionPatterns.clear();
         buildPatterns(pageExtensionPatterns, defaultPageExtensions);
     }
-
+/**
+ * Resets list of patterns for Documents to default
+ */
     public void resetDocumentExtensions() {
         documentExtensionPatterns.clear();
         buildPatterns(documentExtensionPatterns, defaultDocumentExtensions);
     }
-
+/**
+ * Resets list of patterns for Images to default
+ */
     public void resetImageExtensions() {
         imageExtensionPatterns.clear();
         buildPatterns(imageExtensionPatterns, defaultImageExtensions);
     }
-
+/**
+ * Returns a String representation of the list of patterns for Pages
+ * @return 
+ */
     public String getPageExtensions() {
         return join(updatedPageExtensions, ",");
     }
-
+/**
+ * Returns a String representation of the list of patterns for Documents
+ * @return 
+ */
     public String getDocumentExtensions() {
         return join(updatedDocumentExtensions, ",");
     }
-
+/**
+ * Returns a String representation of the list of patterns for Images
+ * @return 
+ */
     public String getImageExtensions() {
         return join(updatedImageExtensions, ",");
     }
-
+/**
+ * Returns a String representation of the default list of patterns for Pages
+ * @return 
+ */
     public String getDefaultPageExtensions() {
         return join(defaultPageExtensions, ",");
     }
-
+/**
+ * Returns a String representation of the default list of patterns for Documents
+ * @return 
+ */
     public String getDefaultDocumentExtensions() {
         return join(defaultDocumentExtensions, ",");
     }
-
+/**
+ * Returns a String representation of the default list of patterns for Images
+ * @return 
+ */
     public String getDefaultImageExtensions() {
         return join(defaultImageExtensions, ",");
     }
 
     /**
-     * Builds list of Patterns from the list of Strings, resets lists if append
-     * is false
+     * Builds list of Patterns from the list of Strings
      *
      * @param patterns
      * @param extensions
-     * @param append
      */
     public void buildPatterns(ArrayList<Pattern> patterns, ArrayList<String> extensions) {
         
