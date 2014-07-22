@@ -58,7 +58,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="documentRadioButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="imageRadioButton" min="-2" max="-2" attributes="0"/>
+                      <Component id="mediaRadioButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="openUrlButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
@@ -72,7 +72,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="documentTypesLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="pageTypesLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="imageTypesLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="mediaTypesLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="fileLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
@@ -80,14 +80,14 @@
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Component id="documentTypesField" max="32767" attributes="0"/>
-                                          <Component id="imageTypesField" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="mediaTypesField" alignment="0" max="32767" attributes="0"/>
                                           <Component id="pageTypesField" alignment="0" pref="186" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="updatePageTypeButton" min="-2" max="-2" attributes="0"/>
                                           <Component id="updateDocumentTypeButton" min="-2" max="-2" attributes="0"/>
-                                          <Component id="updateImageTypeButton" min="-2" max="-2" attributes="0"/>
+                                          <Component id="updateMediaTypeButton" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -99,7 +99,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="resetDocumentTypeButton" min="-2" max="-2" attributes="0"/>
-                                  <Component id="resetImageTypeButton" min="-2" max="-2" attributes="0"/>
+                                  <Component id="resetMediaTypeButton" min="-2" max="-2" attributes="0"/>
                                   <Component id="resetPageTypeButton" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -139,10 +139,10 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="imageTypesLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="imageTypesField" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="updateImageTypeButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="resetImageTypeButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="mediaTypesLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="mediaTypesField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="updateMediaTypeButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="resetMediaTypeButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="analyzeButton" min="-2" max="-2" attributes="0"/>
@@ -150,7 +150,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="allRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="imageRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="mediaRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="documentRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="pageRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="openUrlButton" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -265,16 +265,16 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="allRadioButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="imageRadioButton">
+    <Component class="javax.swing.JRadioButton" name="mediaRadioButton">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="filterButtonGroup"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Image"/>
+        <Property name="text" type="java.lang.String" value="Media"/>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="imageRadioButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mediaRadioButtonActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="documentRadioButton">
@@ -328,9 +328,9 @@
         <Property name="text" type="java.lang.String" value="Document Types:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="imageTypesLabel">
+    <Component class="javax.swing.JLabel" name="mediaTypesLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Image Types:"/>
+        <Property name="text" type="java.lang.String" value="Media Types:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="pageTypesField">
@@ -358,15 +358,15 @@
         <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="documentTypesField.setText(documentTypes);"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JTextField" name="imageTypesField">
+    <Component class="javax.swing.JTextField" name="mediaTypesField">
       <Properties>
-        <Property name="toolTipText" type="java.lang.String" value="Enter image extensions separated by a comma."/>
+        <Property name="toolTipText" type="java.lang.String" value="Enter media extensions separated by a comma."/>
       </Properties>
       <Events>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="imageTypesFieldKeyTyped"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="mediaTypesFieldKeyTyped"/>
       </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="imageTypesField.setText(imageTypes);"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="mediaTypesField.setText(mediaTypes);"/>
       </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="updatePageTypeButton">
@@ -391,15 +391,15 @@
         <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="updateDocumentTypeButton.setEnabled(false);"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JButton" name="updateImageTypeButton">
+    <Component class="javax.swing.JButton" name="updateMediaTypeButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Update"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="updateImageTypeButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="updateMediaTypeButtonActionPerformed"/>
       </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="updateImageTypeButton.setEnabled(false);"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="updateMediaTypeButton.setEnabled(false);"/>
       </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="resetDocumentTypeButton">
@@ -411,13 +411,13 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="resetDocumentTypeButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="resetImageTypeButton">
+    <Component class="javax.swing.JButton" name="resetMediaTypeButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Reset"/>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="resetImageTypeButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="resetMediaTypeButtonActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="resetPageTypeButton">

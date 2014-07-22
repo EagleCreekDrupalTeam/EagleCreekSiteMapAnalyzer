@@ -27,27 +27,27 @@ public class XML {
 
     private static int sumPages = 0;
     private static int sumDocuments = 0;
-    private static int sumImages = 0;
+    private static int sumMedia = 0;
     private static int sumTotal = 0;
     private String fileName;
     private File file;
     private ArrayList<URL> urls;
     private ArrayList<URL> documentURLs;
     private ArrayList<URL> pageURLs;
-    private ArrayList<URL> imageURLs;
+    private ArrayList<URL> mediaURLs;
     private String[] fullPaths;
     
     private ArrayList<String> defaultDocumentExtensions = new ArrayList(Arrays.asList(".docx", ".doc", ".dot", ".pdf", ".txt", ".rft", ".odt",".odg", ".csv", ".xls", ".xlsx", ".xlt", ".ppt", ".pptx"));
     private ArrayList<String> defaultPageExtensions = new ArrayList(Arrays.asList(".html", ".htm", ".aspx", ".jsp", ".php", ".asp", ".shtml"));
-    private ArrayList<String> defaultImageExtensions = new ArrayList(Arrays.asList(".gif", ".jpg", ".png", ".jpeg", ".bmp", ".ico"));
+    private ArrayList<String> defaultMediaExtensions = new ArrayList(Arrays.asList(".gif", ".jpg", ".png", ".jpeg", ".bmp", ".ico"));
 
     private ArrayList<String> updatedDocumentExtensions = new ArrayList();
     private ArrayList<String> updatedPageExtensions = new ArrayList();
-    private ArrayList<String> updatedImageExtensions = new ArrayList();
+    private ArrayList<String> updatedMediaExtensions = new ArrayList();
 
     private ArrayList<Pattern> documentExtensionPatterns = new ArrayList<Pattern>();
     private ArrayList<Pattern> pageExtensionPatterns = new ArrayList<Pattern>();
-    private ArrayList<Pattern> imageExtensionPatterns = new ArrayList<Pattern>();
+    private ArrayList<Pattern> mediaExtensionPatterns = new ArrayList<Pattern>();
 
     private HashMap<String, Integer> queriedURLs = new HashMap<String, Integer>();
 
@@ -55,7 +55,7 @@ public class XML {
         //Initialize the pattern lists from the default extension lists 
         buildPatterns(documentExtensionPatterns, defaultDocumentExtensions);
         buildPatterns(pageExtensionPatterns, defaultPageExtensions);
-        buildPatterns(imageExtensionPatterns, defaultImageExtensions);
+        buildPatterns(mediaExtensionPatterns, defaultMediaExtensions);
     }
 
     public XML(String fName) {
@@ -91,8 +91,8 @@ public class XML {
         return pageURLs.toArray(new URL[pageURLs.size()]);
     }
 
-    public URL[] getImageURLs() {
-        return imageURLs.toArray(new URL[imageURLs.size()]);
+    public URL[] getMediaURLs() {
+        return mediaURLs.toArray(new URL[mediaURLs.size()]);
     }
 /**
  * Takes user supplied list of extensions 
@@ -116,13 +116,13 @@ public class XML {
     }
 /**
  * Takes user supplied list of extensions
- * and updates the list of patterns for Images
+ * and updates the list of patterns for Media
  * @param extensions 
  */
-    public void setImageExtensions(String extensions) {
-        this.updatedImageExtensions = split(extensions, ",");
-        imageExtensionPatterns.clear();
-        buildPatterns(imageExtensionPatterns, updatedImageExtensions);
+    public void setMediaExtensions(String extensions) {
+        this.updatedMediaExtensions = split(extensions, ",");
+        mediaExtensionPatterns.clear();
+        buildPatterns(mediaExtensionPatterns, updatedMediaExtensions);
     }
 /**
  * Resets list patterns for Pages to default
@@ -139,11 +139,11 @@ public class XML {
         buildPatterns(documentExtensionPatterns, defaultDocumentExtensions);
     }
 /**
- * Resets list of patterns for Images to default
+ * Resets list of patterns for Media to default
  */
-    public void resetImageExtensions() {
-        imageExtensionPatterns.clear();
-        buildPatterns(imageExtensionPatterns, defaultImageExtensions);
+    public void resetediaExtensions() {
+        mediaExtensionPatterns.clear();
+        buildPatterns(mediaExtensionPatterns, defaultMediaExtensions);
     }
 /**
  * Returns a String representation of the list of patterns for Pages
@@ -160,11 +160,11 @@ public class XML {
         return join(updatedDocumentExtensions, ",");
     }
 /**
- * Returns a String representation of the list of patterns for Images
+ * Returns a String representation of the list of patterns for Media
  * @return 
  */
-    public String getImageExtensions() {
-        return join(updatedImageExtensions, ",");
+    public String getMediaExtensions() {
+        return join(updatedMediaExtensions, ",");
     }
 /**
  * Returns a String representation of the default list of patterns for Pages
@@ -181,11 +181,11 @@ public class XML {
         return join(defaultDocumentExtensions, ",");
     }
 /**
- * Returns a String representation of the default list of patterns for Images
+ * Returns a String representation of the default list of patterns for Media
  * @return 
  */
-    public String getDefaultImageExtensions() {
-        return join(defaultImageExtensions, ",");
+    public String getDefaultMediaExtensions() {
+        return join(defaultMediaExtensions, ",");
     }
 
     /**
@@ -227,7 +227,7 @@ public class XML {
                 urls = new ArrayList<>();
                 documentURLs = new ArrayList<>();
                 pageURLs = new ArrayList<>();
-                imageURLs = new ArrayList<>();
+                mediaURLs = new ArrayList<>();
 
                 for (int i = 0; i < fullPaths.length; i++) {
                     String fullPath = fullPaths[i].toLowerCase();
@@ -238,6 +238,9 @@ public class XML {
                         if (fullPath.contains("?")) {
                             fullPath = getBaseURL(fullPath);
                             //Check for a duplicate of the base url
+/* Storing each base url used for a query string and the number of times each
+   is used in a query, but data is currently not being used.
+*/                            
                             if (isDuplicateURL(fullPath)) {
                                 //Check the hashmap to see if the base url is in there
                                 if (queriedURLs.get(fullPath) == null) {
@@ -251,7 +254,7 @@ public class XML {
                                 queriedURLs.put(fullPath, new Integer(1));
                             }
                         }
-                        Matcher matcher = pattern.matcher(fullPath.toLowerCase());
+                        Matcher matcher = pattern.matcher(fullPath);
                         if (matcher.find() && !stored) {
                             urls.add(new URL(fullPath, matcher.group(), Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
                             pageURLs.add(new URL(fullPath, matcher.group(), Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
@@ -262,7 +265,7 @@ public class XML {
                     //If the url wasn't a page check to see if url is for a document
                     if (!stored) {
                         for (Pattern pattern : documentExtensionPatterns) {
-                            Matcher matcher = pattern.matcher(fullPath.toLowerCase());
+                            Matcher matcher = pattern.matcher(fullPath);
                             if (matcher.find()) {
                                 urls.add(new URL(fullPath, matcher.group(), Boolean.FALSE, Boolean.TRUE, Boolean.FALSE));
                                 documentURLs.add(new URL(fullPath, matcher.group(), Boolean.FALSE, Boolean.TRUE, Boolean.FALSE));
@@ -271,20 +274,21 @@ public class XML {
                             }
                         }
                     }
-                    //If the url wasn't a page or document heck to see if url is for an image
+                    //If the url wasn't a page or document check to see if url is for a media
                     if (!stored) {
-                        for (Pattern pattern : imageExtensionPatterns) {
-                            Matcher matcher = pattern.matcher(fullPath.toLowerCase());
+                        for (Pattern pattern : mediaExtensionPatterns) {
+                            Matcher matcher = pattern.matcher(fullPath);
                             if (matcher.find()) {
                                 urls.add(new URL(fullPath, matcher.group(), Boolean.FALSE, Boolean.FALSE, Boolean.TRUE));
-                                imageURLs.add(new URL(fullPath, matcher.group(), Boolean.FALSE, Boolean.FALSE, Boolean.TRUE));
+                                mediaURLs.add(new URL(fullPath, matcher.group(), Boolean.FALSE, Boolean.FALSE, Boolean.TRUE));
 
-                                sumImages++;
+                                sumMedia++;
                                 stored = true;
                             }
                         }
                     }
-                    //If the url didn't contain any of the extensions we are checking for check to see if it
+                    //If the url didn't contain any of the extensions we are checking for 
+                    //set extension to other and count as a page
                     if (!stored) {
                         String extension = "other";
                         urls.add(new URL(fullPath, extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
@@ -335,7 +339,7 @@ public class XML {
         Collections.sort(urls);
         Collections.sort(pageURLs);
         Collections.sort(documentURLs);
-        Collections.sort(imageURLs);
+        Collections.sort(mediaURLs);
     }
 
     /**
@@ -376,7 +380,7 @@ public class XML {
      * @return
      */
     public int calculateResults() {
-        return sumTotal = sumPages + sumDocuments + sumImages;
+        return sumTotal = sumPages + sumDocuments + sumMedia;
     }
 
     /**
@@ -385,7 +389,7 @@ public class XML {
     public void resetCounts() {
         sumPages = 0;
         sumDocuments = 0;
-        sumImages = 0;
+        sumMedia = 0;
         sumTotal = 0;
     }
 
@@ -398,7 +402,7 @@ public class XML {
         StringBuilder builder = new StringBuilder();
         builder.append("Number of pages: ").append(sumPages).append("\n");
         builder.append("Number of documents: ").append(sumDocuments).append("\n");
-        builder.append("Number of images: ").append(sumImages).append("\n");
+        builder.append("Number of media: ").append(sumMedia).append("\n");
         builder.append("Total number of elements: ").append(calculateResults());
 
         return builder.toString();
@@ -432,9 +436,9 @@ public class XML {
                     .replace("]", "") + "\n");
             newPrintWriter.write("");
             newPrintWriter.write("********************************************\n");
-            newPrintWriter.write("Image URLs: \n");
+            newPrintWriter.write("Media URLs: \n");
             newPrintWriter.write("********************************************\n");
-            newPrintWriter.write(imageURLs.toString().replace(",", "")
+            newPrintWriter.write(mediaURLs.toString().replace(",", "")
                     .replace("[", "")
                     .replace("]", "") + "\n");
             newPrintWriter.write("********************************************\n");
