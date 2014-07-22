@@ -230,7 +230,7 @@ public class XML {
                 imageURLs = new ArrayList<>();
 
                 for (int i = 0; i < fullPaths.length; i++) {
-                    String fullPath = fullPaths[i];
+                    String fullPath = fullPaths[i].toLowerCase();
                     boolean stored = false; //Flag to see if we've had a match
                     //Check to see if url is for a page first
                     for (Pattern pattern : pageExtensionPatterns) {
