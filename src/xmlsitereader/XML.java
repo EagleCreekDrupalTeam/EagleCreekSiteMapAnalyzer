@@ -232,16 +232,15 @@ public class XML {
                 for (int i = 0; i < fullPaths.length; i++) {
                     String fullPath = fullPaths[i];
                     boolean stored = false; //Flag to see if we've had a match
-                    //Check to see if url is for a page first
-                    for (Pattern pattern : pageExtensionPatterns) {
-                        //Check for query string first
-                        if (fullPath.contains("?")) {
-                            fullPath = getBaseURL(fullPath);
-                            //Check for a duplicate of the base url
+                    //Check for query string first
+                    if (fullPath.contains("?")) {
+                        fullPath = getBaseURL(fullPath);
+                       //Check for a duplicate of the base url
+                        
 /* Storing each base url used for a query string and the number of times each
    is used in a query, but data is currently not being used.
-*/                            
-                            if (isDuplicateURL(fullPath)) {
+*/  
+                        if (isDuplicateURL(fullPath)) {
                                 //Check the hashmap to see if the base url is in there
                                 if (queriedURLs.get(fullPath) == null) {
                                     queriedURLs.put(fullPath, new Integer(1));
@@ -253,7 +252,11 @@ public class XML {
                             } else {
                                 queriedURLs.put(fullPath, new Integer(1));
                             }
-                        }
+                    }
+                    
+                    //Check to see if url is for a page first
+                    for (Pattern pattern : pageExtensionPatterns) {
+                       
                         Matcher matcher = pattern.matcher(fullPath);
                         if (matcher.find() && !stored) {
                             urls.add(new URL(fullPath, matcher.group(), Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
