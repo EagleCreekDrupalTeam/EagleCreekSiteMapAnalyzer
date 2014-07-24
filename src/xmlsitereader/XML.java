@@ -221,16 +221,16 @@ public class XML {
 
                 for (int i = 0; i < nodeList.getLength(); i++) {
                     Node newNode = nodeList.item(i);
-                    fullPaths[i] = newNode.getTextContent();
+                    fullPaths[i] = newNode.getTextContent().toLowerCase();
                 }
-
+                //Initialize ArrayList objects
                 urls = new ArrayList<>();
                 documentURLs = new ArrayList<>();
                 pageURLs = new ArrayList<>();
                 mediaURLs = new ArrayList<>();
 
                 for (int i = 0; i < fullPaths.length; i++) {
-                    String fullPath = fullPaths[i].toLowerCase();
+                    String fullPath = fullPaths[i];
                     boolean stored = false; //Flag to see if we've had a match
                     //Check to see if url is for a page first
                     for (Pattern pattern : pageExtensionPatterns) {
