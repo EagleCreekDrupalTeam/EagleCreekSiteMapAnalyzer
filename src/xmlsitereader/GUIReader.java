@@ -600,6 +600,7 @@ public class GUIReader extends javax.swing.JFrame {
     private void pageTypesFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pageTypesFieldKeyTyped
         updatePageTypeButton.setEnabled(true);
     }//GEN-LAST:event_pageTypesFieldKeyTyped
+    // REFACTOR
     /**
      * Get the new page extension arguments and set them in the XML object
      *
@@ -612,6 +613,7 @@ public class GUIReader extends javax.swing.JFrame {
         resetPageTypeButton.setEnabled(true);
 
     }//GEN-LAST:event_updatePageTypeButtonActionPerformed
+    // REFACTOR
     /**
      * Get the new document extension arguments and set them in the XML object
      *
@@ -623,6 +625,7 @@ public class GUIReader extends javax.swing.JFrame {
         updateDocumentTypeButton.setEnabled(false);
         resetDocumentTypeButton.setEnabled(true);
     }//GEN-LAST:event_updateDocumentTypeButtonActionPerformed
+    // REFACTOR
     /**
      * Get the new media extension arguments and set them in the XML object
      *

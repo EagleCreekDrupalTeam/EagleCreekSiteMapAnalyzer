@@ -1,8 +1,12 @@
 package xmlsitereader;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,6 +37,8 @@ public class XML {
     private static int sumDocuments = 0;
     private static int sumMedia = 0;
     private static int sumTotal = 0;
+    private static final String defaults = "defaults.txt";
+    private static final File preferences = new File("preferences.txt");
     private String fileName;
     private File file;
     private ArrayList<URL> urls;
@@ -59,6 +65,7 @@ public class XML {
     private ArrayList<URLExtension> extensions = new ArrayList<URLExtension>();
     private ArrayList<URL> otherUrls;// = new ArrayList<URL>();
     
+    
 
     public XML() {
         //Initialize the pattern lists from the default extension lists 
@@ -76,37 +83,56 @@ public class XML {
         for (String extension : defaultMediaExtensions) {
             extensions.add(new URLExtension(extension, URLType.Media));
         }
+        
+        try {
+            ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream(defaults));
+            output.writeObject(extensions);
+        }
+        catch(IOException e) {
+            System.out.println("BAD THINGS HAPPENED WHEN SAVING");
+        }
+        
+        try {
+            ObjectInputStream input = new ObjectInputStream(new FileInputStream(defaults));
+            ArrayList<URLExtension> ext = (ArrayList<URLExtension>)input.readObject();
+        }
+        catch(ClassNotFoundException e) {
+            System.out.println("BAD THINGS HAPPENED WHEN CASTING");
+        }
+        catch(IOException e) {
+            System.out.println("BAD THINGS HAPPENED WHEN READING");
+        }
     }
-
+    // KEEP
     public XML(String fName) {
         fileName = fName;
     }
-
+    // KEEP
     public void setFileName(String fName) {
         fileName = fName;
     }
-
+    // KEEP
     public String getFileName() {
         return fileName;
     }
-
+    // KEEP
     public void setFile(File file) {
         this.file = file;
         setFileName(file.getName());
     }
-
+    // KEEP
     public File getFile() {
         return file;
     }
-
+    // REFACTOR
     public URL[] getURLs() {
         return urls.toArray(new URL[urls.size()]);
     }
-
+    // REMOVE
     public URL[] getDocumentURLs() {
         return documentURLs.toArray(new URL[documentURLs.size()]);
     }
-    // New for refactoring
+    // New for refactoring KEEP
     public URL[] getDocumentURLs2() {
         ArrayList<URL> documentURLs2 = new ArrayList<>();
         for (URL url : otherUrls) {
@@ -117,12 +143,12 @@ public class XML {
         
         return documentURLs.toArray(new URL[documentURLs.size()]);
     }
-
+    // REMOVE
     public URL[] getPageURLs() {
         return pageURLs.toArray(new URL[pageURLs.size()]);
     }
     
-    
+    // REMOVE
     // New for refactoring
     public URL[] getURLOfType(URLType urlType) {
         ArrayList<URL> urls2 = new ArrayList<>();
@@ -134,7 +160,7 @@ public class XML {
         return urls2.toArray(new URL[urls2.size()]);
     }
     
-    
+    // REMOVE
     // New for refactoring
     public URL[] getPageURLs2() {
         ArrayList<URL> pageURLs2 = new ArrayList<>();
@@ -146,11 +172,11 @@ public class XML {
         
         return pageURLs2.toArray(new URL[pageURLs2.size()]);
     }
-
+    // REMOVE
     public URL[] getMediaURLs() {
         return mediaURLs.toArray(new URL[mediaURLs.size()]);
     }
-    
+    // REMOVE
     // New for refactoring
     public URL[] getMediaURLs2() {
         ArrayList<URL> mediaURLs2 = new ArrayList<>();
@@ -163,7 +189,7 @@ public class XML {
         return mediaURLs2.toArray(new URL[mediaURLs2.size()]);
     }
     
-    
+    // REFACTOR
 /**
  * Takes user supplied list of extensions 
  * and updates the list of patterns for Pages
@@ -174,6 +200,7 @@ public class XML {
         pageExtensionPatterns.clear();
         buildPatterns(pageExtensionPatterns, updatedPageExtensions);
     }
+    // REFACTOR
 /**
  * Takes user supplied list of extensions
  * and updates the list of patterns for Documents
@@ -184,6 +211,7 @@ public class XML {
         documentExtensionPatterns.clear();
         buildPatterns(documentExtensionPatterns, updatedDocumentExtensions);
     }
+    // REFACTOR
 /**
  * Takes user supplied list of extensions
  * and updates the list of patterns for Media
@@ -194,6 +222,7 @@ public class XML {
         mediaExtensionPatterns.clear();
         buildPatterns(mediaExtensionPatterns, updatedMediaExtensions);
     }
+    // REFACTOR
 /**
  * Resets list patterns for Pages to default
  */
@@ -201,6 +230,7 @@ public class XML {
         pageExtensionPatterns.clear();
         buildPatterns(pageExtensionPatterns, defaultPageExtensions);
     }
+    // REFACTOR
 /**
  * Resets list of patterns for Documents to default
  */
@@ -208,6 +238,7 @@ public class XML {
         documentExtensionPatterns.clear();
         buildPatterns(documentExtensionPatterns, defaultDocumentExtensions);
     }
+    // REFACTOR
 /**
  * Resets list of patterns for Media to default
  */
@@ -215,6 +246,7 @@ public class XML {
         mediaExtensionPatterns.clear();
         buildPatterns(mediaExtensionPatterns, defaultMediaExtensions);
     }
+    // REFACTOR
 /**
  * Returns a String representation of the list of patterns for Pages
  * @return 
@@ -222,6 +254,7 @@ public class XML {
     public String getPageExtensions() {
         return join(updatedPageExtensions, ",");
     }
+    // REFACTOR
 /**
  * Returns a String representation of the list of patterns for Documents
  * @return 
@@ -229,6 +262,7 @@ public class XML {
     public String getDocumentExtensions() {
         return join(updatedDocumentExtensions, ",");
     }
+    // REFACTOR
 /**
  * Returns a String representation of the list of patterns for Media
  * @return 
@@ -236,6 +270,7 @@ public class XML {
     public String getMediaExtensions() {
         return join(updatedMediaExtensions, ",");
     }
+    // REFACTOR
 /**
  * Returns a String representation of the default list of patterns for Pages
  * @return 
@@ -243,6 +278,7 @@ public class XML {
     public String getDefaultPageExtensions() {
         return join(defaultPageExtensions, ",");
     }
+    // REFACTOR
 /**
  * Returns a String representation of the default list of patterns for Documents
  * @return 
@@ -250,6 +286,7 @@ public class XML {
     public String getDefaultDocumentExtensions() {
         return join(defaultDocumentExtensions, ",");
     }
+    // REFACTOR
 /**
  * Returns a String representation of the default list of patterns for Media
  * @return 
@@ -257,7 +294,7 @@ public class XML {
     public String getDefaultMediaExtensions() {
         return join(defaultMediaExtensions, ",");
     }
-
+    // REMOVE     
     /**
      * Builds list of Patterns from the list of Strings
      *
@@ -270,7 +307,7 @@ public class XML {
             patterns.add(Pattern.compile(extension + "$"));
         }
     }
-
+    // RFACTOR
     /**
      * Parses through the xml sitemap to build the lists of urls
      *
@@ -399,7 +436,7 @@ public class XML {
         sortUrls();
 
     }
-
+    // KEEP
     /**
      * Get the base url from one with a query string
      *
@@ -410,7 +447,7 @@ public class XML {
         int queryIndex = url.indexOf("?");
         return url.substring(0, queryIndex);
     }
-
+    // KEEP
     /**
      * Check the list of urls for a duplicate
      *
@@ -425,7 +462,7 @@ public class XML {
         }
         return false;
     }
-
+    // REFACTOR
     /**
      * Sort all the lists
      */
@@ -435,7 +472,7 @@ public class XML {
         Collections.sort(documentURLs);
         Collections.sort(mediaURLs);
     }
-
+    // KEEP
     /**
      * Join a list of Strings as one String separated by a given delimeter
      *
@@ -455,7 +492,7 @@ public class XML {
         }
         return builder.toString();
     }
-
+    // KEEP
     /**
      * Split a String into a list of Strings at a given delimeter
      *
@@ -467,7 +504,7 @@ public class XML {
         String[] temp = extensions.split(delimeter);
         return new ArrayList<String>(Arrays.asList(temp));
     }
-    
+    // KEEP
     public boolean matchPath(ArrayList<URLExtension> extensions, String path) {
         
         for (URLExtension extension : extensions) {
@@ -477,20 +514,9 @@ public class XML {
                 return true;
             }
         }
-        
-//        for (Pattern pattern : patternList) {
-//            Matcher matcher = pattern.matcher(path);
-//            if (matcher.find()) {
-//                //urls.add(new URL(path, matcher.group(), Boolean.FALSE, Boolean.FALSE, Boolean.TRUE));
-//                //mediaURLs.add(new URL(fullPath, matcher.group(), Boolean.FALSE, Boolean.FALSE, Boolean.TRUE));
-//
-//                //sumMedia++;
-//                return true;
-//            }
-//        }
         return false;
     }
-
+    // REFACTOR
     /**
      * Sum up the counts of the different types of urls
      *
@@ -499,7 +525,7 @@ public class XML {
     public int calculateResults() {
         return sumTotal = sumPages + sumDocuments + sumMedia;
     }
-
+    // REFACTOR
     /**
      * Reset url counts so analysis can be ran more than once
      */
@@ -509,7 +535,7 @@ public class XML {
         sumMedia = 0;
         sumTotal = 0;
     }
-
+    // REFACTOR
     /**
      * Build a String with the results to be displayed
      *

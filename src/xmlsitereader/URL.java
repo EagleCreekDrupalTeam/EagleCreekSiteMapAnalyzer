@@ -9,15 +9,16 @@ package xmlsitereader;
 public class URL implements Comparable {
     private String urlPath;
     private String extension;
-    private Boolean isPage;
-    private Boolean isDocument;
-    private Boolean isMedia;
+    private Boolean isPage; // REMOVE
+    private Boolean isDocument; // REMOVE
+    private Boolean isMedia; // REMOVE
     private URLType urlType;
 
     /**
      * Default empty constructor
      */
     public URL(){}
+    // REMOVE
     /**
      * Overridden constructor
      * @param urlPath
@@ -33,6 +34,7 @@ public class URL implements Comparable {
         this.isDocument = isDocument;
         this.isMedia = isImage;
     }
+    //KEEP
     /**
      * New constructor for refactoring
      * @param urlPath
@@ -59,20 +61,23 @@ public class URL implements Comparable {
     public void setExtension(String extension) {
         this.extension = extension;
     }
+    // REMOVE
     /**
      * 
      * @param page 
      */
     public void setIsPage(Boolean page) { 
         this.isPage = page; 
-    }    
+    }
+    // REMOVE
     /**
      * 
      * @param document 
      */
     public void setIsDocument(Boolean document) { 
         this.isDocument = document; 
-    }    
+    }
+    // REMOVE
     /**
      * 
      * @param image 
@@ -101,21 +106,24 @@ public class URL implements Comparable {
      */
     public String getExtension() {
         return extension;
-    }    
+    }
+    // REMOVE
     /**
      * 
      * @return boolean
      */
     public Boolean isPage() { 
         return isPage; 
-    } 
+    }
+    // REMOVE
     /**
      * 
      * @return boolean
      */
     public Boolean isDocument() { 
         return isDocument; 
-    }  
+    }
+    // REMOVE
     /**
      * 
      * @return boolean

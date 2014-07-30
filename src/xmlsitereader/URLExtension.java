@@ -1,12 +1,13 @@
 package xmlsitereader;
 
+import java.io.Serializable;
 import java.util.regex.Pattern;
 
 /**
  *
  * @author cconner
  */
-public class URLExtension {
+public class URLExtension implements Serializable {
     private String extension;
     private URLType urlType;
     private Pattern pattern;
