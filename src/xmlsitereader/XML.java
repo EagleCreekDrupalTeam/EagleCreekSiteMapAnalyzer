@@ -85,16 +85,17 @@ public class XML {
         }
         
         try {
-            ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream(defaults));
+            ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream(preferences));
             output.writeObject(extensions);
         }
         catch(IOException e) {
-            System.out.println("BAD THINGS HAPPENED WHEN SAVING");
+            System.out.println("BAD THINGS HAPPENED WHEN SAVING" + e);
         }
         
         try {
             ObjectInputStream input = new ObjectInputStream(new FileInputStream(defaults));
             ArrayList<URLExtension> ext = (ArrayList<URLExtension>)input.readObject();
+            System.out.println("Loaded extensions " + ext.size());
         }
         catch(ClassNotFoundException e) {
             System.out.println("BAD THINGS HAPPENED WHEN CASTING");
