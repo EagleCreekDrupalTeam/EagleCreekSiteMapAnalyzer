@@ -54,12 +54,28 @@ public class XML {
     private ArrayList<Pattern> mediaExtensionPatterns = new ArrayList<Pattern>();
 
     private HashMap<String, Integer> queriedURLs = new HashMap<String, Integer>();
+    
+    // New for refactoring
+    private ArrayList<URLExtension> extensions = new ArrayList<URLExtension>();
+    private ArrayList<URL> otherUrls;// = new ArrayList<URL>();
+    
 
     public XML() {
         //Initialize the pattern lists from the default extension lists 
         buildPatterns(documentExtensionPatterns, defaultDocumentExtensions);
         buildPatterns(pageExtensionPatterns, defaultPageExtensions);
         buildPatterns(mediaExtensionPatterns, defaultMediaExtensions);
+        
+        // New for refactoring
+        for (String extension : defaultDocumentExtensions) {
+            extensions.add(new URLExtension(extension, URLType.Document));
+        }
+        for (String extension : defaultPageExtensions) {
+            extensions.add(new URLExtension(extension, URLType.Page));
+        }
+        for (String extension : defaultMediaExtensions) {
+            extensions.add(new URLExtension(extension, URLType.Media));
+        }
     }
 
     public XML(String fName) {
@@ -90,14 +106,64 @@ public class XML {
     public URL[] getDocumentURLs() {
         return documentURLs.toArray(new URL[documentURLs.size()]);
     }
+    // New for refactoring
+    public URL[] getDocumentURLs2() {
+        ArrayList<URL> documentURLs2 = new ArrayList<>();
+        for (URL url : otherUrls) {
+            if (url.getURLType() == URLType.Document) {
+                documentURLs2.add(url);
+            }
+        }
+        
+        return documentURLs.toArray(new URL[documentURLs.size()]);
+    }
 
     public URL[] getPageURLs() {
         return pageURLs.toArray(new URL[pageURLs.size()]);
+    }
+    
+    
+    // New for refactoring
+    public URL[] getURLOfType(URLType urlType) {
+        ArrayList<URL> urls2 = new ArrayList<>();
+        for(URL url : otherUrls) {
+            if (url.getURLType() == urlType) {
+                urls2.add(url);
+            }
+        }
+        return urls2.toArray(new URL[urls2.size()]);
+    }
+    
+    
+    // New for refactoring
+    public URL[] getPageURLs2() {
+        ArrayList<URL> pageURLs2 = new ArrayList<>();
+        for (URL url : otherUrls) {
+            if (url.getURLType() == URLType.Page) {
+                pageURLs2.add(url);
+            }
+        }
+        
+        return pageURLs2.toArray(new URL[pageURLs2.size()]);
     }
 
     public URL[] getMediaURLs() {
         return mediaURLs.toArray(new URL[mediaURLs.size()]);
     }
+    
+    // New for refactoring
+    public URL[] getMediaURLs2() {
+        ArrayList<URL> mediaURLs2 = new ArrayList<>();
+        for (URL url : otherUrls) {
+            if (url.getURLType() == URLType.Media) {
+                mediaURLs2.add(url);
+            }
+        }
+        
+        return mediaURLs2.toArray(new URL[mediaURLs2.size()]);
+    }
+    
+    
 /**
  * Takes user supplied list of extensions 
  * and updates the list of patterns for Pages
@@ -145,7 +211,7 @@ public class XML {
 /**
  * Resets list of patterns for Media to default
  */
-    public void resetediaExtensions() {
+    public void resetMediaExtensions() {
         mediaExtensionPatterns.clear();
         buildPatterns(mediaExtensionPatterns, defaultMediaExtensions);
     }
@@ -202,7 +268,7 @@ public class XML {
         
         for (String extension : extensions) {
             patterns.add(Pattern.compile(extension + "$"));
-        }                        
+        }
     }
 
     /**
@@ -232,6 +298,9 @@ public class XML {
                 documentURLs = new ArrayList<>();
                 pageURLs = new ArrayList<>();
                 mediaURLs = new ArrayList<>();
+                
+                // New for refactoring
+                otherUrls = new ArrayList<>();
 
                 for (int i = 0; i < fullPaths.length; i++) {
                     String fullPath = fullPaths[i];
@@ -256,6 +325,14 @@ public class XML {
                             } else {
                                 queriedURLs.put(fullPath, new Integer(1));
                             }
+                    }
+                    
+                    // New for refactoring
+                    if (!stored) {
+                        boolean matched = matchPath(extensions, fullPath);
+                        if (!matched) {
+                            otherUrls.add(new URL(fullPath, "other", URLType.Page));
+                        }
                     }
                     
                     //Check to see if url is for a page first
@@ -304,6 +381,16 @@ public class XML {
                     }
 
                 }
+                
+                System.out.println("Old URLS " + urls.size());
+                System.out.println("New URLS " + otherUrls.size());
+                System.out.println("Extensions " + extensions.size());
+                System.out.println("Old page urls " + pageURLs.size());
+                System.out.println("New page urls " + getPageURLs2().length);
+                System.out.println("Old document urls " + documentURLs.size());
+                System.out.println("New document urls " + getDocumentURLs2().length);
+                System.out.println("Old media urls " + mediaURLs.size());
+                System.out.println("New media urls " + getMediaURLs2().length);
             }
         } catch (ParserConfigurationException | SAXException | IOException | DOMException e) {
             System.out.println(e);
@@ -381,17 +468,26 @@ public class XML {
         return new ArrayList<String>(Arrays.asList(temp));
     }
     
-    public boolean matchPath(ArrayList<Pattern> patternList, String path) {
-        for (Pattern pattern : patternList) {
-            Matcher matcher = pattern.matcher(path);
+    public boolean matchPath(ArrayList<URLExtension> extensions, String path) {
+        
+        for (URLExtension extension : extensions) {
+            Matcher matcher = extension.getPattern().matcher(path);
             if (matcher.find()) {
-                //urls.add(new URL(path, matcher.group(), Boolean.FALSE, Boolean.FALSE, Boolean.TRUE));
-                //mediaURLs.add(new URL(fullPath, matcher.group(), Boolean.FALSE, Boolean.FALSE, Boolean.TRUE));
-
-                //sumMedia++;
+                otherUrls.add(new URL(path, matcher.group(), extension.getURLType()));
                 return true;
             }
         }
+        
+//        for (Pattern pattern : patternList) {
+//            Matcher matcher = pattern.matcher(path);
+//            if (matcher.find()) {
+//                //urls.add(new URL(path, matcher.group(), Boolean.FALSE, Boolean.FALSE, Boolean.TRUE));
+//                //mediaURLs.add(new URL(fullPath, matcher.group(), Boolean.FALSE, Boolean.FALSE, Boolean.TRUE));
+//
+//                //sumMedia++;
+//                return true;
+//            }
+//        }
         return false;
     }
 

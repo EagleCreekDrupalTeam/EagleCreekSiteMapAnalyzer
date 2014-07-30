@@ -669,7 +669,7 @@ public class GUIReader extends javax.swing.JFrame {
      * @param evt
      */
     private void resetMediaTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetMediaTypeButtonActionPerformed
-        xml.resetediaExtensions();
+        xml.resetMediaExtensions();
         mediaTypes = xml.getDefaultMediaExtensions();
         mediaTypesField.setText(mediaTypes);
         resetMediaTypeButton.setEnabled(false);
