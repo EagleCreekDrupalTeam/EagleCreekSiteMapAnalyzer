@@ -40,4 +40,16 @@ public class URLExtension implements Serializable {
     public Pattern getPattern() {
         return pattern;
     }
+    /**
+     * 
+     * @param urlExtension
+     * @return 
+     */
+    public boolean equals(URLExtension urlExtension) {
+        return this.extension.equals(urlExtension.getExtension());
+    }
+    
+    public String toString() {
+        return extension + " " + urlType;
+    }
 }

@@ -38,70 +38,34 @@ public class XML {
     private static int sumMedia = 0;
     private static int sumTotal = 0;
     private static final String defaults = "defaults.txt";
-    private static final File preferences = new File("preferences.txt");
+    private static final String preferences = "preferences.txt";
     private String fileName;
     private File file;
     private ArrayList<URL> urls;
-    private ArrayList<URL> documentURLs;
-    private ArrayList<URL> pageURLs;
-    private ArrayList<URL> mediaURLs;
     private String[] fullPaths;
     
-    private ArrayList<String> defaultDocumentExtensions = new ArrayList(Arrays.asList(".docx", ".doc", ".dot", ".pdf", ".txt", ".rft", ".odt",".odg", ".csv", ".xls", ".xlsx", ".xlt", ".ppt", ".pptx"));
-    private ArrayList<String> defaultPageExtensions = new ArrayList(Arrays.asList(".html", ".htm", ".aspx", ".jsp", ".php", ".asp", ".shtml"));
-    private ArrayList<String> defaultMediaExtensions = new ArrayList(Arrays.asList(".gif", ".jpg", ".png", ".jpeg", ".bmp", ".ico"));
-
-    private ArrayList<String> updatedDocumentExtensions = new ArrayList();
-    private ArrayList<String> updatedPageExtensions = new ArrayList();
-    private ArrayList<String> updatedMediaExtensions = new ArrayList();
-
-    private ArrayList<Pattern> documentExtensionPatterns = new ArrayList<Pattern>();
-    private ArrayList<Pattern> pageExtensionPatterns = new ArrayList<Pattern>();
-    private ArrayList<Pattern> mediaExtensionPatterns = new ArrayList<Pattern>();
-
     private HashMap<String, Integer> queriedURLs = new HashMap<String, Integer>();
     
     // New for refactoring
-    private ArrayList<URLExtension> extensions = new ArrayList<URLExtension>();
-    private ArrayList<URL> otherUrls;// = new ArrayList<URL>();
+    private ArrayList<URLExtension> urlExtensions = new ArrayList<URLExtension>();
+    private ArrayList<URLExtension> defaultURLExtensions = new ArrayList<URLExtension>();
     
-    
-
     public XML() {
-        //Initialize the pattern lists from the default extension lists 
-        buildPatterns(documentExtensionPatterns, defaultDocumentExtensions);
-        buildPatterns(pageExtensionPatterns, defaultPageExtensions);
-        buildPatterns(mediaExtensionPatterns, defaultMediaExtensions);
-        
-        // New for refactoring
-        for (String extension : defaultDocumentExtensions) {
-            extensions.add(new URLExtension(extension, URLType.Document));
-        }
-        for (String extension : defaultPageExtensions) {
-            extensions.add(new URLExtension(extension, URLType.Page));
-        }
-        for (String extension : defaultMediaExtensions) {
-            extensions.add(new URLExtension(extension, URLType.Media));
-        }
-        
-        try {
-            ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream(preferences));
-            output.writeObject(extensions);
-        }
-        catch(IOException e) {
-            System.out.println("BAD THINGS HAPPENED WHEN SAVING" + e);
-        }
-        
+
         try {
             ObjectInputStream input = new ObjectInputStream(new FileInputStream(defaults));
-            ArrayList<URLExtension> ext = (ArrayList<URLExtension>)input.readObject();
-            System.out.println("Loaded extensions " + ext.size());
+            defaultURLExtensions = (ArrayList<URLExtension>)input.readObject();
         }
-        catch(ClassNotFoundException e) {
-            System.out.println("BAD THINGS HAPPENED WHEN CASTING");
+        catch(ClassNotFoundException | IOException e) {
+            System.out.println("BAD THINGS HAPPENED WHEN READING " + e);
         }
-        catch(IOException e) {
-            System.out.println("BAD THINGS HAPPENED WHEN READING");
+        
+        try {
+            ObjectInputStream input = new ObjectInputStream(new FileInputStream(preferences));
+            urlExtensions = (ArrayList<URLExtension>)input.readObject();
+        }
+        catch(ClassNotFoundException | IOException e) {
+            System.out.println("BAD THINGS HAPPENED WHEN READING OR CASTING " + e);
         }
     }
     // KEEP
@@ -125,187 +89,73 @@ public class XML {
     public File getFile() {
         return file;
     }
-    // REFACTOR
+    // KEEP
     public URL[] getURLs() {
         return urls.toArray(new URL[urls.size()]);
     }
-    // REMOVE
-    public URL[] getDocumentURLs() {
-        return documentURLs.toArray(new URL[documentURLs.size()]);
-    }
-    // New for refactoring KEEP
-    public URL[] getDocumentURLs2() {
-        ArrayList<URL> documentURLs2 = new ArrayList<>();
-        for (URL url : otherUrls) {
-            if (url.getURLType() == URLType.Document) {
-                documentURLs2.add(url);
-            }
-        }
-        
-        return documentURLs.toArray(new URL[documentURLs.size()]);
-    }
-    // REMOVE
-    public URL[] getPageURLs() {
-        return pageURLs.toArray(new URL[pageURLs.size()]);
-    }
     
-    // REMOVE
     // New for refactoring
-    public URL[] getURLOfType(URLType urlType) {
-        ArrayList<URL> urls2 = new ArrayList<>();
-        for(URL url : otherUrls) {
+    public URL[] getURLsOfType(URLType urlType) {
+        ArrayList<URL> urlsOfType = new ArrayList<>();
+        for (URL url : urls) {
             if (url.getURLType() == urlType) {
-                urls2.add(url);
+                urlsOfType.add(url);
             }
         }
-        return urls2.toArray(new URL[urls2.size()]);
+        return urlsOfType.toArray(new URL[urlsOfType.size()]);
     }
     
-    // REMOVE
     // New for refactoring
-    public URL[] getPageURLs2() {
-        ArrayList<URL> pageURLs2 = new ArrayList<>();
-        for (URL url : otherUrls) {
-            if (url.getURLType() == URLType.Page) {
-                pageURLs2.add(url);
+    public String getExtensionsOfType(URLType urlType) {
+        ArrayList<String> extensionsOfType = new ArrayList<>();
+        for (URLExtension extension : urlExtensions) {
+            if (extension.getURLType() == urlType) {
+                extensionsOfType.add(extension.getExtension());
             }
         }
-        
-        return pageURLs2.toArray(new URL[pageURLs2.size()]);
-    }
-    // REMOVE
-    public URL[] getMediaURLs() {
-        return mediaURLs.toArray(new URL[mediaURLs.size()]);
-    }
-    // REMOVE
-    // New for refactoring
-    public URL[] getMediaURLs2() {
-        ArrayList<URL> mediaURLs2 = new ArrayList<>();
-        for (URL url : otherUrls) {
-            if (url.getURLType() == URLType.Media) {
-                mediaURLs2.add(url);
-            }
-        }
-        
-        return mediaURLs2.toArray(new URL[mediaURLs2.size()]);
+        return join(extensionsOfType, ",");
     }
     
-    // REFACTOR
-/**
- * Takes user supplied list of extensions 
- * and updates the list of patterns for Pages
- * @param extensions 
- */
-    public void setPageExtensions(String extensions) {
-        this.updatedPageExtensions = split(extensions, ",");
-        pageExtensionPatterns.clear();
-        buildPatterns(pageExtensionPatterns, updatedPageExtensions);
+    // New for refactoring
+    public void setExtensionsOfType(String extensions, URLType urlType) {
+        ArrayList<String> list = split(extensions, ",");
+        clearExtensionsOfType(urlType);
+        for (String extension : list) {
+            urlExtensions.add(new URLExtension(extension, urlType));
+        }
+        saveExtensions();
     }
-    // REFACTOR
-/**
- * Takes user supplied list of extensions
- * and updates the list of patterns for Documents
- * @param extensions 
- */
-    public void setDocumentExtensions(String extensions) {
-        this.updatedDocumentExtensions = new ArrayList(split(extensions, ","));
-        documentExtensionPatterns.clear();
-        buildPatterns(documentExtensionPatterns, updatedDocumentExtensions);
+    
+    // New for refactoring
+    public void resetExtensionsOfType(URLType urlType) {
+        clearExtensionsOfType(urlType);
+        for (URLExtension urlExtension : defaultURLExtensions) {
+            if (urlExtension.getURLType() == urlType) {
+                urlExtensions.add(urlExtension);
+            }            
+        }
+        saveExtensions();
     }
-    // REFACTOR
-/**
- * Takes user supplied list of extensions
- * and updates the list of patterns for Media
- * @param extensions 
- */
-    public void setMediaExtensions(String extensions) {
-        this.updatedMediaExtensions = split(extensions, ",");
-        mediaExtensionPatterns.clear();
-        buildPatterns(mediaExtensionPatterns, updatedMediaExtensions);
+    
+    // New for refactoring
+    private void clearExtensionsOfType(URLType urlType) {
+        ArrayList<URLExtension> newURLExtensions = new ArrayList<>();
+        for (URLExtension urlExtension : urlExtensions) {
+            if (urlExtension.getURLType() != urlType) {
+                newURLExtensions.add(urlExtension);
+            }
+        }
+        urlExtensions = newURLExtensions;
     }
-    // REFACTOR
-/**
- * Resets list patterns for Pages to default
- */
-    public void resetPageExtensions() {
-        pageExtensionPatterns.clear();
-        buildPatterns(pageExtensionPatterns, defaultPageExtensions);
-    }
-    // REFACTOR
-/**
- * Resets list of patterns for Documents to default
- */
-    public void resetDocumentExtensions() {
-        documentExtensionPatterns.clear();
-        buildPatterns(documentExtensionPatterns, defaultDocumentExtensions);
-    }
-    // REFACTOR
-/**
- * Resets list of patterns for Media to default
- */
-    public void resetMediaExtensions() {
-        mediaExtensionPatterns.clear();
-        buildPatterns(mediaExtensionPatterns, defaultMediaExtensions);
-    }
-    // REFACTOR
-/**
- * Returns a String representation of the list of patterns for Pages
- * @return 
- */
-    public String getPageExtensions() {
-        return join(updatedPageExtensions, ",");
-    }
-    // REFACTOR
-/**
- * Returns a String representation of the list of patterns for Documents
- * @return 
- */
-    public String getDocumentExtensions() {
-        return join(updatedDocumentExtensions, ",");
-    }
-    // REFACTOR
-/**
- * Returns a String representation of the list of patterns for Media
- * @return 
- */
-    public String getMediaExtensions() {
-        return join(updatedMediaExtensions, ",");
-    }
-    // REFACTOR
-/**
- * Returns a String representation of the default list of patterns for Pages
- * @return 
- */
-    public String getDefaultPageExtensions() {
-        return join(defaultPageExtensions, ",");
-    }
-    // REFACTOR
-/**
- * Returns a String representation of the default list of patterns for Documents
- * @return 
- */
-    public String getDefaultDocumentExtensions() {
-        return join(defaultDocumentExtensions, ",");
-    }
-    // REFACTOR
-/**
- * Returns a String representation of the default list of patterns for Media
- * @return 
- */
-    public String getDefaultMediaExtensions() {
-        return join(defaultMediaExtensions, ",");
-    }
-    // REMOVE     
-    /**
-     * Builds list of Patterns from the list of Strings
-     *
-     * @param patterns
-     * @param extensions
-     */
-    public void buildPatterns(ArrayList<Pattern> patterns, ArrayList<String> extensions) {
-        
-        for (String extension : extensions) {
-            patterns.add(Pattern.compile(extension + "$"));
+    
+    // New for refactoring
+    private void saveExtensions() {
+        try {
+            ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream(preferences));
+            output.writeObject(urlExtensions);
+        }
+        catch(IOException e) {
+            
         }
     }
     // RFACTOR
@@ -333,102 +183,23 @@ public class XML {
                 }
                 //Initialize ArrayList objects
                 urls = new ArrayList<>();
-                documentURLs = new ArrayList<>();
-                pageURLs = new ArrayList<>();
-                mediaURLs = new ArrayList<>();
                 
-                // New for refactoring
-                otherUrls = new ArrayList<>();
-
-                for (int i = 0; i < fullPaths.length; i++) {
-                    String fullPath = fullPaths[i];
-                    boolean stored = false; //Flag to see if we've had a match
-                    //Check for query string first
+                for(String fullPath : fullPaths) {
+                    boolean stored = false; // Flag to see if we've matched an extension
+                    // Check for query string in path
                     if (fullPath.contains("?")) {
-                        fullPath = getBaseURL(fullPath);
-                       //Check for a duplicate of the base url
-                        
-/* Storing each base url used for a query string and the number of times each
-   is used in a query, but data is currently not being used.
-*/  
-                        if (isDuplicateURL(fullPath)) {
-                                //Check the hashmap to see if the base url is in there
-                                if (queriedURLs.get(fullPath) == null) {
-                                    queriedURLs.put(fullPath, new Integer(1));
-                                }
-                                else {
-                                    queriedURLs.put(fullPath, new Integer(queriedURLs.get(fullPath).intValue() + 1));
-                                }
-                                stored = true;
-                            } else {
-                                queriedURLs.put(fullPath, new Integer(1));
-                            }
+                        fullPath = getBaseURL(fullPath); // Strip off query string
+                        // Check for a duplicate of the base url
+                        stored = isDuplicateURL(fullPath);
                     }
                     
-                    // New for refactoring
                     if (!stored) {
-                        boolean matched = matchPath(extensions, fullPath);
+                        boolean matched = matchPath(urlExtensions, fullPath);
                         if (!matched) {
-                            otherUrls.add(new URL(fullPath, "other", URLType.Page));
+                            urls.add(new URL(fullPath, "other", URLType.Page));
                         }
                     }
-                    
-                    //Check to see if url is for a page first
-                    for (Pattern pattern : pageExtensionPatterns) {
-                       
-                        Matcher matcher = pattern.matcher(fullPath);
-                        if (matcher.find() && !stored) {
-                            urls.add(new URL(fullPath, matcher.group(), Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
-                            pageURLs.add(new URL(fullPath, matcher.group(), Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
-                            sumPages++;
-                            stored = true;
-                        }
-                    }
-                    //If the url wasn't a page check to see if url is for a document
-                    if (!stored) {
-                        for (Pattern pattern : documentExtensionPatterns) {
-                            Matcher matcher = pattern.matcher(fullPath);
-                            if (matcher.find()) {
-                                urls.add(new URL(fullPath, matcher.group(), Boolean.FALSE, Boolean.TRUE, Boolean.FALSE));
-                                documentURLs.add(new URL(fullPath, matcher.group(), Boolean.FALSE, Boolean.TRUE, Boolean.FALSE));
-                                sumDocuments++;
-                                stored = true;
-                            }
-                        }
-                    }
-                    //If the url wasn't a page or document check to see if url is for a media
-                    if (!stored) {
-                        for (Pattern pattern : mediaExtensionPatterns) {
-                            Matcher matcher = pattern.matcher(fullPath);
-                            if (matcher.find()) {
-                                urls.add(new URL(fullPath, matcher.group(), Boolean.FALSE, Boolean.FALSE, Boolean.TRUE));
-                                mediaURLs.add(new URL(fullPath, matcher.group(), Boolean.FALSE, Boolean.FALSE, Boolean.TRUE));
-
-                                sumMedia++;
-                                stored = true;
-                            }
-                        }
-                    }
-                    //If the url didn't contain any of the extensions we are checking for 
-                    //set extension to other and count as a page
-                    if (!stored) {
-                        String extension = "other";
-                        urls.add(new URL(fullPath, extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
-                        pageURLs.add(new URL(fullPath, extension, Boolean.TRUE, Boolean.FALSE, Boolean.FALSE));
-                        sumPages++;
-                    }
-
-                }
-                
-                System.out.println("Old URLS " + urls.size());
-                System.out.println("New URLS " + otherUrls.size());
-                System.out.println("Extensions " + extensions.size());
-                System.out.println("Old page urls " + pageURLs.size());
-                System.out.println("New page urls " + getPageURLs2().length);
-                System.out.println("Old document urls " + documentURLs.size());
-                System.out.println("New document urls " + getDocumentURLs2().length);
-                System.out.println("Old media urls " + mediaURLs.size());
-                System.out.println("New media urls " + getMediaURLs2().length);
+                }               
             }
         } catch (ParserConfigurationException | SAXException | IOException | DOMException e) {
             System.out.println(e);
@@ -463,15 +234,11 @@ public class XML {
         }
         return false;
     }
-    // REFACTOR
     /**
      * Sort all the lists
      */
     public void sortUrls() {
         Collections.sort(urls);
-        Collections.sort(pageURLs);
-        Collections.sort(documentURLs);
-        Collections.sort(mediaURLs);
     }
     // KEEP
     /**
@@ -511,20 +278,30 @@ public class XML {
         for (URLExtension extension : extensions) {
             Matcher matcher = extension.getPattern().matcher(path);
             if (matcher.find()) {
-                otherUrls.add(new URL(path, matcher.group(), extension.getURLType()));
+                urls.add(new URL(path, matcher.group(), extension.getURLType()));
                 return true;
             }
         }
         return false;
     }
-    // REFACTOR
+    
     /**
-     * Sum up the counts of the different types of urls
-     *
-     * @return
+     * Generate counts of url types
      */
-    public int calculateResults() {
-        return sumTotal = sumPages + sumDocuments + sumMedia;
+    public void calculateResults() {
+        resetCounts();
+        for (URL url : urls) {
+            if (url.getURLType() == URLType.Page) {
+                sumPages++;
+            }
+            else if (url.getURLType() == URLType.Document) {
+                sumDocuments++;
+            }
+            else {
+                sumMedia++;
+            }
+        }
+        sumTotal = urls.size();
     }
     // REFACTOR
     /**
@@ -543,11 +320,12 @@ public class XML {
      * @return
      */
     public String printResults() {
+        calculateResults();
         StringBuilder builder = new StringBuilder();
         builder.append("Number of pages: ").append(sumPages).append("\n");
         builder.append("Number of documents: ").append(sumDocuments).append("\n");
         builder.append("Number of media: ").append(sumMedia).append("\n");
-        builder.append("Total number of elements: ").append(calculateResults());
+        builder.append("Total number of elements: ").append(sumTotal);
 
         return builder.toString();
     }
@@ -568,23 +346,23 @@ public class XML {
             newPrintWriter.write("********************************************\n");
             newPrintWriter.write("Page URLS: \n");
             newPrintWriter.write("********************************************\n");
-            newPrintWriter.write(pageURLs.toString().replace(",", "")
-                    .replace("[", "")
-                    .replace("]", "") + "\n");
+//            newPrintWriter.write(pageURLs.toString().replace(",", "")
+//                    .replace("[", "")
+//                    .replace("]", "") + "\n");
             newPrintWriter.write("");
             newPrintWriter.write("********************************************\n");
             newPrintWriter.write("Document URLS: \n");
             newPrintWriter.write("********************************************\n");
-            newPrintWriter.write(documentURLs.toString().replace(",", "")
-                    .replace("[", "")
-                    .replace("]", "") + "\n");
+//            newPrintWriter.write(documentURLs.toString().replace(",", "")
+//                    .replace("[", "")
+//                    .replace("]", "") + "\n");
             newPrintWriter.write("");
             newPrintWriter.write("********************************************\n");
             newPrintWriter.write("Media URLs: \n");
             newPrintWriter.write("********************************************\n");
-            newPrintWriter.write(mediaURLs.toString().replace(",", "")
-                    .replace("[", "")
-                    .replace("]", "") + "\n");
+//            newPrintWriter.write(mediaURLs.toString().replace(",", "")
+//                    .replace("[", "")
+//                    .replace("]", "") + "\n");
             newPrintWriter.write("********************************************\n");
             newPrintWriter.write("Summary: \n");
             newPrintWriter.write("********************************************\n");            

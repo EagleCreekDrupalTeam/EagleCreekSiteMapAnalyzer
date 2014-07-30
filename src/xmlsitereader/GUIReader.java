@@ -24,9 +24,9 @@ public class GUIReader extends javax.swing.JFrame {
     private Object[][] data;
     private String[] columnNames = {"Line#", "URL", "Extension", "Page", "Document", "Media"};
     private String urlToOpen;
-    private String pageTypes = xml.getDefaultPageExtensions();
-    private String documentTypes = xml.getDefaultDocumentExtensions();
-    private String mediaTypes = xml.getDefaultMediaExtensions();
+    private String pageTypes = xml.getExtensionsOfType(URLType.Page);
+    private String documentTypes = xml.getExtensionsOfType(URLType.Document);
+    private String mediaTypes = xml.getExtensionsOfType(URLType.Media);
     private DefaultTableModel tableModel = new DefaultTableModel(data, columnNames) {
         public boolean isCellEditable(int row, int column) {
             return false;
@@ -243,24 +243,21 @@ public class GUIReader extends javax.swing.JFrame {
             }
         });
 
-        resetDocumentTypeButton.setText("Reset");
-        resetDocumentTypeButton.setEnabled(false);
+        resetDocumentTypeButton.setText("Restore Defaults");
         resetDocumentTypeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 resetDocumentTypeButtonActionPerformed(evt);
             }
         });
 
-        resetMediaTypeButton.setText("Reset");
-        resetMediaTypeButton.setEnabled(false);
+        resetMediaTypeButton.setText("Restore Defaults");
         resetMediaTypeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 resetMediaTypeButtonActionPerformed(evt);
             }
         });
 
-        resetPageTypeButton.setText("Reset");
-        resetPageTypeButton.setEnabled(false);
+        resetPageTypeButton.setText("Restore Defaults");
         resetPageTypeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 resetPageTypeButtonActionPerformed(evt);
@@ -398,13 +395,13 @@ public class GUIReader extends javax.swing.JFrame {
                 urls = xml.getURLs();
                 break;
             case "page":
-                urls = xml.getPageURLs();
+                urls = xml.getURLsOfType(URLType.Page);
                 break;
             case "document":
-                urls = xml.getDocumentURLs();
+                urls = xml.getURLsOfType(URLType.Document);
                 break;
             default:
-                urls = xml.getMediaURLs();
+                urls = xml.getURLsOfType(URLType.Media);
                 break;
         }
 
@@ -438,13 +435,13 @@ public class GUIReader extends javax.swing.JFrame {
                         data[i][j] = urls[i].getExtension();
                         break;
                     case 3:
-                        data[i][j] = urls[i].isPage();
+                        data[i][j] = urls[i].getURLType() == URLType.Page;
                         break;
                     case 4:
-                        data[i][j] = urls[i].isDocument();
+                        data[i][j] = urls[i].getURLType() == URLType.Document;
                         break;
                     case 5:
-                        data[i][j] = urls[i].isMedia();
+                        data[i][j] = urls[i].getURLType() == URLType.Media;
                         break;
                     default:
                 }
@@ -608,7 +605,7 @@ public class GUIReader extends javax.swing.JFrame {
      */
     private void updatePageTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updatePageTypeButtonActionPerformed
         String extensions = pageTypesField.getText();
-        xml.setPageExtensions(extensions);
+        xml.setExtensionsOfType(extensions, URLType.Page);
         updatePageTypeButton.setEnabled(false);
         resetPageTypeButton.setEnabled(true);
 
@@ -621,7 +618,7 @@ public class GUIReader extends javax.swing.JFrame {
      */
     private void updateDocumentTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateDocumentTypeButtonActionPerformed
         String extensions = documentTypesField.getText();
-        xml.setDocumentExtensions(extensions);
+        xml.setExtensionsOfType(extensions, URLType.Document);
         updateDocumentTypeButton.setEnabled(false);
         resetDocumentTypeButton.setEnabled(true);
     }//GEN-LAST:event_updateDocumentTypeButtonActionPerformed
@@ -633,7 +630,7 @@ public class GUIReader extends javax.swing.JFrame {
      */
     private void updateMediaTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateMediaTypeButtonActionPerformed
         String extensions = mediaTypesField.getText();
-        xml.setMediaExtensions(extensions);
+        xml.setExtensionsOfType(extensions, URLType.Media);
         updateMediaTypeButton.setEnabled(false);
         resetMediaTypeButton.setEnabled(true);
     }//GEN-LAST:event_updateMediaTypeButtonActionPerformed
@@ -661,10 +658,9 @@ public class GUIReader extends javax.swing.JFrame {
      * @param evt
      */
     private void resetPageTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetPageTypeButtonActionPerformed
-        xml.resetPageExtensions();
-        pageTypes = xml.getDefaultPageExtensions();
+        xml.resetExtensionsOfType(URLType.Page);
+        pageTypes = xml.getExtensionsOfType(URLType.Page);
         pageTypesField.setText(pageTypes);
-        resetPageTypeButton.setEnabled(false);
     }//GEN-LAST:event_resetPageTypeButtonActionPerformed
     /**
      * Reset media types to the default media types
@@ -672,10 +668,9 @@ public class GUIReader extends javax.swing.JFrame {
      * @param evt
      */
     private void resetMediaTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetMediaTypeButtonActionPerformed
-        xml.resetMediaExtensions();
-        mediaTypes = xml.getDefaultMediaExtensions();
+        xml.resetExtensionsOfType(URLType.Media);
+        mediaTypes = xml.getExtensionsOfType(URLType.Media);
         mediaTypesField.setText(mediaTypes);
-        resetMediaTypeButton.setEnabled(false);
     }//GEN-LAST:event_resetMediaTypeButtonActionPerformed
     /**
      * Reset document types to the default document types
@@ -683,10 +678,9 @@ public class GUIReader extends javax.swing.JFrame {
      * @param evt
      */
     private void resetDocumentTypeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetDocumentTypeButtonActionPerformed
-        xml.resetDocumentExtensions();
-        documentTypes = xml.getDefaultDocumentExtensions();
+        xml.resetExtensionsOfType(URLType.Document);
+        documentTypes = xml.getExtensionsOfType(URLType.Document);
         documentTypesField.setText(documentTypes);
-        resetDocumentTypeButton.setEnabled(false);
     }//GEN-LAST:event_resetDocumentTypeButtonActionPerformed
     /**
      * Calls createReport() and generates a report in .xls format

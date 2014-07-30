@@ -404,8 +404,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="resetDocumentTypeButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Reset"/>
-        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="text" type="java.lang.String" value="Restore Defaults"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="resetDocumentTypeButtonActionPerformed"/>
@@ -413,8 +412,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="resetMediaTypeButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Reset"/>
-        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="text" type="java.lang.String" value="Restore Defaults"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="resetMediaTypeButtonActionPerformed"/>
@@ -422,8 +420,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="resetPageTypeButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Reset"/>
-        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="text" type="java.lang.String" value="Restore Defaults"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="resetPageTypeButtonActionPerformed"/>

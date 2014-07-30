@@ -9,32 +9,13 @@ package xmlsitereader;
 public class URL implements Comparable {
     private String urlPath;
     private String extension;
-    private Boolean isPage; // REMOVE
-    private Boolean isDocument; // REMOVE
-    private Boolean isMedia; // REMOVE
     private URLType urlType;
 
     /**
      * Default empty constructor
      */
     public URL(){}
-    // REMOVE
-    /**
-     * Overridden constructor
-     * @param urlPath
-     * @param extension
-     * @param isPage
-     * @param isDocument
-     * @param isImage 
-     */
-    public URL(String urlPath, String extension, Boolean isPage, Boolean isDocument, Boolean isImage) {        
-        this.urlPath = urlPath;
-        this.extension = extension;
-        this.isPage = isPage;
-        this.isDocument = isDocument;
-        this.isMedia = isImage;
-    }
-    //KEEP
+
     /**
      * New constructor for refactoring
      * @param urlPath
@@ -61,30 +42,6 @@ public class URL implements Comparable {
     public void setExtension(String extension) {
         this.extension = extension;
     }
-    // REMOVE
-    /**
-     * 
-     * @param page 
-     */
-    public void setIsPage(Boolean page) { 
-        this.isPage = page; 
-    }
-    // REMOVE
-    /**
-     * 
-     * @param document 
-     */
-    public void setIsDocument(Boolean document) { 
-        this.isDocument = document; 
-    }
-    // REMOVE
-    /**
-     * 
-     * @param image 
-     */
-    public void setIsMedia(Boolean image) { 
-        this.isMedia = image; 
-    }
     /**
      * New for refactoring 
      * @param urlType 
@@ -106,30 +63,6 @@ public class URL implements Comparable {
      */
     public String getExtension() {
         return extension;
-    }
-    // REMOVE
-    /**
-     * 
-     * @return boolean
-     */
-    public Boolean isPage() { 
-        return isPage; 
-    }
-    // REMOVE
-    /**
-     * 
-     * @return boolean
-     */
-    public Boolean isDocument() { 
-        return isDocument; 
-    }
-    // REMOVE
-    /**
-     * 
-     * @return boolean
-     */
-    public Boolean isMedia() { 
-        return isMedia; 
     }
     /**
      * New for refactoring
