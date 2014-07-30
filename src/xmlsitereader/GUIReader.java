@@ -16,6 +16,7 @@ import javax.swing.table.DefaultTableModel;
  *
  ** @author Curtis Conner & Stephen Paden * Company: Eagle Creek Software
  * Services * Date: 2/27/2014
+ * Re-factored by Curtis Conner 7-30-2014
  *
  */
 public class GUIReader extends javax.swing.JFrame {

@@ -29,6 +29,7 @@ import org.xml.sax.SAXException;
  *
  ** @author Curtis Conner and Stephen Paden * Company: Eagle Creek Software
  * Services * Date: 2/26/2014
+ * Re-factored by Curtis Conner 7-30-2014
  *
  */
 public class XML {
@@ -42,16 +43,14 @@ public class XML {
     private String fileName;
     private File file;
     private ArrayList<URL> urls;
-    private String[] fullPaths;
-    
-    private HashMap<String, Integer> queriedURLs = new HashMap<String, Integer>();
-    
-    // New for refactoring
+    private String[] fullPaths;    
     private ArrayList<URLExtension> urlExtensions = new ArrayList<URLExtension>();
     private ArrayList<URLExtension> defaultURLExtensions = new ArrayList<URLExtension>();
-    
+    /**
+     * Constructor
+     */
     public XML() {
-
+        // Load the default extensions and user created extensions from files
         try {
             ObjectInputStream input = new ObjectInputStream(new FileInputStream(defaults));
             defaultURLExtensions = (ArrayList<URLExtension>)input.readObject();
@@ -68,33 +67,54 @@ public class XML {
             System.out.println("BAD THINGS HAPPENED WHEN READING OR CASTING " + e);
         }
     }
-    // KEEP
+    /**
+     * 
+     * @param fName 
+     */   
     public XML(String fName) {
         fileName = fName;
     }
-    // KEEP
+    /**
+     * 
+     * @param fName 
+     */
     public void setFileName(String fName) {
         fileName = fName;
     }
-    // KEEP
+    /**
+     * 
+     * @return 
+     */
     public String getFileName() {
         return fileName;
     }
-    // KEEP
+    /**
+     * 
+     * @param file 
+     */
     public void setFile(File file) {
         this.file = file;
         setFileName(file.getName());
     }
-    // KEEP
+    /**
+     * 
+     * @return 
+     */
     public File getFile() {
         return file;
     }
-    // KEEP
+    /**
+     * 
+     * @return 
+     */
     public URL[] getURLs() {
         return urls.toArray(new URL[urls.size()]);
-    }
-    
-    // New for refactoring
+    }    
+    /**
+     * Return an Array of urls of a specified type
+     * @param urlType
+     * @return 
+     */
     public URL[] getURLsOfType(URLType urlType) {
         ArrayList<URL> urlsOfType = new ArrayList<>();
         for (URL url : urls) {
@@ -103,9 +123,12 @@ public class XML {
             }
         }
         return urlsOfType.toArray(new URL[urlsOfType.size()]);
-    }
-    
-    // New for refactoring
+    }    
+    /**
+     * Return a String of extensions of a specified type
+     * @param urlType
+     * @return 
+     */
     public String getExtensionsOfType(URLType urlType) {
         ArrayList<String> extensionsOfType = new ArrayList<>();
         for (URLExtension extension : urlExtensions) {
@@ -116,7 +139,11 @@ public class XML {
         return join(extensionsOfType, ",");
     }
     
-    // New for refactoring
+    /**
+     * Set extensions of specified type to user input and save to preferences
+     * @param extensions
+     * @param urlType 
+     */
     public void setExtensionsOfType(String extensions, URLType urlType) {
         ArrayList<String> list = split(extensions, ",");
         clearExtensionsOfType(urlType);
@@ -126,7 +153,10 @@ public class XML {
         saveExtensions();
     }
     
-    // New for refactoring
+    /**
+     * Set extensions of specified type to defaults and save to preferences
+     * @param urlType 
+     */
     public void resetExtensionsOfType(URLType urlType) {
         clearExtensionsOfType(urlType);
         for (URLExtension urlExtension : defaultURLExtensions) {
@@ -137,7 +167,10 @@ public class XML {
         saveExtensions();
     }
     
-    // New for refactoring
+    /**
+     * Clear extensions of a specified type from list
+     * @param urlType 
+     */
     private void clearExtensionsOfType(URLType urlType) {
         ArrayList<URLExtension> newURLExtensions = new ArrayList<>();
         for (URLExtension urlExtension : urlExtensions) {
@@ -148,7 +181,9 @@ public class XML {
         urlExtensions = newURLExtensions;
     }
     
-    // New for refactoring
+    /**
+     * Save list of extensions to preferences
+     */
     private void saveExtensions() {
         try {
             ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream(preferences));
@@ -158,9 +193,9 @@ public class XML {
             
         }
     }
-    // RFACTOR
+    
     /**
-     * Parses through the xml sitemap to build the lists of urls
+     * Parses through the xml sitemap to build the list of urls
      *
      * @throws FileNotFoundException
      */
@@ -205,10 +240,9 @@ public class XML {
             System.out.println(e);
         }
 
-        sortUrls();
+        Collections.sort(urls);
 
     }
-    // KEEP
     /**
      * Get the base url from one with a query string
      *
@@ -219,7 +253,6 @@ public class XML {
         int queryIndex = url.indexOf("?");
         return url.substring(0, queryIndex);
     }
-    // KEEP
     /**
      * Check the list of urls for a duplicate
      *
@@ -233,12 +266,6 @@ public class XML {
             }
         }
         return false;
-    }
-    /**
-     * Sort all the lists
-     */
-    public void sortUrls() {
-        Collections.sort(urls);
     }
     // KEEP
     /**
@@ -260,7 +287,6 @@ public class XML {
         }
         return builder.toString();
     }
-    // KEEP
     /**
      * Split a String into a list of Strings at a given delimeter
      *
@@ -272,7 +298,12 @@ public class XML {
         String[] temp = extensions.split(delimeter);
         return new ArrayList<String>(Arrays.asList(temp));
     }
-    // KEEP
+    /**
+     * 
+     * @param extensions
+     * @param path
+     * @return 
+     */
     public boolean matchPath(ArrayList<URLExtension> extensions, String path) {
         
         for (URLExtension extension : extensions) {
@@ -303,7 +334,6 @@ public class XML {
         }
         sumTotal = urls.size();
     }
-    // REFACTOR
     /**
      * Reset url counts so analysis can be ran more than once
      */
@@ -313,7 +343,6 @@ public class XML {
         sumMedia = 0;
         sumTotal = 0;
     }
-    // REFACTOR
     /**
      * Build a String with the results to be displayed
      *

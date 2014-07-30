@@ -4,6 +4,7 @@ package xmlsitereader;
  ** @author Curtis Conner and Steve Paden
  ** Company: Eagle Creek Software Services 
  ** Date: 2/27/2014
+ * Re-factored by Curtis Conner 7-30-2014
  *
  */
 public class URL implements Comparable {
@@ -17,7 +18,7 @@ public class URL implements Comparable {
     public URL(){}
 
     /**
-     * New constructor for refactoring
+     * Constructor
      * @param urlPath
      * @param extension
      * @param urlType 
@@ -43,7 +44,7 @@ public class URL implements Comparable {
         this.extension = extension;
     }
     /**
-     * New for refactoring 
+     *  
      * @param urlType 
      */
     public void setURLType(URLType urlType) {
@@ -65,7 +66,7 @@ public class URL implements Comparable {
         return extension;
     }
     /**
-     * New for refactoring
+     * 
      * @return 
      */
     public URLType getURLType() {
