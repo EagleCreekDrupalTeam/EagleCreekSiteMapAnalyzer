@@ -12,6 +12,7 @@ public class URL implements Comparable {
     private Boolean isPage;
     private Boolean isDocument;
     private Boolean isMedia;
+    private URLType urlType;
 
     /**
      * Default empty constructor
@@ -31,6 +32,17 @@ public class URL implements Comparable {
         this.isPage = isPage;
         this.isDocument = isDocument;
         this.isMedia = isImage;
+    }
+    /**
+     * New constructor for refactoring
+     * @param urlPath
+     * @param extension
+     * @param urlType 
+     */
+    public URL(String urlPath, String extension, URLType urlType) {
+        this.urlPath = urlPath;
+        this.extension = extension;
+        this.urlType = urlType;
     }
     
     /**
@@ -67,7 +79,15 @@ public class URL implements Comparable {
      */
     public void setIsMedia(Boolean image) { 
         this.isMedia = image; 
-    }    
+    }
+    /**
+     * New for refactoring 
+     * @param urlType 
+     */
+    public void setURLType(URLType urlType) {
+        this.urlType = urlType;
+    }
+    
     /**
      * 
      * @return urlPath
@@ -103,6 +123,14 @@ public class URL implements Comparable {
     public Boolean isMedia() { 
         return isMedia; 
     }
+    /**
+     * New for refactoring
+     * @return 
+     */
+    public URLType getURLType() {
+        return urlType;
+    }
+    
     /**
      * Compares the extensions to sort alphabetically
      * @param obj

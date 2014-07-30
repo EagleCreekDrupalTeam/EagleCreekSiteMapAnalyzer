@@ -380,6 +380,20 @@ public class XML {
         String[] temp = extensions.split(delimeter);
         return new ArrayList<String>(Arrays.asList(temp));
     }
+    
+    public boolean matchPath(ArrayList<Pattern> patternList, String path) {
+        for (Pattern pattern : patternList) {
+            Matcher matcher = pattern.matcher(path);
+            if (matcher.find()) {
+                //urls.add(new URL(path, matcher.group(), Boolean.FALSE, Boolean.FALSE, Boolean.TRUE));
+                //mediaURLs.add(new URL(fullPath, matcher.group(), Boolean.FALSE, Boolean.FALSE, Boolean.TRUE));
+
+                //sumMedia++;
+                return true;
+            }
+        }
+        return false;
+    }
 
     /**
      * Sum up the counts of the different types of urls
