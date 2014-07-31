@@ -8,6 +8,6 @@ Features
 - Sorting based on url type.
 - Select a url and click Open URL to open the link in default browser.
 
-Authors
+Author
 --------
-Curtis Conner, Stephen Paden
+Curtis Conner
