@@ -4,7 +4,7 @@ This repository holds a java program written to parse an xml sitemap in order to
 
 Features
 ------------
-- Extensions for pages, documents, and images to search for are customizable.
+- Extensions for pages, documents, and media to search for are customizable.
 - Sorting based on url type.
 - Select a url and click Open URL to open the link in default browser.
 
