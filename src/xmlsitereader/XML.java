@@ -43,41 +43,11 @@ public class XML {
     private String[] fullPaths;    
     private ArrayList<URLExtension> urlExtensions = new ArrayList<URLExtension>();
     private ArrayList<URLExtension> defaultURLExtensions = new ArrayList<URLExtension>();
-    
-    private ArrayList<String> dpe = new ArrayList<String>(Arrays.asList(".html",".htm",".aspx",".jsp",".php",".asp",".shtml"));
-    private ArrayList<String> dde = new ArrayList<String>(Arrays.asList(".docx",".doc",".dot",".pdf",".txt",".rft",".odt",".odg",".csv",".xls",".xlsx",".xlt",".ppt",".pptx"));
-    private ArrayList<String> dme = new ArrayList<String>(Arrays.asList(".gif",".jpg",".png",".jpeg",".bmp",".ico"));
-            
+                
     /**
      * Constructor
      */
     public XML() {
-        
-//        for (String string : dpe) {
-//            defaultURLExtensions.add(new URLExtension(string, URLType.Page));
-//        }
-//        for (String string : dde) {
-//            defaultURLExtensions.add(new URLExtension(string, URLType.Document));
-//        }
-//        for (String string : dme) {
-//            defaultURLExtensions.add(new URLExtension(string, URLType.Media));
-//        }
-//        
-//        try {
-//            ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream(defaults));
-//            output.writeObject(defaultURLExtensions);
-//        }
-//        catch(IOException e) {
-//            
-//        }
-//        
-//        try {
-//            ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream(preferences));
-//            output.writeObject(defaultURLExtensions);
-//        }
-//        catch(IOException e) {
-//            
-//        }
         
         // Load the default extensions and user created extensions from files
         try {
