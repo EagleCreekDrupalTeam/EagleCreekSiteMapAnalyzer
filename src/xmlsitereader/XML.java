@@ -24,7 +24,8 @@ import org.xml.sax.SAXException;
 
 /**
  *
- ** @author Curtis Conner and Stephen Paden * Company: Eagle Creek Software
+ ** @author Curtis Conner
+ * Company: Eagle Creek Software
  * Services * Date: 2/26/2014
  * Re-factored by Curtis Conner 7-30-2014
  *
@@ -358,45 +359,40 @@ public class XML {
         return builder.toString();
     }
 
-    // added by Stephen Paden, 3/6/14
     /**
-     * 
-     * @param newFile
-     * @param defaultExtension
-     * @throws FileNotFoundException 
-     * This method is responsible for formatting the output to a hard-coded .xls file.
+     * Create a report and save it to a file
+     * @param newFile 
      */
-    public void createReport(File newFile, String defaultExtension) throws FileNotFoundException {
-        PrintWriter newPrintWriter = new PrintWriter(newFile + ".xls");
+    public void createReport(File newFile) {
+        PrintWriter writer;
         try {
-            newPrintWriter.write(printResults() + "\n");
-            newPrintWriter.write("Eagle Creek Sitemap Analyzer Report for: " + getFileName() + "\n");
-            newPrintWriter.write("********************************************\n");
-            newPrintWriter.write("Page URLS: \n");
-            newPrintWriter.write("********************************************\n");
-//            newPrintWriter.write(pageURLs.toString().replace(",", "")
-//                    .replace("[", "")
-//                    .replace("]", "") + "\n");
-            newPrintWriter.write("");
-            newPrintWriter.write("********************************************\n");
-            newPrintWriter.write("Document URLS: \n");
-            newPrintWriter.write("********************************************\n");
-//            newPrintWriter.write(documentURLs.toString().replace(",", "")
-//                    .replace("[", "")
-//                    .replace("]", "") + "\n");
-            newPrintWriter.write("");
-            newPrintWriter.write("********************************************\n");
-            newPrintWriter.write("Media URLs: \n");
-            newPrintWriter.write("********************************************\n");
-//            newPrintWriter.write(mediaURLs.toString().replace(",", "")
-//                    .replace("[", "")
-//                    .replace("]", "") + "\n");
-            newPrintWriter.write("********************************************\n");
-            newPrintWriter.write("Summary: \n");
-            newPrintWriter.write("********************************************\n");            
-            newPrintWriter.close();
+            
+            writer = new PrintWriter(newFile);
+            
+            writer.write("Eagle Creek SiteMap Analyzer Report for: " + getFileName() + "\n");
+            writer.write(" ,Summary:, Total, Pages, Documents, Media" + "\n");
+            writer.write(" , , " + sumTotal + "," + sumPages + "," + sumDocuments + "," + sumMedia + "\n");
+            if (sumPages > 0)          {
+                writer.write("********************************************\n");
+                writer.write("Page URLS: \n");
+                writer.write("********************************************\n");
+                writer.write(Arrays.asList(getURLsOfType(URLType.Page)).toString().replace(",", "").replace("[", "").replace("]", "") + "\n");
+            }
+            if (sumDocuments > 0) {
+                writer.write("********************************************\n");
+                writer.write("Document URLS: \n");
+                writer.write("********************************************\n");
+                writer.write(Arrays.asList(getURLsOfType(URLType.Document)).toString().replace(",", "").replace("[", "").replace("]", "") + "\n");
+            }
+            if (sumMedia > 0) {
+                writer.write("********************************************\n");
+                writer.write("Media URLs: \n");
+                writer.write("********************************************\n");
+                writer.write(Arrays.asList(getURLsOfType(URLType.Media)).toString().replace(",", "").replace("[", "").replace("]", "") + "\n");
+            }            
+            writer.close();
 
-        } catch (SecurityException se) {
+        } catch (SecurityException | FileNotFoundException se ) {
             System.out.println(se);
         }
     }

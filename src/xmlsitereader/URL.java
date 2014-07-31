@@ -1,7 +1,7 @@
 package xmlsitereader;
 /**
  *
- ** @author Curtis Conner and Steve Paden
+ ** @author Curtis Conner
  ** Company: Eagle Creek Software Services 
  ** Date: 2/27/2014
  * Re-factored by Curtis Conner 7-30-2014

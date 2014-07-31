@@ -1,6 +1,7 @@
 package xmlsitereader;
 
 import java.awt.Desktop;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URI;
@@ -14,7 +15,8 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- ** @author Curtis Conner & Stephen Paden * Company: Eagle Creek Software
+ ** @author Curtis Conner
+ * Company: Eagle Creek Software
  * Services * Date: 2/27/2014
  * Re-factored by Curtis Conner 7-30-2014
  *
@@ -684,38 +686,39 @@ public class GUIReader extends javax.swing.JFrame {
         documentTypesField.setText(documentTypes);
     }//GEN-LAST:event_resetDocumentTypeButtonActionPerformed
     /**
-     * Calls createReport() and generates a report in .xls format
+     * Calls createReport() and generates a report in .csv format
+     * Check if file exists and asks to overwrite
      *
      * @param evt
      */
     private void btnGenerateReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerateReportActionPerformed
-        {
-            JFileChooser newChooser = new JFileChooser();
-            newChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
-            int chooserResult = newChooser.showSaveDialog(this);
-            String defaultExtension = ".xls";
-
-            switch (chooserResult) {
-                case JFileChooser.CANCEL_OPTION:
-                    btnGenerateReport.setEnabled(true);
-                    btnGenerateReport.requestFocus();
-                    break;
-                case JFileChooser.APPROVE_OPTION:
-                    try {
-                        xml.createReport(newChooser.getSelectedFile(), defaultExtension);
-                        btnGenerateReport.setEnabled(true);
-                        btnGenerateReport.requestFocus();
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
+        
+        JFileChooser newChooser = new JFileChooser();
+        int chooserResult = newChooser.showSaveDialog(this); 
+        
+        switch(chooserResult) {
+            case JFileChooser.CANCEL_OPTION :
+                break;
+            case JFileChooser.APPROVE_OPTION :
+                File file = new File(newChooser.getSelectedFile().getAbsolutePath() + ".csv");
+                if (!file.exists()) {
+                    xml.createReport(file);
+                }
+                else {
+                    int overwrite = JOptionPane.showConfirmDialog(null, "This file already exists. \n Do you want to overwrite this file? ", "Warning", JOptionPane.WARNING_MESSAGE);
+                    switch(overwrite) {
+                        case JOptionPane.YES_OPTION :
+                            xml.createReport(file);
+                            break;                       
                     }
-                    break;
-                case JFileChooser.ERROR_OPTION:
-                    System.out.println("An error has occured.");
-                    break;
-            }
-        }
+                }
+                break;
+            case JFileChooser.ERROR_OPTION :
+                JOptionPane.showMessageDialog(null, "Something went wrong.", "Error", JOptionPane.ERROR_MESSAGE);
+                break;
+        }      
     }//GEN-LAST:event_btnGenerateReportActionPerformed
-
+   
     /**
      * @param args the command line arguments
      */
